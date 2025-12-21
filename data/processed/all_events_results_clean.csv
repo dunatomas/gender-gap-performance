@@ -1,8 +1,8 @@
 event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_meters,wind,auto_raw,category,subcategory
-10000m,men,time,William Howitt,GBR,1847-04-05,32:35.0[a],1955.0,,,,,run,long
-10000m,men,time,Walter George,GBR,1882-03-25,32:09.0[b],1929.0,,,,,run,long
-10000m,men,time,Walter George,GBR,1884-04-07,31:53.4[b],1913.4,,,,,run,long
-10000m,men,time,Walter George,GBR,1884-07-28,31:40.0[b],1900.0,,,,,run,long
+10000m,men,time,William Howitt,GBR,1847-04-05,32:35.0,1955.0,,,,,run,long
+10000m,men,time,Walter George,GBR,1882-03-25,32:09.0,1929.0,,,,,run,long
+10000m,men,time,Walter George,GBR,1884-04-07,31:53.4,1913.4,,,,,run,long
+10000m,men,time,Walter George,GBR,1884-07-28,31:40.0,1900.0,,,,,run,long
 10000m,men,time,William Cummings,GBR,1885-09-28,31:23.1,1883.1,,,,,run,long
 10000m,men,time,Alfred Shrubb,GBR,1904-11-05,31:02.4,1862.4,,,,,run,long
 10000m,men,time,Jean Bouin,FRA,1911-11-16,30:58.8,1858.8,,,,,run,long
@@ -120,15 +120,12 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 100m,women,time,Marie Mejzlíková,Czechoslovakia,1922-08-05,13.6,13.6,,,,,run,sprint
 100m,women,time,Mary Lines,United Kingdom,1922-08-20,12.8,12.8,,,,,run,sprint
 100m,women,time,Marie Mejzlíková,Czechoslovakia,1923-05-13,12.8,12.8,,,,,run,sprint
-100m,women,time,Emmi Haux,Germany,1923-05-21,"12.7
-(110y)",12.7,,,,,run,sprint
+100m,women,time,Emmi Haux,Germany,1923-05-21,12.7 (110),12.7,,,,,run,sprint
 100m,women,time,Leni Schmidt,Germany,1925-08-30,12.4,12.4,,,,,run,sprint
-100m,women,time,Leni Junker,Germany,1925-09-13,"12.2
-(110y)",12.2,,,,,run,sprint
+100m,women,time,Leni Junker,Germany,1925-09-13,12.2 (110),12.2,,,,,run,sprint
 100m,women,time,Gundel Wittmann,Germany,1926-08-22,12.4,12.4,,,,,run,sprint
 100m,women,time,Leni Junker,Germany,1926-08-29,12.2,12.2,,,,,run,sprint
-100m,women,time,Gertrud Gladitsch,Germany,1927-07-03,"12.1
-(110y)",12.1,,,,,run,sprint
+100m,women,time,Gertrud Gladitsch,Germany,1927-07-03,12.1 (110),12.1,,,,,run,sprint
 100m,women,time,Kinue Hitomi,Japan,1928-05-20,12.2,12.2,,,,,run,sprint
 100m,women,time,Betty Robinson,United States,1928-06-02,12.0,12.0,,,,,run,sprint
 100m,women,time,Myrtle Cook,Canada,1928-07-02,12.0,12.0,,,,,run,sprint
@@ -160,8 +157,8 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 100m,women,time,Wyomia Tyus,United States,1968-04-21,11.1,11.1,,,,,run,sprint
 100m,women,time,Lyudmila Samotyosova,Soviet Union,1968-08-15,11.1,11.1,,,0.0,,run,sprint
 100m,women,time,Margaret Bailes,United States,1968-08-18,11.1,11.1,,,,,run,sprint
-100m,women,time,Irena Szewińska,Poland,1968-10-14,11.1,11.1,,,1.8,11.2,run,sprint
 100m,women,time,Barbara Ferrell,United States,1968-10-14,11.1,11.1,,,,,run,sprint
+100m,women,time,Irena Szewińska,Poland,1968-10-14,11.1,11.1,,,1.8,11.2,run,sprint
 100m,women,time,Wyomia Tyus,United States,1968-10-15,11.07,11.07,,,1.2,,run,sprint
 100m,women,time,Renate Stecher,East Germany,1972-09-02,11.07,11.07,,,0.2,,run,sprint
 100m,women,time,Inge Helten,West Germany,1976-06-13,11.04,11.04,,,0.6,,run,sprint
@@ -171,22 +168,19 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 100m,women,time,Marlies Göhr,East Germany,1983-06-08,10.81,10.81,,,1.7,,run,sprint
 100m,women,time,Evelyn Ashford,United States,1983-07-03,10.79,10.79,,,0.6,,run,sprint
 100m,women,time,Evelyn Ashford,United States,1984-08-22,10.76,10.76,,,1.7,,run,sprint
-100m,women,time,Florence Griffith-Joyner,United States,1988-07-17,10.70,10.7,,,1.6,,run,sprint
-100m,women,time,Elaine Thompson-Herah,Jamaica,2021-07-31,10.61,10.61,,,-0.6,,run,sprint
-100m,women,time,Florence Griffith-Joyner,United States,2021-07-31,10.61,10.61,,,1.2,,run,sprint
-100m,women,time,Elaine Thompson-Herah,Jamaica,2021-08-21,10.54,10.54,,,0.9,,run,sprint
+100m,women,time,Florence Griffith-Joyner,United States,1988-07-16,10.49,10.49,,,0.0,,run,sprint
 1500m,men,time,Fernand Meiers,FRA,1893-05-28,04:21.0,261.0,,,,,run,middle
-1500m,men,time,Felix Bourdier,FRA,1894-07-22,?4:19+4/5?,259.8,,,,,run,middle
-1500m,men,time,Albin Lermusiaux,FRA,1895-05-12,?4:18+2/5?,258.4,,,,,run,middle
-1500m,men,time,Michel Soalhat,FRA,1895-05-26,?4:16+4/5?,256.8,,,,,run,middle
-1500m,men,time,Thomas Conneff,USA,1895-08-26,?4:15+3/5?,255.6,,,,,run,middle
-1500m,men,time,Albin Lermusiaux,FRA,1896-06-26,?4:10+2/5?,250.4,,,,,run,middle
+1500m,men,time,Felix Bourdier,FRA,1894-07-22,4:19+4/5,259.8,,,,,run,middle
+1500m,men,time,Albin Lermusiaux,FRA,1895-05-12,4:18+2/5,258.4,,,,,run,middle
+1500m,men,time,Michel Soalhat,FRA,1895-05-26,4:16+4/5,256.8,,,,,run,middle
+1500m,men,time,Thomas Conneff,USA,1895-08-26,4:15+3/5,255.6,,,,,run,middle
+1500m,men,time,Albin Lermusiaux,FRA,1896-06-26,4:10+2/5,250.4,,,,,run,middle
 1500m,men,time,John Bray,USA,1900-05-30,04:09:00,14940.0,,,,,run,middle
-1500m,men,time,Charles Bennett,GBR,1900-07-15,?4:06+1/5?,246.2,,,,,run,middle
-1500m,men,time,James Lightbody,USA,1904-09-03,?4:05+2/5?,245.4,,,,,run,middle
-1500m,men,time,Harold Wilson,GBR,1908-05-30,?3:59+4/5?,239.8,,,,,run,middle
-1500m,men,time,Abel Kiviat,USA,1912-05-26,?3:59+1/5?,239.2,,,,,run,middle
-1500m,men,time,Abel Kiviat,USA,1912-06-01,?3:56+4/5?,236.8,,,,,run,middle
+1500m,men,time,Charles Bennett,GBR,1900-07-15,4:06+1/5,246.2,,,,,run,middle
+1500m,men,time,James Lightbody,USA,1904-09-03,4:05+2/5,245.4,,,,,run,middle
+1500m,men,time,Harold Wilson,GBR,1908-05-30,3:59+4/5,239.8,,,,,run,middle
+1500m,men,time,Abel Kiviat,USA,1912-05-26,3:59+1/5,239.2,,,,,run,middle
+1500m,men,time,Abel Kiviat,USA,1912-06-01,3:56+4/5,236.8,,,,,run,middle
 1500m,men,time,Abel Kiviat,USA,1912-06-08,3:55.8,235.8,,,,,run,middle
 1500m,men,time,John Zander,SWE,1917-08-05,3:54.7,234.7,,,,,run,middle
 1500m,men,time,Paavo Nurmi,FIN,1924-06-19,3:52.6,232.6,,,,,run,middle
@@ -202,8 +196,8 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 1500m,men,time,Gunder Hägg,SWE,1944-07-07,3:43.0,223.0,,,,,run,middle
 1500m,men,time,Lennart Strand,SWE,1947-07-15,3:43.0,223.0,,,,,run,middle
 1500m,men,time,Werner Lueg,FRG,1952-06-29,3:43.0,223.0,,,,,run,middle
-1500m,men,time,Wes Santee,USA,1954-06-04,3:42.8+,222.8,,,,,run,middle
-1500m,men,time,John Landy,AUS,1954-06-21,3:41.8+,221.8,,,,,run,middle
+1500m,men,time,Wes Santee,USA,1954-06-04,3:42.8,222.8,,,,,run,middle
+1500m,men,time,John Landy,AUS,1954-06-21,3:41.8,221.8,,,,,run,middle
 1500m,men,time,Sándor Iharos,HUN,1955-07-28,3:40.8,220.8,,,,,run,middle
 1500m,men,time,László Tábori,HUN,1955-09-06,3:40.8,220.8,,,,,run,middle
 1500m,men,time,Gunnar Nielsen,DEN,1955-09-06,3:40.8,220.8,,,,,run,middle
@@ -236,9 +230,9 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 1500m,women,time,Nina Pletnyova,URS,1952-08-30,4:37.0,277.0,,,,,run,middle
 1500m,women,time,Phyllis Perkins,GBR,1956-05-17,4:35.4,275.4,,,,,run,middle
 1500m,women,time,Diane Leather,GBR,1957-05-16,4:30.0,270.0,,,,,run,middle
-1500m,women,time,Diane Leather,GBR,1957-07-19,4:29.7+,269.7,,,,,run,middle
-1500m,women,time,Marise Chamberlain,NZL,1962-12-08,4:19.0+,259.0,,,,,run,middle
-1500m,women,time,Anne Smith,GBR,1967-06-03,4:17.3+,257.3,,,,,run,middle
+1500m,women,time,Diane Leather,GBR,1957-07-19,4:29.7,269.7,,,,,run,middle
+1500m,women,time,Marise Chamberlain,NZL,1962-12-08,4:19.0,259.0,,,,,run,middle
+1500m,women,time,Anne Smith,GBR,1967-06-03,4:17.3,257.3,,,,,run,middle
 1500m,women,time,Maria Gommers,NED,1967-10-24,4:15.6,255.6,,,,,run,middle
 1500m,women,time,Paola Pigni,ITA,1969-07-02,4:12.4,252.4,,,,,run,middle
 1500m,women,time,Jaroslava Jehličková,CZE,1969-09-20,4:10.7,250.7,,,,4:10.77,run,middle
@@ -255,31 +249,31 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 1500m,women,time,Faith Kipyegon,KEN,2023-06-02,3:49.11,229.11,,,,,run,middle
 1500m,women,time,Faith Kipyegon,KEN,2024-07-07,3:49.04,229.04,,,,,run,middle
 1500m,women,time,Faith Kipyegon,KEN,2025-07-05,3:48.68,228.68,,,,,run,middle
-200m,men,time,Willie Applegarth,GBI,1914-07-04,21.2y,21.2,,,,,run,sprint
-200m,men,time,Creed Haymond,USA,1915-05-15,21.2y,21.2,,,,,run,sprint
+200m,men,time,Willie Applegarth,GBI,1914-07-04,21.2,21.2,,,,,run,sprint
+200m,men,time,Creed Haymond,USA,1915-05-15,21.2,21.2,,,,,run,sprint
 200m,men,time,Helmut Körnig,GER,1928-08-26,21.0,21.0,,,,,run,sprint
 200m,men,time,Ralph Metcalfe,USA,1933-08-06,21.0,21.0,,,,,run,sprint
 200m,men,time,Jesse Owens,USA,1936-07-12,21.0,21.0,,,,,run,sprint
-200m,men,time,Lloyd LaBeach,PAN,1946-09-05,20.9y,20.9,,,,,run,sprint
-200m,men,time,Charles Peters,USA,1948-05-01,20.9y,20.9,,,,,run,sprint
+200m,men,time,Lloyd LaBeach,PAN,1946-09-05,20.9,20.9,,,,,run,sprint
+200m,men,time,Charles Peters,USA,1948-05-01,20.9,20.9,,,,,run,sprint
 200m,men,time,Mel Patton,USA,1948-07-10,20.7,20.7,,,,,run,sprint
 200m,men,time,âBarneyâ Ewell,USA,1948-07-10,20.7,20.7,,,,,run,sprint
-200m,men,time,Andy Stanfield,United States,1951-05-26,20.6y,20.6,,,,,run,sprint
+200m,men,time,Andy Stanfield,United States,1951-05-26,20.6,20.6,,,,,run,sprint
 200m,men,time,Andy Stanfield,United States,1952-06-28,20.6,20.6,,,,,run,sprint
 200m,men,time,Thane Baker,United States,1956-06-23,20.6,20.6,,,0.0,,run,sprint
 200m,men,time,Bobby Morrow,United States,1956-11-27,20.6,20.6,,,,20.75,run,sprint
 200m,men,time,Manfred Germar,West Germany,1958-10-01,20.6,20.6,,,,,run,sprint
-200m,men,time,Ray Norton,United States,1960-03-19,20.6y,20.6,,,-1.6,,run,sprint
+200m,men,time,Ray Norton,United States,1960-03-19,20.6,20.6,,,-1.6,,run,sprint
 200m,men,time,Ray Norton,United States,1960-04-30,20.6,20.6,,,,,run,sprint
-200m,men,time,Peter Radford,United Kingdom,1960-05-28,20.5y,20.5,,,,,run,sprint
+200m,men,time,Peter Radford,United Kingdom,1960-05-28,20.5,20.5,,,,,run,sprint
 200m,men,time,Stone Johnson,United States,1960-07-02,20.5,20.5,,,0.0,20.75,run,sprint
 200m,men,time,Ray Norton,United States,1960-07-02,20.5,20.5,,,0.0,,run,sprint
 200m,men,time,Livio Berruti,Italy,1960-09-03,20.5,20.5,,,,20.65,run,sprint
 200m,men,time,Livio Berruti,Italy,1960-09-03,20.5,20.5,,,0.0,20.62,run,sprint
-200m,men,time,Paul Drayton,United States,1962-06-23,20.5y,20.5,,,-1.1,20.67,run,sprint
-200m,men,time,Henry Carr,United States,1963-03-23,20.3y,20.3,,,-0.1,,run,sprint
-200m,men,time,Henry Carr,United States,1964-04-04,20.2y,20.2,,,0.5,,run,sprint
-200m,men,time,Tommie Smith,United States,1966-06-11,20.0y,20.0,,,0.0,,run,sprint
+200m,men,time,Paul Drayton,United States,1962-06-23,20.5,20.5,,,-1.1,20.67,run,sprint
+200m,men,time,Henry Carr,United States,1963-03-23,20.3,20.3,,,-0.1,,run,sprint
+200m,men,time,Henry Carr,United States,1964-04-04,20.2,20.2,,,0.5,,run,sprint
+200m,men,time,Tommie Smith,United States,1966-06-11,20.0,20.0,,,0.0,,run,sprint
 200m,men,time,Tommie Smith,United States,1968-10-16,19.83 A,19.83,,,0.9,,run,sprint
 200m,men,time,Pietro Mennea,Italy,1979-09-12,19.72 A,19.72,,,1.8,,run,sprint
 200m,men,time,Michael Johnson,United States,1996-06-23,19.66,19.66,,,1.7,,run,sprint
@@ -287,9 +281,9 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 200m,men,time,Usain Bolt,Jamaica,2008-08-20,19.30,19.3,,,-0.9,19296.0,run,sprint
 200m,men,time,Usain Bolt,Jamaica,2009-08-20,19.19,19.19,,,-0.3,19190.0,run,sprint
 200m,men,time,Athlete,Location of race,,Time,,,,,,run,sprint
-200m,women,time,Alice Cast,United Kingdom,1922-08-20,27.8+,27.8,,,,,run,sprint
-200m,women,time,Mary Lines,United Kingdom,1922-09-23,26.8y,26.8,,,,,run,sprint
-200m,women,time,Eileen Edwards,United Kingdom,1924-08-20,26.2y,26.2,,,,,run,sprint
+200m,women,time,Alice Cast,United Kingdom,1922-08-20,27.8,27.8,,,,,run,sprint
+200m,women,time,Mary Lines,United Kingdom,1922-09-23,26.8,26.8,,,,,run,sprint
+200m,women,time,Eileen Edwards,United Kingdom,1924-08-20,26.2,26.2,,,,,run,sprint
 200m,women,time,Eileen Edwards,United Kingdom,1926-10-03,26.0,26.0,,,,,run,sprint
 200m,women,time,Eileen Edwards,United Kingdom,1927-06-12,25.4,25.4,,,,,run,sprint
 200m,women,time,Tollien Schuurman,Netherlands,1933-08-13,24.6,24.6,,,,,run,sprint
@@ -297,9 +291,9 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 200m,women,time,Marjorie Jackson,Australia,1952-07-25,23.6,23.6,,,,23.73,run,sprint
 200m,women,time,Marjorie Jackson,Australia,1952-07-25,23.4,23.4,,,,23.59,run,sprint
 200m,women,time,Betty Cuthbert,Australia,1956-09-16,23.2,23.2,,,,,run,sprint
-200m,women,time,Betty Cuthbert,Australia,1960-03-07,23.2y,23.2,,,,,run,sprint
+200m,women,time,Betty Cuthbert,Australia,1960-03-07,23.2,23.2,,,,,run,sprint
 200m,women,time,Wilma Rudolph,United States,1960-07-09,22.9,22.9,,,1.4,,run,sprint
-200m,women,time,Margaret Burvill,Australia,1964-02-22,22.9y,22.9,,,0.0,,run,sprint
+200m,women,time,Margaret Burvill,Australia,1964-02-22,22.9,22.9,,,0.0,,run,sprint
 200m,women,time,Irena Szewińska,Poland,1965-08-08,22.7,22.7,,,0.8,,run,sprint
 200m,women,time,Irena Szewińska,Poland,1968-10-18,22.5A,22.5,,,2.0,22.58A,run,sprint
 200m,women,time,Chi Cheng,Taiwan,1970-07-12,22.4,22.4,,,0.8,22.62,run,sprint
@@ -335,7 +329,7 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 3000m,men,time,Gordon Pirie,ENG,1956-06-22,7:55.6,475.6,,,,,run,middle
 3000m,men,time,Gordon Pirie,ENG,1956-09-04,7:52.8,472.8,,,,,run,middle
 3000m,men,time,Michel Jazy,FRA,1962-06-27,7:49.2,469.2,,,,,run,middle
-3000m,men,time,Michel Jazy,FRA,1965-06-23,7:49.0+,469.0,,,,,run,middle
+3000m,men,time,Michel Jazy,FRA,1965-06-23,7:49.0,469.0,,,,,run,middle
 3000m,men,time,Siegfried Herrmann,GDR,1965-08-05,7:46.0,466.0,,,,,run,middle
 3000m,men,time,Kipchoge Keino,KEN,1965-08-27,7:39.6,459.6,,,,,run,middle
 3000m,men,time,Emiel Puttemans,BEL,1972-09-14,7:37.6,457.6,,,,,run,middle
@@ -358,47 +352,47 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 3000m,women,time,Joyce Smith,GBR,1971-07-16,9:23.4,563.4,,,,,run,middle
 3000m,women,time,Paola Pigni,ITA,1972-05-11,9:09.2,549.2,,,,,run,middle
 3000m,women,time,Lyudmila Bragina,URS,1972-08-12,8:53.0,533.0,,,,,run,middle
-3000m,women,time,Lyudmila Bragina,URS,1974-07-06,8:52.8*,532.8,,,,,run,middle
+3000m,women,time,Lyudmila Bragina,URS,1974-07-06,8:52.8,532.8,,,,,run,middle
 3000m,women,time,Grete Andersen-Waitz,NOR,1975-06-24,8:46.6,526.6,,,,,run,middle
 3000m,women,time,Grete Waitz,NOR,1976-06-21,8:45.4,525.4,,,,,run,middle
-3000m,women,time,Lyudmila Bragina,URS,1976-08-07,8:27.2*,507.2,,,,,run,middle
+3000m,women,time,Lyudmila Bragina,URS,1976-08-07,8:27.2,507.2,,,,,run,middle
 3000m,women,time,Svetlana Ulmasova,URS,1982-07-25,8:26.78,506.78,,,,,run,middle
 3000m,women,time,Tatyana Kazankina,URS,1984-08-26,8:22.62,502.62,,,,,run,middle
 3000m,women,time,Zhang Linli,CHN,1993-09-12,8:22.06,502.06,,,,,run,middle
 3000m,women,time,Wang Junxia,CHN,1993-09-12,8:12.19,492.19,,,,,run,middle
 3000m,women,time,Wang Junxia,CHN,1993-09-13,8:06.11,486.11,,,,,run,middle
-400m,men,time,Maxie Long,United States,1900-09-29,47.8y,47.8,,,,,run,sprint
+400m,men,time,Maxie Long,United States,1900-09-29,47.8,47.8,,,,,run,sprint
 400m,men,time,Charles Reidpath,United States,1912-07-13,48.2,48.2,,,,,run,sprint
-400m,men,time,Ted Meredith,United States,1916-05-27,47.4y,47.4,,,,,run,sprint
+400m,men,time,Ted Meredith,United States,1916-05-27,47.4,47.4,,,,,run,sprint
 400m,men,time,Eric Liddell,United Kingdom,1924-07-11,47.6,47.6,,,,,run,sprint
 400m,men,time,Emerson Spencer,United States,1928-05-12,47.0,47.0,,,,,run,sprint
-400m,men,time,Ben Eastman,United States,1932-03-26,46.4y,46.4,,,,,run,sprint
+400m,men,time,Ben Eastman,United States,1932-03-26,46.4,46.4,,,,,run,sprint
 400m,men,time,Bill Carr,United States,1932-08-05,46.2,46.2,,,,46.28,run,sprint
 400m,men,time,Archie Williams,United States,1936-06-19,46.1,46.1,,,,,run,sprint
 400m,men,time,Rudolf Harbig,Germany,1939-08-12,46.0,46.0,,,,,run,sprint
 400m,men,time,Grover Klemmer,United States,1941-06-06,46.0,46.0,,,,,run,sprint
-400m,men,time,Herb McKenley,Jamaica,1948-06-05,46.0y,46.0,,,,,run,sprint
+400m,men,time,Herb McKenley,Jamaica,1948-06-05,46.0,46.0,,,,,run,sprint
 400m,men,time,Herb McKenley,Jamaica,1948-07-02,45.9,45.9,,,,46.0,run,sprint
 400m,men,time,George Rhoden,Jamaica,1950-08-22,45.8,45.8,,,,,run,sprint
 400m,men,time,Lou Jones,United States,1955-03-18,45.4A,45.4,,,,45.68,run,sprint
 400m,men,time,Lou Jones,United States,1956-06-30,45.2,45.2,,,,,run,sprint
 400m,men,time,Otis Davis,United States,1960-09-06,44.9,44.9,,,,45.07,run,sprint
 400m,men,time,Carl Kaufmann,Germany,1960-09-06,44.9,44.9,,,,45.08,run,sprint
-400m,men,time,Adolph Plummer,United States,1963-05-25,44.9y,44.9,,,,,run,sprint
+400m,men,time,Adolph Plummer,United States,1963-05-25,44.9,44.9,,,,,run,sprint
 400m,men,time,Mike Larrabee,United States,1964-09-12,44.9,44.9,,,,,run,sprint
-400m,men,time,Tommie Smith,United States,1967-05-20,44.5+,44.5,,,,,run,sprint
+400m,men,time,Tommie Smith,United States,1967-05-20,44.5,44.5,,,,,run,sprint
 400m,men,time,Larry James,United States,1968-09-14,44.1A,44.1,,,,44.19,run,sprint
-400m,men,time,Lee Evans,United States,1968-10-18,43.86Â A,43.86,,,,,run,sprint
+400m,men,time,Lee Evans,United States,1968-10-18,43.86 A,43.86,,,,,run,sprint
 400m,men,time,Butch Reynolds,United States,1988-08-17,43.29,43.29,,,,,run,sprint
 400m,men,time,Michael Johnson,United States,1999-08-26,43.18,43.18,,,,,run,sprint
 400m,men,time,Wayde van Niekerk,South Africa,2016-08-14,43.03,43.03,,,,,run,sprint
-400m,women,time,Marlene Mathews,Australia,1957-01-06,57.0y,57.0,,,,,run,sprint
-400m,women,time,Marise Chamberlain,New Zealand,1957-02-16,57.0y,57.0,,,,,run,sprint
-400m,women,time,Nancy Boyle,Australia,1957-02-24,56.3y,56.3,,,,,run,sprint
+400m,women,time,Marlene Mathews,Australia,1957-01-06,57.0,57.0,,,,,run,sprint
+400m,women,time,Marise Chamberlain,New Zealand,1957-02-16,57.0,57.0,,,,,run,sprint
+400m,women,time,Nancy Boyle,Australia,1957-02-24,56.3,56.3,,,,,run,sprint
 400m,women,time,Polina Lazareva,Soviet Union,1957-05-10,55.2,55.2,,,,,run,sprint
 400m,women,time,Mariya Itkina,Soviet Union,1957-06-08,54.0,54.0,,,,,run,sprint
 400m,women,time,Mariya Itkina,Soviet Union,1957-07-06,53.6,53.6,,,,,run,sprint
-400m,women,time,Mariya Itkina,Soviet Union,1959-09-12,53.4+,53.4,,,,,run,sprint
+400m,women,time,Mariya Itkina,Soviet Union,1959-09-12,53.4,53.4,,,,,run,sprint
 400m,women,time,Mariya Itkina,Soviet Union,1962-09-14,53.4,53.4,,,,,run,sprint
 400m,women,time,Shin Geum-Dan,North Korea,1962-10-23,51.9,51.9,,,,,run,sprint
 400m,women,time,Nicole Duclos,France,1969-09-18,51.7,51.7,,,,51.72,run,sprint
@@ -416,18 +410,18 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 400m,women,time,Marita Koch,East Germany,1979-08-04,48.60,48.6,,,,,run,sprint
 400m,women,time,Marita Koch,East Germany,1982-09-08,48.16,48.16,,,,,run,sprint
 400m,women,time,Jarmila Kratochvílová,Czechoslovakia,1983-08-10,47.99,47.99,,,,,run,sprint
-400m,women,time,Marita Koch,East Germany,1985-10-06,47.60*,47.6,,,,,run,sprint
+400m,women,time,Marita Koch,East Germany,1985-10-06,47.60,47.6,,,,,run,sprint
 4x100m_relays,men,time,Otto Röhr; Max Herrmann; Erwin Kern; Richard Rau,Germany,1912-07-08,42.3,42.3,,,,,run,relay
 4x100m_relays,men,time,Jackson Scholz; Loren Murchison; Morris Kirksey; Charley Paddock,United States,1920-08-22,42.2,42.2,,,,,run,relay
 4x100m_relays,men,time,Harold Abrahams; Walter Rangeley; Lancelot Royle; Wilfred Nichol,United Kingdom,1924-07-12,42.0,42.0,,,,,run,relay
 4x100m_relays,men,time,Jaap Boot; Harry Broos; Jan de Vries; Rinus van den Berge,Netherlands,1924-07-12,42.0,42.0,,,,,run,relay
 4x100m_relays,men,time,Frank Hussey; Louis Clarke; Loren Murchison; Alfred LeConey,United States,1924-07-13,41.0,41.0,,,,,run,relay
-4x100m_relays,men,time,Chester Bowman; John Currie; James Pappas; Henry Cummings,United States,1927-07-04,41.0y,41.0,,,,,run,relay
+4x100m_relays,men,time,Chester Bowman; John Currie; James Pappas; Henry Cummings,United States,1927-07-04,41.0,41.0,,,,,run,relay
 4x100m_relays,men,time,Ernst Geerling; Friedrich-Wilhelm Wichmann; Adolf Metzner; Hans Salz,Germany,1928-06-10,41.0,41.0,,,,,run,relay
 4x100m_relays,men,time,Frank Wykoff; James Quinn; Charles Borah; Henry Russell,United States,1928-08-05,41.0,41.0,,,,,run,relay
 4x100m_relays,men,time,Arthur Jonath; Richard Corts; Hubert Houben; Helmut Körnig,Germany,1928-09-02,41.0,41.0,,,,,run,relay
 4x100m_relays,men,time,Helmut Körnig; Wilhelm Grosser; Alex Natan; Hermann Schlöske,Germany,1929-07-22,40.8,40.8,,,,,run,relay
-4x100m_relays,men,time,Roy Delby; Milton Maurer; Maurice Guyer; Frank Wykoff,United States,1931-05-09,40.8y,40.8,,,,,run,relay
+4x100m_relays,men,time,Roy Delby; Milton Maurer; Maurice Guyer; Frank Wykoff,United States,1931-05-09,40.8,40.8,,,,,run,relay
 4x100m_relays,men,time,Helmut Körnig; Georg Lammers; Erich Borchmeyer; Arthur Jonath,Germany,1932-06-14,40.6,40.6,,,,,run,relay
 4x100m_relays,men,time,Bob Kiesel; Emmett Toppino; Hector Dyer; Frank Wykoff,United States,1932-08-07,40.0,40.0,,,,40.1,run,relay
 4x100m_relays,men,time,Jesse Owens; Ralph Metcalfe; Foy Draper; Frank Wykoff,United States,1936-08-09,39.8,39.8,,,,,run,relay
@@ -455,7 +449,7 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 4x100m_relays,men,time,Nesta Carter; Michael Frater; Yohan Blake; Usain Bolt,Jamaica,2011-09-04,37.04,37.04,,,,,run,relay
 4x100m_relays,men,time,Nesta Carter; Michael Frater; Yohan Blake; Usain Bolt,Jamaica,2012-08-11,36.84,36.84,,,,,run,relay
 4x100m_relays,women,time,Marie Mejzlíková I; Marie Bakovská; Marie Jirásková; Marie Mejzlíková II,Czechoslovakia,1922-05-21,53.2,53.2,,,,,run,relay
-4x100m_relays,women,time,Mary Lines; Daisy Leach; Gwendoline Porter; Nora Callebout,United Kingdom,1922-08-20,51.4+,51.4,,,,,run,relay
+4x100m_relays,women,time,Mary Lines; Daisy Leach; Gwendoline Porter; Nora Callebout,United Kingdom,1922-08-20,51.4,51.4,,,,,run,relay
 4x100m_relays,women,time,Lilli Henoch; Charlotte Köhler; Gerda Pöting; Cläre Voss,Germany,1926-07-11,50.4,50.4,,,,,run,relay
 4x100m_relays,women,time,Anneliese Jacke; Lieselotte Hellmann; Rose Drieling; Ilse Drieling,Germany,1927-08-07,50.0,50.0,,,,,run,relay
 4x100m_relays,women,time,Georgette Gagneux; Lucienne Velu; Simone Warnier; Marguerite Radideau,France,1928-07-15,50.0,50.0,,,,,run,relay
@@ -499,12 +493,12 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 4x100m_relays,women,time,Silke Gladisch; Marita Koch; Ingrid Auerswald; Marlies Göhr,East Germany,1983-07-31,41.53,41.53,,,,,run,relay
 4x100m_relays,women,time,Silke Gladisch; Sabine Rieger; Ingrid Auerswald; Marlies Göhr,East Germany,1985-10-06,41.37,41.37,,,,,run,relay
 4x100m_relays,women,time,Tianna Madison; Allyson Felix; Bianca Knight; Carmelita Jeter,United States,2012-08-10,40.82,40.82,,,,,run,relay
-4x400m_relays,men,time,Harry Schaaf; Mel Sheppard; Harry Gissing; James Rosenberger,United States,1911-09-04,3:18.2Â y,198.2,,,,,run,relay
+4x400m_relays,men,time,Harry Schaaf; Mel Sheppard; Harry Gissing; James Rosenberger,United States,1911-09-04,3:18.2,198.2,,,,,run,relay
 4x400m_relays,men,time,Mel Sheppard; Charles Reidpath; Ted Meredith; Edward Lindberg,United States,1912-06-15,3:16.6,196.6,,,,,run,relay
 4x400m_relays,men,time,Commodore Cochran; Alan Helffrich; Oliver MacDonald; William Stevenson,United States,1924-07-13,3:16.0,196.0,,,,,run,relay
 4x400m_relays,men,time,George Baird; Emerson Spencer; Fred Alderman; Ray Barbuti,United States,1928-08-05,3:14.2,194.2,,,,,run,relay
-4x400m_relays,men,time,George Baird; Morgan Taylor; Ray Barbuti; Emerson Spencer,United States,1928-08-11,3:13.4Â y,193.4,,,,,run,relay
-4x400m_relays,men,time,Maynor Shore; Alvin Hables; Leslie Hables; Ben Eastman,United States,1931-05-08,3:12.6Â y,192.6,,,,,run,relay
+4x400m_relays,men,time,George Baird; Morgan Taylor; Ray Barbuti; Emerson Spencer,United States,1928-08-11,3:13.4,193.4,,,,,run,relay
+4x400m_relays,men,time,Maynor Shore; Alvin Hables; Leslie Hables; Ben Eastman,United States,1931-05-08,3:12.6,192.6,,,,,run,relay
 4x400m_relays,men,time,Ivan Fuqua; Ed Ablowich; Karl Warner; Bill Carr,United States,1932-08-07,3:08.2,188.2,,,,3:08.14,run,relay
 4x400m_relays,men,time,Arthur Wint; Leslie Laing; Herb McKenley; George Rhoden,Jamaica,1952-07-27,3:03.9,183.9,,,,3:04.04,run,relay
 4x400m_relays,men,time,Jack Yerman; Earl Young; Glenn Davis; Otis Davis,United States,1960-09-08,3:02.2,182.2,,,,3:02.37,run,relay
@@ -581,7 +575,7 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 5000m,women,time,Paula Fudge,GBR,1981-09-13,15:14.51,914.51,,,,,run,long
 5000m,women,time,Anne Audain,NZL,1982-03-17,15:13.22,913.22,,,,,run,long
 5000m,women,time,Mary Tabb,USA,1982-06-05,15:08.26,908.26,,,,,run,long
-5000m,women,time,Zola Budd,RSA,1984-01-05,15:01.83Â [a],901.83,,,,,run,long
+5000m,women,time,Zola Budd,RSA,1984-01-05,15:01.83,901.83,,,,,run,long
 5000m,women,time,Ingrid Kristiansen,NOR,1984-06-28,14:58.89,898.89,,,,,run,long
 5000m,women,time,Zola Budd,GBR,1985-08-26,14:48.07,888.07,,,,,run,long
 5000m,women,time,Ingrid Kristiansen,NOR,1986-08-05,14:37.33,877.33,,,,,run,long
@@ -596,42 +590,42 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 5000m,women,time,Faith Kipyegon,KEN,2023-06-09,14:05.20,845.2,,,,,run,long
 5000m,women,time,Gudaf Tsegay,ETH,2023-09-17,14:00.21,840.21,,,,,run,long
 5000m,women,time,Beatrice Chebet,KEN,2025-07-05,13:58.06,838.06,,,,,run,long
-800m,men,time,J. Blackwood,Great Britain,1857-04-25,2.05.0y,125.0,,,,,run,middle
-800m,men,time,Wiliam Way,Great Britain,1859-11-25,2.04.0y,124.0,,,,,run,middle
-800m,men,time,Charlie Grey,Ireland,1861-06-27,2.03.0y,123.0,,,,,run,middle
-800m,men,time,Percy Thornton,Great Britain,1865-12-16,2.03.0y,123.0,,,,,run,middle
-800m,men,time,Percy Thornton,Great Britain,1865-12-16,2.02.5y,122.5,,,,,run,middle
-800m,men,time,Francis Pelham,Great Britain,1867-03-23,2.02.4y,122.4,,,,,run,middle
-800m,men,time,Kinross Gair,Great Britain,1867-06-26,2.01.0y,121.0,,,,,run,middle
-800m,men,time,George Templer,United States,1872-03-27,2.01.0y,121.0,,,,,run,middle
-800m,men,time,Thomas Christie,United States,1872-03-27,2.01.0y,121.0,,,,,run,middle
-800m,men,time,Arthur Pelham,Great Britain,1873-03-26,1.59.8y,119.8,,,,,run,middle
-800m,men,time,Walter Slade,Great Britain,1876-06-05,1.59.5y,119.5,,,,,run,middle
-800m,men,time,Walter Slade,Great Britain,1876-06-06,1.58.8y,118.8,,,,,run,middle
-800m,men,time,Walter Slade,Great Britain,1876-06-10,1.58.2y,118.2,,,,,run,middle
-800m,men,time,Frederic Elborough,Great Britain,1876-10-07,1.57.5y,117.5,,,,,run,middle
-800m,men,time,Lawrence Myers,United States,1880-07-17,1.56.2y,116.2,,,,,run,middle
-800m,men,time,Lawrence Myers,United States,1881-07-02,1.55.8y,115.8,,,,,run,middle
-800m,men,time,Lawrence Myers,United States,1881-10-08,1.55.6y,115.6,,,,,run,middle
-800m,men,time,Lawrence Myers,United States,1882-09-16,1.55.6y,115.6,,,,,run,middle
-800m,men,time,Lawrence Myers,United States,1884-07-07,1.55.4y,115.4,,,,,run,middle
-800m,men,time,Lawrence Myers,United States,1885-10-03,1.55.4y,115.4,,,,,run,middle
-800m,men,time,Francis Cross,Great Britain,1888-03-09,1.54.6y,114.6,,,,,run,middle
-800m,men,time,Walter Dohm,United States,1891-09-19,1.54.5y,114.5,,,,,run,middle
-800m,men,time,Charles Kilpatrick,United States,1895-09-21,1.53.4y,113.4,,,,,run,middle
+800m,men,time,J. Blackwood,Great Britain,1857-04-25,2.05.0,125.0,,,,,run,middle
+800m,men,time,Wiliam Way,Great Britain,1859-11-25,2.04.0,124.0,,,,,run,middle
+800m,men,time,Charlie Grey,Ireland,1861-06-27,2.03.0,123.0,,,,,run,middle
+800m,men,time,Percy Thornton,Great Britain,1865-12-16,2.03.0,123.0,,,,,run,middle
+800m,men,time,Percy Thornton,Great Britain,1865-12-16,2.02.5,122.5,,,,,run,middle
+800m,men,time,Francis Pelham,Great Britain,1867-03-23,2.02.4,122.4,,,,,run,middle
+800m,men,time,Kinross Gair,Great Britain,1867-06-26,2.01.0,121.0,,,,,run,middle
+800m,men,time,George Templer,United States,1872-03-27,2.01.0,121.0,,,,,run,middle
+800m,men,time,Thomas Christie,United States,1872-03-27,2.01.0,121.0,,,,,run,middle
+800m,men,time,Arthur Pelham,Great Britain,1873-03-26,1.59.8,119.8,,,,,run,middle
+800m,men,time,Walter Slade,Great Britain,1876-06-05,1.59.5,119.5,,,,,run,middle
+800m,men,time,Walter Slade,Great Britain,1876-06-06,1.58.8,118.8,,,,,run,middle
+800m,men,time,Walter Slade,Great Britain,1876-06-10,1.58.2,118.2,,,,,run,middle
+800m,men,time,Frederic Elborough,Great Britain,1876-10-07,1.57.5,117.5,,,,,run,middle
+800m,men,time,Lawrence Myers,United States,1880-07-17,1.56.2,116.2,,,,,run,middle
+800m,men,time,Lawrence Myers,United States,1881-07-02,1.55.8,115.8,,,,,run,middle
+800m,men,time,Lawrence Myers,United States,1881-10-08,1.55.6,115.6,,,,,run,middle
+800m,men,time,Lawrence Myers,United States,1882-09-16,1.55.6,115.6,,,,,run,middle
+800m,men,time,Lawrence Myers,United States,1884-07-07,1.55.4,115.4,,,,,run,middle
+800m,men,time,Lawrence Myers,United States,1885-10-03,1.55.4,115.4,,,,,run,middle
+800m,men,time,Francis Cross,Great Britain,1888-03-09,1.54.6,114.6,,,,,run,middle
+800m,men,time,Walter Dohm,United States,1891-09-19,1.54.5,114.5,,,,,run,middle
+800m,men,time,Charles Kilpatrick,United States,1895-09-21,1.53.4,113.4,,,,,run,middle
 800m,men,time,Melvin Sheppard,United States,1908-07-21,1.52.8,112.8,,,,,run,middle
-800m,men,time,Emilio Lunghi,Italy,1909-09-15,1.52.1y,112.1,,,,,run,middle
-800m,men,time,Ted Meredith,USA,1912-07-08,1:51.9+,111.9,,,,,run,middle
-800m,men,time,Otto Peltzer,GER,1926-07-03,1:51.6y,111.6,,,,,run,middle
+800m,men,time,Emilio Lunghi,Italy,1909-09-15,1.52.1,112.1,,,,,run,middle
+800m,men,time,Ted Meredith,USA,1912-07-08,1:51.9,111.9,,,,,run,middle
+800m,men,time,Otto Peltzer,GER,1926-07-03,1:51.6,111.6,,,,,run,middle
 800m,men,time,Sera Martin,FRA,1928-07-14,1:50.6,110.6,,,,,run,middle
 800m,men,time,Tommy Hampson,GBR,1932-08-02,1:49.8,109.8,,,,1:49.70,run,middle
-800m,men,time,Ben Eastman,USA,1934-06-16,1:49.8y,109.8,,,,,run,middle
+800m,men,time,Ben Eastman,USA,1934-06-16,1:49.8,109.8,,,,,run,middle
 800m,men,time,Glenn Cunningham,USA,1936-08-20,1:49.7,109.7,,,,,run,middle
-800m,men,time,Elroy Robinson,USA,1937-07-11,1:49.6y,109.6,,,,,run,middle
-800m,men,time,Sydney Wooderson,GBR,1938-08-20,1:48.4+,108.4,,,,,run,middle
+800m,men,time,Elroy Robinson,USA,1937-07-11,1:49.6,109.6,,,,,run,middle
+800m,men,time,Sydney Wooderson,GBR,1938-08-20,1:48.4,108.4,,,,,run,middle
 800m,men,time,Rudolf Harbig,GER,1939-07-15,1:46.6,106.6,,,,,run,middle
 800m,men,time,Roger Moens,BEL,1955-08-03,1:45.7,105.7,,,,,run,middle
-800m,men,time,Peter Snell,NZL,1962-02-03,1:44.3+,104.3,,,,,run,middle
+800m,men,time,Peter Snell,NZL,1962-02-03,1:44.3,104.3,,,,,run,middle
 800m,men,time,Ralph Doubell,AUS,1968-10-15,1:44.3,104.3,,,,1:44.40,run,middle
 800m,men,time,Dave Wottle,USA,1972-07-01,1:44.3,104.3,,,,,run,middle
 800m,men,time,Marcello Fiasconaro,ITA,1973-06-27,1:43.7,103.7,,,,,run,middle
@@ -645,14 +639,14 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 800m,men,time,David Rudisha,KEN,2010-08-22,1:41.09,101.09,,,,,run,middle
 800m,men,time,David Rudisha,KEN,2010-08-29,1:41.01,101.01,,,,,run,middle
 800m,men,time,David Rudisha,KEN,2012-08-09,1:40.91,100.91,,,,,run,middle
-800m,women,time,Georgette Lenoir,FRA,1922-08-20,2:30.4+,150.4,,,,,run,middle
-800m,women,time,Mary Lines,GBR,1922-08-30,2:26.6y,146.6,,,,,run,middle
+800m,women,time,Georgette Lenoir,FRA,1922-08-20,2:30.4,150.4,,,,,run,middle
+800m,women,time,Mary Lines,GBR,1922-08-30,2:26.6,146.6,,,,,run,middle
 800m,women,time,Lina Radke,GER,1927-08-07,2:23.8,143.8,,,,,run,middle
 800m,women,time,Inga Gentzel,SWE,1928-06-16,2:20.4,140.4,,,,,run,middle
 800m,women,time,Lina Radke,GER,1928-07-01,2:19.6,139.6,,,,,run,middle
 800m,women,time,Lina Radke,GER,1928-08-02,2:16.8,136.8,,,,,run,middle
-800m,women,time,Zdeněk Koubek,CSK,1934-06-14,2:16.4*,136.4,,,,,run,middle
-800m,women,time,Zdeněk Koubek,CSK,1934-08-10,2:12.4*,132.4,,,,,run,middle
+800m,women,time,Zdeněk Koubek,CSK,1934-06-14,2:16.4,136.4,,,,,run,middle
+800m,women,time,Zdeněk Koubek,CSK,1934-08-10,2:12.4,132.4,,,,,run,middle
 800m,women,time,Anna Larsson,SWE,1944-08-28,2:15.9,135.9,,,,,run,middle
 800m,women,time,Anna Larsson,SWE,1945-08-19,2:14.8,134.8,,,,,run,middle
 800m,women,time,Anna Larsson,SWE,1945-08-30,2:13.8,133.8,,,,,run,middle
@@ -665,7 +659,7 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 800m,women,time,Nina Otkalenko,URS,1955-09-24,2:05.0,125.0,,,,,run,middle
 800m,women,time,Lyudmila Shevtsova,URS,1960-07-03,2:04.3,124.3,,,,,run,middle
 800m,women,time,Lyudmila Shevtsova,URS,1960-09-07,2:04.3,124.3,,,,2:04.50,run,middle
-800m,women,time,Dixie Willis,AUS,1962-03-03,2:01.2+,121.2,,,,,run,middle
+800m,women,time,Dixie Willis,AUS,1962-03-03,2:01.2,121.2,,,,,run,middle
 800m,women,time,Ann Packer,GBR,1964-10-20,2:01.1,121.1,,,,,run,middle
 800m,women,time,Judy Pollock,AUS,1967-06-28,2:01.0,121.0,,,,,run,middle
 800m,women,time,Vera Nikolic,YUG,1968-07-20,2:00.5,120.5,,,,,run,middle
@@ -753,199 +747,199 @@ half_marathon,women,time,Peres Jepchirchir,Kenya,2020-10-17,1:05:16,3916.0,,,,,r
 half_marathon,women,time,Ruth Chepngetich,Kenya,2021-04-04,1:04:02,3842.0,,,,,run,long
 half_marathon,women,time,Yalemzerf Yehualaw,Ethiopia,2021-08-29,1:03:44,3824.0,,,,,run,long
 half_marathon,women,time,Letesenbet Gidey,Ethiopia,2021-10-24,1:02:52,3772.0,,,,,run,long
-high_jump,men,mark,Adam Wilson,GBR,1827-09-26,,,1.575Â m (5Â ft 2Â in),1.575,,,jump,jump
-high_jump,men,mark,Thomas Anderson,GBR,1829-07-24,,,1.60Â m (5Â ftÂ 2+3â4Â in),1.6,,,jump,jump
-high_jump,men,mark,John Pattison,GBR,1837-05-06,,,1.60Â m (5Â ftÂ 2+3â4Â in),1.6,,,jump,jump
-high_jump,men,mark,Richard Armstrong,GBR,1839-08-05,,,1.675Â m (5Â ftÂ 5+3â4Â in),1.675,,,jump,jump
-high_jump,men,mark,Thomas Roper,GBR,1850-04-01,,,1.675Â m (5Â ftÂ 5+3â4Â in),1.675,,,jump,jump
-high_jump,men,mark,Francis Temple,GBR,1850-09-21,,,1.675Â m (5Â ftÂ 5+3â4Â in),1.675,,,jump,jump
-high_jump,men,mark,Hanmer Webb,GBR,1857-03-17,,,1.675Â m (5Â ftÂ 5+3â4Â in),1.675,,,jump,jump
-high_jump,men,mark,Henry Powell,GBR,1860-03-15,,,1.675Â m (5Â ftÂ 5+3â4Â in),1.675,,,jump,jump
-high_jump,men,mark,Robert Burton,GBR,1860-03-27,,,1.70Â m (5Â ftÂ 6+3â4Â in),1.7,,,jump,jump
-high_jump,men,mark,Henry Sampson,GBR,1863-06-13,,,1.675Â m (5Â ftÂ 5+3â4Â in),1.675,,,jump,jump
-high_jump,men,mark,T. Bailey,GBR,1863-06-13,,,1.675Â m (5Â ftÂ 5+3â4Â in),1.675,,,jump,jump
-high_jump,men,mark,Francis Gooch,GBR,1863-09-02,,,1.675Â m (5Â ftÂ 5+3â4Â in),1.675,,,jump,jump
-high_jump,men,mark,Tom Mitchell,GBR,1864-07-09,,,1.70Â m (5Â ftÂ 6+3â4Â in),1.7,,,jump,jump
-high_jump,men,mark,John Roupell,GBR,1866-03-05,,,1.725Â m (5Â ftÂ 7+3â4Â in),1.725,,,jump,jump
-high_jump,men,mark,John Roupell,GBR,1866-03-23,,,1.75Â m (5Â ftÂ 8+3â4Â in),1.75,,,jump,jump
-high_jump,men,mark,Thomas Little,GBR,1866-03-23,,,1.75Â m (5Â ftÂ 8+3â4Â in),1.75,,,jump,jump
-high_jump,men,mark,J.A. Harwood,GBR,1866-11-26,,,1.75Â m (5Â ftÂ 8+3â4Â in),1.75,,,jump,jump
-high_jump,men,mark,Herbert Brooks,GBR,1866-11-26,,,1.75Â m (5Â ftÂ 8+3â4Â in),1.75,,,jump,jump
-high_jump,men,mark,Thomas Little,GBR,1867-04-12,,,1.75Â m (5Â ftÂ 8+3â4Â in),1.75,,,jump,jump
-high_jump,men,mark,Ronald Mitchell,GBR,1870-04-09,,,1.75Â m (5Â ftÂ 8+3â4Â in),1.75,,,jump,jump
-high_jump,men,mark,Ronald Mitchell,GBR,1871-04-03,,,1.755Â m (5Â ft 9Â in),1.755,,,jump,jump
-high_jump,men,mark,Tom Davin,IRE,1873-07-07,,,1.785Â m (5Â ftÂ 10+1â4Â in),1.785,,,jump,jump
-high_jump,men,mark,Marshall Brooks,GBR,1874-03-30,,,1.80Â m (5Â ftÂ 10+3â4Â in),1.8,,,jump,jump
-high_jump,men,mark,Michael Glazebrook,GBR,1875-03-22,,,1.80Â m (5Â ftÂ 10+3â4Â in),1.8,,,jump,jump
-high_jump,men,mark,Marshall Brooks,GBR,1876-03-17,,,1.83Â m (6Â ft 0Â in),1.83,,,jump,jump
-high_jump,men,mark,Marshall Brooks,GBR,1876-04-07,,,1.89Â m (6Â ftÂ 2+1â4Â in),1.89,,,jump,jump
-high_jump,men,mark,Patrick Davin,IRE,1880-07-05,,,1.90Â m (6Â ftÂ 2+3â4Â in),1.9,,,jump,jump
-high_jump,men,mark,William Page,USA,1887-08-15,,,1.91Â m (6Â ft 3Â in),1.91,,,jump,jump
-high_jump,men,mark,William Page,USA,1887-10-07,,,1.93Â m (6Â ftÂ 3+3â4Â in),1.93,,,jump,jump
-high_jump,men,mark,George Rowdon,GBR,1890-08-06,,,1.968Â m (6Â ftÂ 5+1â4Â in)[a],1.968,,,jump,jump
-high_jump,men,mark,Michael Sweeney,USA,1892-10-08,,,1.935Â m (6Â ft 4Â in),1.935,,,jump,jump
-high_jump,men,mark,James Ryan,IRE,1895-08-19,,,1.945Â m (6Â ftÂ 4+1â2Â in),1.945,,,jump,jump
-high_jump,men,mark,Michael Sweeney,USA,1895-08-28,,,1.955Â m (6Â ftÂ 4+3â4Â in),1.955,,,jump,jump
-high_jump,men,mark,Michael Sweeney,USA,1895-09-02,,,1.955Â m (6Â ftÂ 4+3â4Â in),1.955,,,jump,jump
-high_jump,men,mark,Michael Sweeney,USA,1895-09-21,,,1.97Â m (6Â ftÂ 5+1â2Â in),1.97,,,jump,jump
-high_jump,men,mark,George Horine,USA,1912-03-29,,,1.98Â m (6Â ftÂ 5+3â4Â in),1.98,,,jump,jump
-high_jump,men,mark,George Horine,USA,1912-05-18,,,2.00Â m (6Â ftÂ 6+1â2Â in),2.0,,,jump,jump
-high_jump,men,mark,Edward Beeson,USA,1914-05-02,,,2.01Â m (6Â ft 7Â in),2.01,,,jump,jump
-high_jump,men,mark,Harold Osborn,USA,1924-05-27,,,2.03Â m (6Â ftÂ 7+3â4Â in),2.03,,,jump,jump
-high_jump,men,mark,Walter Marty,USA,1933-05-13,,,2.04Â m (6Â ftÂ 8+1â4Â in),2.04,,,jump,jump
-high_jump,men,mark,Walter Marty,USA,1934-04-28,,,2.06Â m (6Â ft 9Â in),2.06,,,jump,jump
-high_jump,men,mark,Cornelius Johnson,USA,1936-07-12,,,2.07Â m (6Â ftÂ 9+1â4Â in),2.07,,,jump,jump
-high_jump,men,mark,Dave Albritton,USA,1936-07-12,,,2.07Â m (6Â ftÂ 9+1â4Â in),2.07,,,jump,jump
-high_jump,men,mark,Mel Walker,USA,1937-08-12,,,2.09Â m (6Â ftÂ 10+1â4Â in),2.09,,,jump,jump
-high_jump,men,mark,Lester Steers,USA,1941-06-17,,,2.11Â m (6Â ft 11Â in),2.11,,,jump,jump
-high_jump,men,mark,Walt Davis,USA,1953-06-27,,,2.12Â m (6Â ftÂ 11+1â4Â in),2.12,,,jump,jump
-high_jump,men,mark,Charles Dumas,USA,1956-06-29,,,2.15Â m (7Â ftÂ 1â2Â in),2.15,,,jump,jump
-high_jump,men,mark,Yuriy Stepanov,URS,1957-07-13,,,2.16Â m (7Â ft 1Â in),2.16,,,jump,jump
-high_jump,men,mark,John Thomas,USA,1960-04-30,,,2.17Â m (7Â ftÂ 1+1â4Â in),2.17,,,jump,jump
-high_jump,men,mark,John Thomas,USA,1960-05-21,,,2.17Â m (7Â ftÂ 1+1â4Â in),2.17,,,jump,jump
-high_jump,men,mark,John Thomas,USA,1960-06-24,,,2.18Â m (7Â ftÂ 1+3â4Â in),2.18,,,jump,jump
-high_jump,men,mark,John Thomas,USA,1960-07-01,,,2.22Â m (7Â ftÂ 3+1â4Â in),2.22,,,jump,jump
-high_jump,men,mark,Valeriy Brumel,URS,1961-06-18,,,2.23Â m (7Â ftÂ 3+3â4Â in),2.23,,,jump,jump
-high_jump,men,mark,Valeriy Brumel,URS,1961-07-16,,,2.24Â m (7Â ft 4Â in),2.24,,,jump,jump
-high_jump,men,mark,Valeriy Brumel,URS,1961-08-31,,,2.25Â m (7Â ftÂ 4+1â2Â in),2.25,,,jump,jump
-high_jump,men,mark,Valeriy Brumel,URS,1962-07-22,,,2.26Â m (7Â ftÂ 4+3â4Â in),2.26,,,jump,jump
-high_jump,men,mark,Valeriy Brumel,URS,1962-09-29,,,2.27Â m (7Â ftÂ 5+1â4Â in),2.27,,,jump,jump
-high_jump,men,mark,Valeriy Brumel,URS,1963-07-21,,,2.28Â m (7Â ftÂ 5+3â4Â in),2.28,,,jump,jump
-high_jump,men,mark,Pat Matzdorf,USA,1971-07-03,,,2.29Â m (7Â ft 6Â in),2.29,,,jump,jump
-high_jump,men,mark,Dwight Stones,USA,1973-07-11,,,2.30Â m (7Â ftÂ 6+1â2Â in),2.3,,,jump,jump
-high_jump,men,mark,Dwight Stones,USA,1976-06-05,,,2.31Â m (7Â ftÂ 6+3â4Â in),2.31,,,jump,jump
-high_jump,men,mark,Dwight Stones,USA,1976-08-04,,,2.32Â m (7Â ftÂ 7+1â4Â in),2.32,,,jump,jump
-high_jump,men,mark,Vladimir Yashchenko,URS,1977-06-02,,,2.33Â m (7Â ftÂ 7+1â2Â in),2.33,,,jump,jump
-high_jump,men,mark,Vladimir Yashchenko,URS,1978-06-16,,,2.34Â m (7Â ft 8Â in),2.34,,,jump,jump
-high_jump,men,mark,Jacek Wszoła,POL,1980-05-25,,,2.35Â m (7Â ftÂ 8+1â2Â in),2.35,,,jump,jump
-high_jump,men,mark,Dietmar Mögenburg,FRG,1980-05-26,,,2.35Â m (7Â ftÂ 8+1â2Â in),2.35,,,jump,jump
-high_jump,men,mark,Gerd Wessig,GDR,1980-08-01,,,2.36Â m (7Â ftÂ 8+3â4Â in),2.36,,,jump,jump
-high_jump,men,mark,Zhu Jianhua,CHN,1983-06-11,,,2.37Â m (7Â ftÂ 9+1â4Â in),2.37,,,jump,jump
-high_jump,men,mark,Zhu Jianhua,CHN,1983-09-22,,,2.38Â m (7Â ftÂ 9+1â2Â in),2.38,,,jump,jump
-high_jump,men,mark,Zhu Jianhua,CHN,1984-06-10,,,2.39Â m (7Â ft 10Â in),2.39,,,jump,jump
-high_jump,men,mark,Rudolf Povarnitsyn,URS,1985-08-11,,,2.40Â m (7Â ftÂ 10+1â4Â in),2.4,,,jump,jump
-high_jump,men,mark,Igor Paklin,URS,1985-09-04,,,2.41Â m (7Â ftÂ 10+3â4Â in),2.41,,,jump,jump
-high_jump,men,mark,Patrik Sjöberg,SWE,1987-06-30,,,2.42Â m (7Â ftÂ 11+1â4Â in),2.42,,,jump,jump
-high_jump,men,mark,Javier Sotomayor,CUB,1988-09-08,,,2.43Â m (7Â ftÂ 11+1â2Â in),2.43,,,jump,jump
-high_jump,men,mark,Javier Sotomayor,CUB,1989-07-29,,,2.44Â m (8Â ft 0Â in),2.44,,,jump,jump
-high_jump,men,mark,Javier Sotomayor,CUB,1993-07-27,,,2.45Â m (8Â ftÂ 1â4Â in),2.45,,,jump,jump
-high_jump,women,mark,Nancy Voorhees,USA,1922-05-20,,,1.46Â m (4Â ftÂ 9+1â4Â in),1.46,,,jump,jump
-high_jump,women,mark,Elizabeth Stine,USA,1923-05-26,,,1.485Â m (4Â ftÂ 10+1â4Â in),1.485,,,jump,jump
-high_jump,women,mark,Sophie Eliott-Lynn,GBR,1923-08-06,,,1.485Â m (4Â ftÂ 10+1â4Â in),1.485,,,jump,jump
-high_jump,women,mark,Phyllis Green,GBR,1925-07-11,,,1.524Â m (5Â ft 0Â in),1.524,,,jump,jump
-high_jump,women,mark,Phyllis Green,GBR,1926-08-02,,,1.552Â m (5Â ft 1Â in),1.552,,,jump,jump
-high_jump,women,mark,Ethel Catherwood,CAN,1926-09-06,,,1.58Â m (5Â ft 2Â in),1.58,,,jump,jump
-high_jump,women,mark,Lien Gisolf,NED,1928-07-03,,,1.58Â m (5Â ft 2Â in),1.58,,,jump,jump
-high_jump,women,mark,Ethel Catherwood,CAN,1928-08-05,,,1.595Â m (5Â ftÂ 2+3â4Â in),1.595,,,jump,jump
-high_jump,women,mark,Lien Gisolf,NED,1929-08-18,,,1.605Â m (5Â ft 3Â in),1.605,,,jump,jump
-high_jump,women,mark,Lien Gisolf,NED,1932-06-12,,,1.62Â m (5Â ftÂ 3+3â4Â in),1.62,,,jump,jump
-high_jump,women,mark,Jean Shiley,USA,1932-08-07,,,1.65Â m (5Â ftÂ 4+3â4Â in),1.65,,,jump,jump
-high_jump,women,mark,Mildred Didrikson,USA,1932-08-07,,,1.65Â m (5Â ftÂ 4+3â4Â in),1.65,,,jump,jump
-high_jump,women,mark,Dorothy Odam,GBR,1939-05-29,,,1.66Â m (5Â ftÂ 5+1â4Â in),1.66,,,jump,jump
-high_jump,women,mark,Esther van Heerden,South Africa,1941-03-29,,,1.66Â m (5Â ftÂ 5+1â4Â in),1.66,,,jump,jump
-high_jump,women,mark,Ilsebill Pfenning,SUI,1941-07-27,,,1.66Â m (5Â ftÂ 5+1â4Â in),1.66,,,jump,jump
-high_jump,women,mark,Fanny Blankers-Koen,NED,1943-05-30,,,1.71Â m (5Â ftÂ 7+1â4Â in),1.71,,,jump,jump
-high_jump,women,mark,Sheila Lerwill,GBR,1951-07-07,,,1.72Â m (5Â ftÂ 7+1â2Â in),1.72,,,jump,jump
-high_jump,women,mark,Aleksandra Chudina,URS,1954-05-22,,,1.73Â m (5Â ft 8Â in),1.73,,,jump,jump
-high_jump,women,mark,Thelma Hopkins,GBR,1956-05-05,,,1.74Â m (5Â ftÂ 8+1â2Â in),1.74,,,jump,jump
-high_jump,women,mark,Iolanda Balaș,ROM,1956-07-14,,,1.75Â m (5Â ftÂ 8+3â4Â in),1.75,,,jump,jump
-high_jump,women,mark,Mildred McDaniel,USA,1956-12-01,,,1.76Â m (5Â ftÂ 9+1â4Â in),1.76,,,jump,jump
-high_jump,women,mark,Iolanda Balaş,ROM,1957-10-13,,,1.76Â m (5Â ftÂ 9+1â4Â in),1.76,,,jump,jump
-high_jump,women,mark,Zheng Fengrong,CHN,1957-11-17,,,1.77Â m (5Â ftÂ 9+1â2Â in),1.77,,,jump,jump
-high_jump,women,mark,Iolanda Balaş,ROM,1958-06-07,,,1.78Â m (5Â ft 10Â in),1.78,,,jump,jump
-high_jump,women,mark,Iolanda Balaş,ROM,1958-06-22,,,1.80Â m (5Â ftÂ 10+3â4Â in),1.8,,,jump,jump
-high_jump,women,mark,Iolanda Balaş,ROM,1958-07-31,,,1.81Â m (5Â ftÂ 11+1â4Â in),1.81,,,jump,jump
-high_jump,women,mark,Iolanda Balaş,ROM,1958-10-04,,,1.82Â m (5Â ftÂ 11+1â2Â in),1.82,,,jump,jump
-high_jump,women,mark,Iolanda Balaş,ROM,1958-10-18,,,1.83Â m (6Â ft 0Â in),1.83,,,jump,jump
-high_jump,women,mark,Iolanda Balaş,ROM,1959-09-21,,,1.84Â m (6Â ftÂ 1â4Â in),1.84,,,jump,jump
-high_jump,women,mark,Iolanda Balaş,ROM,1960-06-06,,,1.85Â m (6Â ftÂ 3â4Â in),1.85,,,jump,jump
-high_jump,women,mark,Iolanda Balaş,ROM,1960-07-10,,,1.86Â m (6Â ft 1Â in),1.86,,,jump,jump
-high_jump,women,mark,Iolanda Balaş,ROM,1961-04-15,,,1.87Â m (6Â ftÂ 1+1â2Â in),1.87,,,jump,jump
-high_jump,women,mark,Iolanda Balaş,ROM,1961-06-18,,,1.88Â m (6Â ft 2Â in),1.88,,,jump,jump
-high_jump,women,mark,Iolanda Balaş,ROM,1961-07-08,,,1.90Â m (6Â ftÂ 2+3â4Â in),1.9,,,jump,jump
-high_jump,women,mark,Iolanda Balaş,ROM,1961-07-16,,,1.91Â m (6Â ft 3Â in),1.91,,,jump,jump
-high_jump,women,mark,Ilona Gusenbauer,AUT,1971-09-04,,,1.92Â m (6Â ftÂ 3+1â2Â in),1.92,,,jump,jump
-high_jump,women,mark,Ulrike Meyfarth,FRG,1972-09-04,,,1.92Â m (6Â ftÂ 3+1â2Â in),1.92,,,jump,jump
-high_jump,women,mark,Yordanka Blagoeva,BUL,1972-09-24,,,1.94Â m (6Â ftÂ 4+1â4Â in),1.94,,,jump,jump
-high_jump,women,mark,Rosemarie Witschas,GDR,1974-08-24,,,1.94Â m (6Â ftÂ 4+1â4Â in),1.94,,,jump,jump
-high_jump,women,mark,Rosemarie Ackermann,GDR,1974-09-08,,,1.95Â m (6Â ftÂ 4+3â4Â in),1.95,,,jump,jump
-high_jump,women,mark,Rosemarie Ackermann,GDR,1976-05-08,,,1.96Â m (6Â ft 5Â in),1.96,,,jump,jump
-high_jump,women,mark,Rosemarie Ackermann,GDR,1977-07-03,,,1.96Â m (6Â ft 5Â in),1.96,,,jump,jump
-high_jump,women,mark,Rosemarie Ackermann,GDR,1977-08-14,,,1.97Â m (6Â ftÂ 5+1â2Â in),1.97,,,jump,jump
-high_jump,women,mark,Rosemarie Ackermann,GDR,1977-08-26,,,1.97Â m (6Â ftÂ 5+1â2Â in),1.97,,,jump,jump
-high_jump,women,mark,Rosemarie Ackermann,GDR,1977-08-26,,,2.00Â m (6Â ftÂ 6+1â2Â in),2.0,,,jump,jump
-high_jump,women,mark,Sara Simeoni,ITA,1978-08-04,,,2.01Â m (6Â ft 7Â in),2.01,,,jump,jump
-high_jump,women,mark,Sara Simeoni,ITA,1978-08-31,,,2.01Â m (6Â ft 7Â in),2.01,,,jump,jump
-high_jump,women,mark,Ulrike Meyfarth,FRG,1982-09-08,,,2.02Â m (6Â ftÂ 7+1â2Â in),2.02,,,jump,jump
-high_jump,women,mark,Ulrike Meyfarth,FRG,1983-08-21,,,2.03Â m (6Â ftÂ 7+3â4Â in),2.03,,,jump,jump
-high_jump,women,mark,Tamara Bykova,URS,1983-08-21,,,2.03Â m (6Â ftÂ 7+3â4Â in),2.03,,,jump,jump
-high_jump,women,mark,Tamara Bykova,URS,1983-08-25,,,2.04Â m (6Â ftÂ 8+1â4Â in),2.04,,,jump,jump
-high_jump,women,mark,Tamara Bykova,URS,1984-06-22,,,2.05Â m (6Â ftÂ 8+1â2Â in),2.05,,,jump,jump
-high_jump,women,mark,Lyudmila Andonova,BUL,1984-07-20,,,2.07Â m (6Â ftÂ 9+1â4Â in),2.07,,,jump,jump
-high_jump,women,mark,Stefka Kostadinova,BUL,1986-05-25,,,2.07Â m (6Â ftÂ 9+1â4Â in),2.07,,,jump,jump
-high_jump,women,mark,Stefka Kostadinova,BUL,1986-05-31,,,2.08Â m (6Â ftÂ 9+3â4Â in),2.08,,,jump,jump
-high_jump,women,mark,Stefka Kostadinova,BUL,1987-08-30,,,2.09Â m (6Â ftÂ 10+1â4Â in),2.09,,,jump,jump
-high_jump,women,mark,Yaroslava Mahuchikh,UKR,2024-07-07,,,2.10Â m (6Â ftÂ 10+1â2Â in),2.1,,,jump,jump
-long_jump,men,mark,Peter O'Connor,IRE,1901-08-05,,,Â Â 7.61Â m (24Â ftÂ 11+1â2Â in),7.61,,,jump,jump
-long_jump,men,mark,Edward Gourdin,USA,1921-07-23,,,Â Â 7.69Â m (25Â ftÂ 2+3â4Â in),7.69,,,jump,jump
-long_jump,men,mark,Robert LeGendre,USA,1924-07-07,,,Â Â 7.76Â m (25Â ftÂ 5+1â2Â in),7.76,,,jump,jump
-long_jump,men,mark,DeHart Hubbard,USA,1925-06-13,,,Â Â 7.89Â m (25Â ftÂ 10+1â2Â in),7.89,,,jump,jump
-long_jump,men,mark,Edward Hamm,USA,1928-07-07,,,Â Â 7.90Â m (25Â ft 11Â in),7.9,,,jump,jump
-long_jump,men,mark,Sylvio Cator,HAI,1928-09-09,,,Â Â 7.93Â m (26Â ft 0Â in),7.93,0.0,,jump,jump
-long_jump,men,mark,Chuhei Nambu,JPN,1931-10-27,,,Â Â 7.98Â m (26Â ft 2Â in),7.98,0.5,,jump,jump
-long_jump,men,mark,Jesse Owens,USA,1935-05-25,,,Â Â 8.13Â m (26Â ft 8Â in),8.13,1.5,,jump,jump
-long_jump,men,mark,Ralph Boston,USA,1960-08-12,,,Â Â 8.21Â m (26Â ft 11Â in),8.21,0.0,,jump,jump
-long_jump,men,mark,Ralph Boston,USA,1961-05-27,,,Â Â 8.24Â m (27Â ftÂ 1â4Â in),8.24,1.8,,jump,jump
-long_jump,men,mark,Ralph Boston,USA,1961-07-16,,,Â Â 8.28Â m (27Â ftÂ 1+3â4Â in),8.28,1.2,,jump,jump
-long_jump,men,mark,Igor Ter-Ovanesyan,URS,1962-06-10,,,Â Â 8.31Â m (27Â ft 3Â in)Â A,8.31,,,jump,jump
-long_jump,men,mark,Phil Shinnick,USA,1963-05-25,,,Â Â 8.33Â m (27Â ftÂ 3+3â4Â in)[3],8.33,,,jump,jump
-long_jump,men,mark,Ralph Boston,USA,1964-08-15,,,Â Â 8.31Â m (27Â ft 3Â in),8.31,0.0,,jump,jump
-long_jump,men,mark,Ralph Boston,USA,1964-09-12,,,Â Â 8.34Â m (27Â ftÂ 4+1â4Â in),8.34,1.0,,jump,jump
-long_jump,men,mark,Ralph Boston,USA,1965-05-29,,,8.35Â m (27Â ftÂ 4+1â2Â in)[6],8.35,0.0,,jump,jump
-long_jump,men,mark,Josef Schwarz,FRG,1970-07-15,,,Â Â 8.35Â m (27Â ftÂ 4+1â2Â in),8.35,0.8,,jump,jump
-long_jump,men,mark,Nenad Stekić,YUG,1975-07-25,,,Â Â 8.45Â m (27Â ftÂ 8+1â2Â in),8.45,2.0,,jump,jump
-long_jump,men,mark,Larry Myricks,USA,1979-08-26,,,Â Â 8.52Â m (27Â ftÂ 11+1â4Â in),8.52,0.0,,jump,jump
-long_jump,men,mark,Lutz Dombrowski,GDR,1980-07-28,,,Â Â 8.54Â m (28Â ft 0Â in),8.54,0.9,,jump,jump
-long_jump,men,mark,Carl Lewis,USA,1981-06-20,,,Â Â 8.62Â m (28Â ftÂ 3+1â4Â in),8.62,0.8,,jump,jump
-long_jump,men,mark,Carl Lewis,USA,1982-07-24,,,Â Â 8.76Â m (28Â ftÂ 8+3â4Â in),8.76,1.0,,jump,jump
-long_jump,men,mark,Carl Lewis,USA,1983-06-19,,,Â Â 8.79Â m (28Â ft 10Â in),8.79,1.9,,jump,jump
-long_jump,men,mark,Mike Powell,USA,1991-08-30,,,Â Â 8.95Â m (29Â ftÂ 4+1â4Â in),8.95,0.3,,jump,jump
-long_jump,women,mark,Marie Mejzlíková II,TCH,1922-08-06,,,Â Â 5.16Â m (16Â ft 11Â in),5.16,,,jump,jump
-long_jump,women,mark,Marie Mejzlíková II,TCH,1923-09-23,,,Â Â 5.30Â m (17Â ftÂ 4+1â2Â in),5.3,,,jump,jump
-long_jump,women,mark,Muriel Gunn,GBR,1926-08-02,,,Â Â 5.485Â m (17Â ftÂ 11+3â4Â in),5.485,,,jump,jump
-long_jump,women,mark,Kinue Hitomi,JPN,1926-08-28,,,Â Â 5.50Â m (18Â ftÂ 1â2Â in),5.5,,,jump,jump
-long_jump,women,mark,Muriel Gunn,GBR,1927-08-01,,,Â Â 5.575Â m (18Â ftÂ 3+1â4Â in),5.575,,,jump,jump
-long_jump,women,mark,Kinue Hitomi,JPN,1928-05-20,,,Â Â 5.98Â m (19Â ftÂ 7+1â4Â in),5.98,,,jump,jump
-long_jump,women,mark,Christel Schulz,GER,1939-07-30,,,Â Â 6.12Â m (20Â ftÂ 3â4Â in),6.12,,,jump,jump
-long_jump,women,mark,Fanny Blankers-Koen,NED,1943-09-19,,,Â Â 6.25Â m (20Â ft 6Â in),6.25,,,jump,jump
-long_jump,women,mark,Yvette Williams,NZL,1954-02-20,,,Â Â 6.28Â m (20Â ft 7Â in),6.28,0.2,,jump,jump
-long_jump,women,mark,Galina Vinogradova,URS,1955-09-11,,,Â Â 6.28Â m (20Â ft 7Â in),6.28,1.3,,jump,jump
-long_jump,women,mark,Galina Vinogradova,URS,1955-11-18,,,Â Â 6.31Â m (20Â ftÂ 8+1â4Â in),6.31,0.5,,jump,jump
-long_jump,women,mark,Elżbieta Krzesińska,POL,1956-08-20,,,Â Â 6.35Â m (20Â ft 10Â in),6.35,1.0,,jump,jump
-long_jump,women,mark,Elżbieta Krzesińska,POL,1956-11-27,,,Â Â 6.35Â m (20Â ft 10Â in),6.35,,,jump,jump
-long_jump,women,mark,Hildrun Claus,GDR,1960-08-07,,,Â Â 6.40Â m (20Â ftÂ 11+3â4Â in),6.4,0.0,,jump,jump
-long_jump,women,mark,Hildrun Claus,GDR,1961-06-23,,,Â Â 6.42Â m (21Â ftÂ 3â4Â in),6.42,1.4,,jump,jump
-long_jump,women,mark,Tatyana Shchelkanova,URS,1961-07-16,,,Â Â 6.48Â m (21Â ft 3Â in),6.48,,,jump,jump
-long_jump,women,mark,Tatyana Shchelkanova,URS,1962-06-10,,,Â Â 6.53Â m (21Â ft 5Â in),6.53,1.5,,jump,jump
-long_jump,women,mark,Tatyana Shchelkanova,URS,1964-07-04,,,Â Â 6.70Â m (21Â ftÂ 11+3â4Â in),6.7,,,jump,jump
-long_jump,women,mark,Mary Rand,GBR,1964-10-14,,,Â Â 6.76Â m (22Â ft 2Â in),6.76,,,jump,jump
-long_jump,women,mark,Viorica Viscopoleanu,ROU,1968-10-14,,,Â Â 6.82Â m (22Â ftÂ 4+1â2Â in)Â A,6.82,0.0,,jump,jump
-long_jump,women,mark,Heide Rosendahl,FRG,1970-09-03,,,Â Â 6.84Â m (22Â ftÂ 5+1â4Â in),6.84,0.0,,jump,jump
-long_jump,women,mark,Angela Voigt,GDR,1976-05-09,,,Â Â 6.92Â m (22Â ftÂ 8+1â4Â in),6.92,1.6,,jump,jump
-long_jump,women,mark,Siegrun Siegl,GDR,1976-05-19,,,Â Â 6.99Â m (22Â ft 11Â in),6.99,2.0,,jump,jump
-long_jump,women,mark,Vilma Bardauskiené,URS,1978-08-18,,,Â Â 7.07Â m (23Â ftÂ 2+1â4Â in),7.07,1.9,,jump,jump
-long_jump,women,mark,Vilma Bardauskiené,URS,1978-08-29,,,Â Â 7.09Â m (23Â ft 3Â in),7.09,0.0,,jump,jump
-long_jump,women,mark,Valy Ionescu,ROU,1982-08-01,,,Â Â 7.20Â m (23Â ftÂ 7+1â4Â in),7.2,,,jump,jump
-long_jump,women,mark,Anişoara Cuşmir,ROU,1982-08-01,,,Â Â 7.15Â m (23Â ftÂ 5+1â4Â in),7.15,0.3,,jump,jump
-long_jump,women,mark,Anişoara Cuşmir,ROU,1983-05-15,,,Â Â 7.21Â m (23Â ftÂ 7+3â4Â in),7.21,0.6,,jump,jump
-long_jump,women,mark,Anişoara Cuşmir,ROU,1983-06-04,,,Â Â 7.27Â m (23Â ft 10Â in),7.27,0.6,,jump,jump
-long_jump,women,mark,Anişoara Cuşmir,ROU,1983-06-04,,,Â Â 7.43Â m (24Â ftÂ 4+1â2Â in),7.43,1.4,,jump,jump
-long_jump,women,mark,Heike Drechsler,GDR,1985-09-22,,,Â Â 7.44Â m (24Â ftÂ 4+3â4Â in),7.44,2.0,,jump,jump
-long_jump,women,mark,Heike Drechsler,GDR,1986-06-21,,,Â Â 7.45Â m (24Â ftÂ 5+1â4Â in),7.45,0.9,,jump,jump
-long_jump,women,mark,Heike Drechsler,GDR,1986-07-03,,,Â Â 7.45Â m (24Â ftÂ 5+1â4Â in),7.45,1.1,,jump,jump
-long_jump,women,mark,Jackie Joyner-Kersee,USA,1987-08-13,,,Â Â 7.45Â m (24Â ftÂ 5+1â4Â in),7.45,0.6,,jump,jump
-long_jump,women,mark,Galina Chistyakova,URS,1988-06-11,,,Â Â 7.45Â m (24Â ftÂ 5+1â4Â in),7.45,1.0,,jump,jump
-long_jump,women,mark,Galina Chistyakova,URS,1988-06-11,,,Â Â 7.52Â m (24Â ft 8Â in),7.52,1.4,,jump,jump
+high_jump,men,mark,Adam Wilson,GBR,1827-09-26,,,1.575 m (5 ft 2 in),1.575,,,jump,jump
+high_jump,men,mark,Thomas Anderson,GBR,1829-07-24,,,1.60 m (5 ft 2+3/4 in),1.6,,,jump,jump
+high_jump,men,mark,John Pattison,GBR,1837-05-06,,,1.60 m (5 ft 2+3/4 in),1.6,,,jump,jump
+high_jump,men,mark,Richard Armstrong,GBR,1839-08-05,,,1.675 m (5 ft 5+3/4 in),1.675,,,jump,jump
+high_jump,men,mark,Thomas Roper,GBR,1850-04-01,,,1.675 m (5 ft 5+3/4 in),1.675,,,jump,jump
+high_jump,men,mark,Francis Temple,GBR,1850-09-21,,,1.675 m (5 ft 5+3/4 in),1.675,,,jump,jump
+high_jump,men,mark,Hanmer Webb,GBR,1857-03-17,,,1.675 m (5 ft 5+3/4 in),1.675,,,jump,jump
+high_jump,men,mark,Henry Powell,GBR,1860-03-15,,,1.675 m (5 ft 5+3/4 in),1.675,,,jump,jump
+high_jump,men,mark,Robert Burton,GBR,1860-03-27,,,1.70 m (5 ft 6+3/4 in),1.7,,,jump,jump
+high_jump,men,mark,Henry Sampson,GBR,1863-06-13,,,1.675 m (5 ft 5+3/4 in),1.675,,,jump,jump
+high_jump,men,mark,T. Bailey,GBR,1863-06-13,,,1.675 m (5 ft 5+3/4 in),1.675,,,jump,jump
+high_jump,men,mark,Francis Gooch,GBR,1863-09-02,,,1.675 m (5 ft 5+3/4 in),1.675,,,jump,jump
+high_jump,men,mark,Tom Mitchell,GBR,1864-07-09,,,1.70 m (5 ft 6+3/4 in),1.7,,,jump,jump
+high_jump,men,mark,John Roupell,GBR,1866-03-05,,,1.725 m (5 ft 7+3/4 in),1.725,,,jump,jump
+high_jump,men,mark,John Roupell,GBR,1866-03-23,,,1.75 m (5 ft 8+3/4 in),1.75,,,jump,jump
+high_jump,men,mark,Thomas Little,GBR,1866-03-23,,,1.75 m (5 ft 8+3/4 in),1.75,,,jump,jump
+high_jump,men,mark,J.A. Harwood,GBR,1866-11-26,,,1.75 m (5 ft 8+3/4 in),1.75,,,jump,jump
+high_jump,men,mark,Herbert Brooks,GBR,1866-11-26,,,1.75 m (5 ft 8+3/4 in),1.75,,,jump,jump
+high_jump,men,mark,Thomas Little,GBR,1867-04-12,,,1.75 m (5 ft 8+3/4 in),1.75,,,jump,jump
+high_jump,men,mark,Ronald Mitchell,GBR,1870-04-09,,,1.75 m (5 ft 8+3/4 in),1.75,,,jump,jump
+high_jump,men,mark,Ronald Mitchell,GBR,1871-04-03,,,1.755 m (5 ft 9 in),1.755,,,jump,jump
+high_jump,men,mark,Tom Davin,IRE,1873-07-07,,,1.785 m (5 ft 10+1/4 in),1.785,,,jump,jump
+high_jump,men,mark,Marshall Brooks,GBR,1874-03-30,,,1.80 m (5 ft 10+3/4 in),1.8,,,jump,jump
+high_jump,men,mark,Michael Glazebrook,GBR,1875-03-22,,,1.80 m (5 ft 10+3/4 in),1.8,,,jump,jump
+high_jump,men,mark,Marshall Brooks,GBR,1876-03-17,,,1.83 m (6 ft 0 in),1.83,,,jump,jump
+high_jump,men,mark,Marshall Brooks,GBR,1876-04-07,,,1.89 m (6 ft 2+1/4 in),1.89,,,jump,jump
+high_jump,men,mark,Patrick Davin,IRE,1880-07-05,,,1.90 m (6 ft 2+3/4 in),1.9,,,jump,jump
+high_jump,men,mark,William Page,USA,1887-08-15,,,1.91 m (6 ft 3 in),1.91,,,jump,jump
+high_jump,men,mark,William Page,USA,1887-10-07,,,1.93 m (6 ft 3+3/4 in),1.93,,,jump,jump
+high_jump,men,mark,George Rowdon,GBR,1890-08-06,,,1.968 m (6 ft 5+1/4 in),1.968,,,jump,jump
+high_jump,men,mark,Michael Sweeney,USA,1892-10-08,,,1.935 m (6 ft 4 in),1.935,,,jump,jump
+high_jump,men,mark,James Ryan,IRE,1895-08-19,,,1.945 m (6 ft 4+1/2 in),1.945,,,jump,jump
+high_jump,men,mark,Michael Sweeney,USA,1895-08-28,,,1.955 m (6 ft 4+3/4 in),1.955,,,jump,jump
+high_jump,men,mark,Michael Sweeney,USA,1895-09-02,,,1.955 m (6 ft 4+3/4 in),1.955,,,jump,jump
+high_jump,men,mark,Michael Sweeney,USA,1895-09-21,,,1.97 m (6 ft 5+1/2 in),1.97,,,jump,jump
+high_jump,men,mark,George Horine,USA,1912-03-29,,,1.98 m (6 ft 5+3/4 in),1.98,,,jump,jump
+high_jump,men,mark,George Horine,USA,1912-05-18,,,2.00 m (6 ft 6+1/2 in),2.0,,,jump,jump
+high_jump,men,mark,Edward Beeson,USA,1914-05-02,,,2.01 m (6 ft 7 in),2.01,,,jump,jump
+high_jump,men,mark,Harold Osborn,USA,1924-05-27,,,2.03 m (6 ft 7+3/4 in),2.03,,,jump,jump
+high_jump,men,mark,Walter Marty,USA,1933-05-13,,,2.04 m (6 ft 8+1/4 in),2.04,,,jump,jump
+high_jump,men,mark,Walter Marty,USA,1934-04-28,,,2.06 m (6 ft 9 in),2.06,,,jump,jump
+high_jump,men,mark,Cornelius Johnson,USA,1936-07-12,,,2.07 m (6 ft 9+1/4 in),2.07,,,jump,jump
+high_jump,men,mark,Dave Albritton,USA,1936-07-12,,,2.07 m (6 ft 9+1/4 in),2.07,,,jump,jump
+high_jump,men,mark,Mel Walker,USA,1937-08-12,,,2.09 m (6 ft 10+1/4 in),2.09,,,jump,jump
+high_jump,men,mark,Lester Steers,USA,1941-06-17,,,2.11 m (6 ft 11 in),2.11,,,jump,jump
+high_jump,men,mark,Walt Davis,USA,1953-06-27,,,2.12 m (6 ft 11+1/4 in),2.12,,,jump,jump
+high_jump,men,mark,Charles Dumas,USA,1956-06-29,,,2.15 m (7 ft 1/2 in),2.15,,,jump,jump
+high_jump,men,mark,Yuriy Stepanov,URS,1957-07-13,,,2.16 m (7 ft 1 in),2.16,,,jump,jump
+high_jump,men,mark,John Thomas,USA,1960-04-30,,,2.17 m (7 ft 1+1/4 in),2.17,,,jump,jump
+high_jump,men,mark,John Thomas,USA,1960-05-21,,,2.17 m (7 ft 1+1/4 in),2.17,,,jump,jump
+high_jump,men,mark,John Thomas,USA,1960-06-24,,,2.18 m (7 ft 1+3/4 in),2.18,,,jump,jump
+high_jump,men,mark,John Thomas,USA,1960-07-01,,,2.22 m (7 ft 3+1/4 in),2.22,,,jump,jump
+high_jump,men,mark,Valeriy Brumel,URS,1961-06-18,,,2.23 m (7 ft 3+3/4 in),2.23,,,jump,jump
+high_jump,men,mark,Valeriy Brumel,URS,1961-07-16,,,2.24 m (7 ft 4 in),2.24,,,jump,jump
+high_jump,men,mark,Valeriy Brumel,URS,1961-08-31,,,2.25 m (7 ft 4+1/2 in),2.25,,,jump,jump
+high_jump,men,mark,Valeriy Brumel,URS,1962-07-22,,,2.26 m (7 ft 4+3/4 in),2.26,,,jump,jump
+high_jump,men,mark,Valeriy Brumel,URS,1962-09-29,,,2.27 m (7 ft 5+1/4 in),2.27,,,jump,jump
+high_jump,men,mark,Valeriy Brumel,URS,1963-07-21,,,2.28 m (7 ft 5+3/4 in),2.28,,,jump,jump
+high_jump,men,mark,Pat Matzdorf,USA,1971-07-03,,,2.29 m (7 ft 6 in),2.29,,,jump,jump
+high_jump,men,mark,Dwight Stones,USA,1973-07-11,,,2.30 m (7 ft 6+1/2 in),2.3,,,jump,jump
+high_jump,men,mark,Dwight Stones,USA,1976-06-05,,,2.31 m (7 ft 6+3/4 in),2.31,,,jump,jump
+high_jump,men,mark,Dwight Stones,USA,1976-08-04,,,2.32 m (7 ft 7+1/4 in),2.32,,,jump,jump
+high_jump,men,mark,Vladimir Yashchenko,URS,1977-06-02,,,2.33 m (7 ft 7+1/2 in),2.33,,,jump,jump
+high_jump,men,mark,Vladimir Yashchenko,URS,1978-06-16,,,2.34 m (7 ft 8 in),2.34,,,jump,jump
+high_jump,men,mark,Jacek Wszoła,POL,1980-05-25,,,2.35 m (7 ft 8+1/2 in),2.35,,,jump,jump
+high_jump,men,mark,Dietmar Mögenburg,FRG,1980-05-26,,,2.35 m (7 ft 8+1/2 in),2.35,,,jump,jump
+high_jump,men,mark,Gerd Wessig,GDR,1980-08-01,,,2.36 m (7 ft 8+3/4 in),2.36,,,jump,jump
+high_jump,men,mark,Zhu Jianhua,CHN,1983-06-11,,,2.37 m (7 ft 9+1/4 in),2.37,,,jump,jump
+high_jump,men,mark,Zhu Jianhua,CHN,1983-09-22,,,2.38 m (7 ft 9+1/2 in),2.38,,,jump,jump
+high_jump,men,mark,Zhu Jianhua,CHN,1984-06-10,,,2.39 m (7 ft 10 in),2.39,,,jump,jump
+high_jump,men,mark,Rudolf Povarnitsyn,URS,1985-08-11,,,2.40 m (7 ft 10+1/4 in),2.4,,,jump,jump
+high_jump,men,mark,Igor Paklin,URS,1985-09-04,,,2.41 m (7 ft 10+3/4 in),2.41,,,jump,jump
+high_jump,men,mark,Patrik Sjöberg,SWE,1987-06-30,,,2.42 m (7 ft 11+1/4 in),2.42,,,jump,jump
+high_jump,men,mark,Javier Sotomayor,CUB,1988-09-08,,,2.43 m (7 ft 11+1/2 in),2.43,,,jump,jump
+high_jump,men,mark,Javier Sotomayor,CUB,1989-07-29,,,2.44 m (8 ft 0 in),2.44,,,jump,jump
+high_jump,men,mark,Javier Sotomayor,CUB,1993-07-27,,,2.45 m (8 ft 1/4 in),2.45,,,jump,jump
+high_jump,women,mark,Nancy Voorhees,USA,1922-05-20,,,1.46 m (4 ft 9+1/4 in),1.46,,,jump,jump
+high_jump,women,mark,Elizabeth Stine,USA,1923-05-26,,,1.485 m (4 ft 10+1/4 in),1.485,,,jump,jump
+high_jump,women,mark,Sophie Eliott-Lynn,GBR,1923-08-06,,,1.485 m (4 ft 10+1/4 in),1.485,,,jump,jump
+high_jump,women,mark,Phyllis Green,GBR,1925-07-11,,,1.524 m (5 ft 0 in),1.524,,,jump,jump
+high_jump,women,mark,Phyllis Green,GBR,1926-08-02,,,1.552 m (5 ft 1 in),1.552,,,jump,jump
+high_jump,women,mark,Ethel Catherwood,CAN,1926-09-06,,,1.58 m (5 ft 2 in),1.58,,,jump,jump
+high_jump,women,mark,Lien Gisolf,NED,1928-07-03,,,1.58 m (5 ft 2 in),1.58,,,jump,jump
+high_jump,women,mark,Ethel Catherwood,CAN,1928-08-05,,,1.595 m (5 ft 2+3/4 in),1.595,,,jump,jump
+high_jump,women,mark,Lien Gisolf,NED,1929-08-18,,,1.605 m (5 ft 3 in),1.605,,,jump,jump
+high_jump,women,mark,Lien Gisolf,NED,1932-06-12,,,1.62 m (5 ft 3+3/4 in),1.62,,,jump,jump
+high_jump,women,mark,Jean Shiley,USA,1932-08-07,,,1.65 m (5 ft 4+3/4 in),1.65,,,jump,jump
+high_jump,women,mark,Mildred Didrikson,USA,1932-08-07,,,1.65 m (5 ft 4+3/4 in),1.65,,,jump,jump
+high_jump,women,mark,Dorothy Odam,GBR,1939-05-29,,,1.66 m (5 ft 5+1/4 in),1.66,,,jump,jump
+high_jump,women,mark,Esther van Heerden,South Africa,1941-03-29,,,1.66 m (5 ft 5+1/4 in),1.66,,,jump,jump
+high_jump,women,mark,Ilsebill Pfenning,SUI,1941-07-27,,,1.66 m (5 ft 5+1/4 in),1.66,,,jump,jump
+high_jump,women,mark,Fanny Blankers-Koen,NED,1943-05-30,,,1.71 m (5 ft 7+1/4 in),1.71,,,jump,jump
+high_jump,women,mark,Sheila Lerwill,GBR,1951-07-07,,,1.72 m (5 ft 7+1/2 in),1.72,,,jump,jump
+high_jump,women,mark,Aleksandra Chudina,URS,1954-05-22,,,1.73 m (5 ft 8 in),1.73,,,jump,jump
+high_jump,women,mark,Thelma Hopkins,GBR,1956-05-05,,,1.74 m (5 ft 8+1/2 in),1.74,,,jump,jump
+high_jump,women,mark,Iolanda Balaș,ROM,1956-07-14,,,1.75 m (5 ft 8+3/4 in),1.75,,,jump,jump
+high_jump,women,mark,Mildred McDaniel,USA,1956-12-01,,,1.76 m (5 ft 9+1/4 in),1.76,,,jump,jump
+high_jump,women,mark,Iolanda Balaş,ROM,1957-10-13,,,1.76 m (5 ft 9+1/4 in),1.76,,,jump,jump
+high_jump,women,mark,Zheng Fengrong,CHN,1957-11-17,,,1.77 m (5 ft 9+1/2 in),1.77,,,jump,jump
+high_jump,women,mark,Iolanda Balaş,ROM,1958-06-07,,,1.78 m (5 ft 10 in),1.78,,,jump,jump
+high_jump,women,mark,Iolanda Balaş,ROM,1958-06-22,,,1.80 m (5 ft 10+3/4 in),1.8,,,jump,jump
+high_jump,women,mark,Iolanda Balaş,ROM,1958-07-31,,,1.81 m (5 ft 11+1/4 in),1.81,,,jump,jump
+high_jump,women,mark,Iolanda Balaş,ROM,1958-10-04,,,1.82 m (5 ft 11+1/2 in),1.82,,,jump,jump
+high_jump,women,mark,Iolanda Balaş,ROM,1958-10-18,,,1.83 m (6 ft 0 in),1.83,,,jump,jump
+high_jump,women,mark,Iolanda Balaş,ROM,1959-09-21,,,1.84 m (6 ft 1/4 in),1.84,,,jump,jump
+high_jump,women,mark,Iolanda Balaş,ROM,1960-06-06,,,1.85 m (6 ft 3/4 in),1.85,,,jump,jump
+high_jump,women,mark,Iolanda Balaş,ROM,1960-07-10,,,1.86 m (6 ft 1 in),1.86,,,jump,jump
+high_jump,women,mark,Iolanda Balaş,ROM,1961-04-15,,,1.87 m (6 ft 1+1/2 in),1.87,,,jump,jump
+high_jump,women,mark,Iolanda Balaş,ROM,1961-06-18,,,1.88 m (6 ft 2 in),1.88,,,jump,jump
+high_jump,women,mark,Iolanda Balaş,ROM,1961-07-08,,,1.90 m (6 ft 2+3/4 in),1.9,,,jump,jump
+high_jump,women,mark,Iolanda Balaş,ROM,1961-07-16,,,1.91 m (6 ft 3 in),1.91,,,jump,jump
+high_jump,women,mark,Ilona Gusenbauer,AUT,1971-09-04,,,1.92 m (6 ft 3+1/2 in),1.92,,,jump,jump
+high_jump,women,mark,Ulrike Meyfarth,FRG,1972-09-04,,,1.92 m (6 ft 3+1/2 in),1.92,,,jump,jump
+high_jump,women,mark,Yordanka Blagoeva,BUL,1972-09-24,,,1.94 m (6 ft 4+1/4 in),1.94,,,jump,jump
+high_jump,women,mark,Rosemarie Witschas,GDR,1974-08-24,,,1.94 m (6 ft 4+1/4 in),1.94,,,jump,jump
+high_jump,women,mark,Rosemarie Ackermann,GDR,1974-09-08,,,1.95 m (6 ft 4+3/4 in),1.95,,,jump,jump
+high_jump,women,mark,Rosemarie Ackermann,GDR,1976-05-08,,,1.96 m (6 ft 5 in),1.96,,,jump,jump
+high_jump,women,mark,Rosemarie Ackermann,GDR,1977-07-03,,,1.96 m (6 ft 5 in),1.96,,,jump,jump
+high_jump,women,mark,Rosemarie Ackermann,GDR,1977-08-14,,,1.97 m (6 ft 5+1/2 in),1.97,,,jump,jump
+high_jump,women,mark,Rosemarie Ackermann,GDR,1977-08-26,,,1.97 m (6 ft 5+1/2 in),1.97,,,jump,jump
+high_jump,women,mark,Rosemarie Ackermann,GDR,1977-08-26,,,2.00 m (6 ft 6+1/2 in),2.0,,,jump,jump
+high_jump,women,mark,Sara Simeoni,ITA,1978-08-04,,,2.01 m (6 ft 7 in),2.01,,,jump,jump
+high_jump,women,mark,Sara Simeoni,ITA,1978-08-31,,,2.01 m (6 ft 7 in),2.01,,,jump,jump
+high_jump,women,mark,Ulrike Meyfarth,FRG,1982-09-08,,,2.02 m (6 ft 7+1/2 in),2.02,,,jump,jump
+high_jump,women,mark,Ulrike Meyfarth,FRG,1983-08-21,,,2.03 m (6 ft 7+3/4 in),2.03,,,jump,jump
+high_jump,women,mark,Tamara Bykova,URS,1983-08-21,,,2.03 m (6 ft 7+3/4 in),2.03,,,jump,jump
+high_jump,women,mark,Tamara Bykova,URS,1983-08-25,,,2.04 m (6 ft 8+1/4 in),2.04,,,jump,jump
+high_jump,women,mark,Tamara Bykova,URS,1984-06-22,,,2.05 m (6 ft 8+1/2 in),2.05,,,jump,jump
+high_jump,women,mark,Lyudmila Andonova,BUL,1984-07-20,,,2.07 m (6 ft 9+1/4 in),2.07,,,jump,jump
+high_jump,women,mark,Stefka Kostadinova,BUL,1986-05-25,,,2.07 m (6 ft 9+1/4 in),2.07,,,jump,jump
+high_jump,women,mark,Stefka Kostadinova,BUL,1986-05-31,,,2.08 m (6 ft 9+3/4 in),2.08,,,jump,jump
+high_jump,women,mark,Stefka Kostadinova,BUL,1987-08-30,,,2.09 m (6 ft 10+1/4 in),2.09,,,jump,jump
+high_jump,women,mark,Yaroslava Mahuchikh,UKR,2024-07-07,,,2.10 m (6 ft 10+1/2 in),2.1,,,jump,jump
+long_jump,men,mark,Peter O'Connor,IRE,1901-08-05,,,7.61 m (24 ft 11+1/2 in),7.61,,,jump,jump
+long_jump,men,mark,Edward Gourdin,USA,1921-07-23,,,7.69 m (25 ft 2+3/4 in),7.69,,,jump,jump
+long_jump,men,mark,Robert LeGendre,USA,1924-07-07,,,7.76 m (25 ft 5+1/2 in),7.76,,,jump,jump
+long_jump,men,mark,DeHart Hubbard,USA,1925-06-13,,,7.89 m (25 ft 10+1/2 in),7.89,,,jump,jump
+long_jump,men,mark,Edward Hamm,USA,1928-07-07,,,7.90 m (25 ft 11 in),7.9,,,jump,jump
+long_jump,men,mark,Sylvio Cator,HAI,1928-09-09,,,7.93 m (26 ft 0 in),7.93,0.0,,jump,jump
+long_jump,men,mark,Chuhei Nambu,JPN,1931-10-27,,,7.98 m (26 ft 2 in),7.98,0.5,,jump,jump
+long_jump,men,mark,Jesse Owens,USA,1935-05-25,,,8.13 m (26 ft 8 in),8.13,1.5,,jump,jump
+long_jump,men,mark,Ralph Boston,USA,1960-08-12,,,8.21 m (26 ft 11 in),8.21,0.0,,jump,jump
+long_jump,men,mark,Ralph Boston,USA,1961-05-27,,,8.24 m (27 ft 1/4 in),8.24,1.8,,jump,jump
+long_jump,men,mark,Ralph Boston,USA,1961-07-16,,,8.28 m (27 ft 1+3/4 in),8.28,1.2,,jump,jump
+long_jump,men,mark,Igor Ter-Ovanesyan,URS,1962-06-10,,,8.31 m (27 ft 3 in) A,8.31,,,jump,jump
+long_jump,men,mark,Phil Shinnick,USA,1963-05-25,,,8.33 m (27 ft 3+3/4 in),8.33,,,jump,jump
+long_jump,men,mark,Ralph Boston,USA,1964-08-15,,,8.31 m (27 ft 3 in),8.31,0.0,,jump,jump
+long_jump,men,mark,Ralph Boston,USA,1964-09-12,,,8.34 m (27 ft 4+1/4 in),8.34,1.0,,jump,jump
+long_jump,men,mark,Ralph Boston,USA,1965-05-29,,,8.35 m (27 ft 4+1/2 in),8.35,0.0,,jump,jump
+long_jump,men,mark,Josef Schwarz,FRG,1970-07-15,,,8.35 m (27 ft 4+1/2 in),8.35,0.8,,jump,jump
+long_jump,men,mark,Nenad Stekić,YUG,1975-07-25,,,8.45 m (27 ft 8+1/2 in),8.45,2.0,,jump,jump
+long_jump,men,mark,Larry Myricks,USA,1979-08-26,,,8.52 m (27 ft 11+1/4 in),8.52,0.0,,jump,jump
+long_jump,men,mark,Lutz Dombrowski,GDR,1980-07-28,,,8.54 m (28 ft 0 in),8.54,0.9,,jump,jump
+long_jump,men,mark,Carl Lewis,USA,1981-06-20,,,8.62 m (28 ft 3+1/4 in),8.62,0.8,,jump,jump
+long_jump,men,mark,Carl Lewis,USA,1982-07-24,,,8.76 m (28 ft 8+3/4 in),8.76,1.0,,jump,jump
+long_jump,men,mark,Carl Lewis,USA,1983-06-19,,,8.79 m (28 ft 10 in),8.79,1.9,,jump,jump
+long_jump,men,mark,Mike Powell,USA,1991-08-30,,,8.95 m (29 ft 4+1/4 in),8.95,0.3,,jump,jump
+long_jump,women,mark,Marie Mejzlíková II,TCH,1922-08-06,,,5.16 m (16 ft 11 in),5.16,,,jump,jump
+long_jump,women,mark,Marie Mejzlíková II,TCH,1923-09-23,,,5.30 m (17 ft 4+1/2 in),5.3,,,jump,jump
+long_jump,women,mark,Muriel Gunn,GBR,1926-08-02,,,5.485 m (17 ft 11+3/4 in),5.485,,,jump,jump
+long_jump,women,mark,Kinue Hitomi,JPN,1926-08-28,,,5.50 m (18 ft 1/2 in),5.5,,,jump,jump
+long_jump,women,mark,Muriel Gunn,GBR,1927-08-01,,,5.575 m (18 ft 3+1/4 in),5.575,,,jump,jump
+long_jump,women,mark,Kinue Hitomi,JPN,1928-05-20,,,5.98 m (19 ft 7+1/4 in),5.98,,,jump,jump
+long_jump,women,mark,Christel Schulz,GER,1939-07-30,,,6.12 m (20 ft 3/4 in),6.12,,,jump,jump
+long_jump,women,mark,Fanny Blankers-Koen,NED,1943-09-19,,,6.25 m (20 ft 6 in),6.25,,,jump,jump
+long_jump,women,mark,Yvette Williams,NZL,1954-02-20,,,6.28 m (20 ft 7 in),6.28,0.2,,jump,jump
+long_jump,women,mark,Galina Vinogradova,URS,1955-09-11,,,6.28 m (20 ft 7 in),6.28,1.3,,jump,jump
+long_jump,women,mark,Galina Vinogradova,URS,1955-11-18,,,6.31 m (20 ft 8+1/4 in),6.31,0.5,,jump,jump
+long_jump,women,mark,Elżbieta Krzesińska,POL,1956-08-20,,,6.35 m (20 ft 10 in),6.35,1.0,,jump,jump
+long_jump,women,mark,Elżbieta Krzesińska,POL,1956-11-27,,,6.35 m (20 ft 10 in),6.35,,,jump,jump
+long_jump,women,mark,Hildrun Claus,GDR,1960-08-07,,,6.40 m (20 ft 11+3/4 in),6.4,0.0,,jump,jump
+long_jump,women,mark,Hildrun Claus,GDR,1961-06-23,,,6.42 m (21 ft 3/4 in),6.42,1.4,,jump,jump
+long_jump,women,mark,Tatyana Shchelkanova,URS,1961-07-16,,,6.48 m (21 ft 3 in),6.48,,,jump,jump
+long_jump,women,mark,Tatyana Shchelkanova,URS,1962-06-10,,,6.53 m (21 ft 5 in),6.53,1.5,,jump,jump
+long_jump,women,mark,Tatyana Shchelkanova,URS,1964-07-04,,,6.70 m (21 ft 11+3/4 in),6.7,,,jump,jump
+long_jump,women,mark,Mary Rand,GBR,1964-10-14,,,6.76 m (22 ft 2 in),6.76,,,jump,jump
+long_jump,women,mark,Viorica Viscopoleanu,ROU,1968-10-14,,,6.82 m (22 ft 4+1/2 in) A,6.82,0.0,,jump,jump
+long_jump,women,mark,Heide Rosendahl,FRG,1970-09-03,,,6.84 m (22 ft 5+1/4 in),6.84,0.0,,jump,jump
+long_jump,women,mark,Angela Voigt,GDR,1976-05-09,,,6.92 m (22 ft 8+1/4 in),6.92,1.6,,jump,jump
+long_jump,women,mark,Siegrun Siegl,GDR,1976-05-19,,,6.99 m (22 ft 11 in),6.99,2.0,,jump,jump
+long_jump,women,mark,Vilma Bardauskiené,URS,1978-08-18,,,7.07 m (23 ft 2+1/4 in),7.07,1.9,,jump,jump
+long_jump,women,mark,Vilma Bardauskiené,URS,1978-08-29,,,7.09 m (23 ft 3 in),7.09,0.0,,jump,jump
+long_jump,women,mark,Valy Ionescu,ROU,1982-08-01,,,7.20 m (23 ft 7+1/4 in),7.2,,,jump,jump
+long_jump,women,mark,Anişoara Cuşmir,ROU,1982-08-01,,,7.15 m (23 ft 5+1/4 in),7.15,0.3,,jump,jump
+long_jump,women,mark,Anişoara Cuşmir,ROU,1983-05-15,,,7.21 m (23 ft 7+3/4 in),7.21,0.6,,jump,jump
+long_jump,women,mark,Anişoara Cuşmir,ROU,1983-06-04,,,7.27 m (23 ft 10 in),7.27,0.6,,jump,jump
+long_jump,women,mark,Anişoara Cuşmir,ROU,1983-06-04,,,7.43 m (24 ft 4+1/2 in),7.43,1.4,,jump,jump
+long_jump,women,mark,Heike Drechsler,GDR,1985-09-22,,,7.44 m (24 ft 4+3/4 in),7.44,2.0,,jump,jump
+long_jump,women,mark,Heike Drechsler,GDR,1986-06-21,,,7.45 m (24 ft 5+1/4 in),7.45,0.9,,jump,jump
+long_jump,women,mark,Heike Drechsler,GDR,1986-07-03,,,7.45 m (24 ft 5+1/4 in),7.45,1.1,,jump,jump
+long_jump,women,mark,Jackie Joyner-Kersee,USA,1987-08-13,,,7.45 m (24 ft 5+1/4 in),7.45,0.6,,jump,jump
+long_jump,women,mark,Galina Chistyakova,URS,1988-06-11,,,7.45 m (24 ft 5+1/4 in),7.45,1.0,,jump,jump
+long_jump,women,mark,Galina Chistyakova,URS,1988-06-11,,,7.52 m (24 ft 8 in),7.52,1.4,,jump,jump
 marathon,men,time,Johnny Hayes,United States,1908-07-24,2:55:18.4,10518.4,,,,,run,long
 marathon,men,time,Robert Fowler,United States,1909-01-01,2:52:45.4,10365.4,,,,,run,long
 marathon,men,time,James Clark,United States,1909-02-12,2:46:52.8,10012.8,,,,,run,long
@@ -1027,246 +1021,205 @@ marathon,women,time,Tigst Assefa,Ethiopia,2023-09-24,2:11:53,7913.0,,,,,run,long
 marathon,women,time,Peres Jepchirchir,Kenya,2024-04-21,2:16:16,8176.0,,,,,run,long
 marathon,women,time,Ruth Chepng'etich,Kenya,2024-10-13,2:09:56,7796.0,,,,,run,long
 marathon,women,time,Tigst Assefa,Ethiopia,2025-04-27,2:15:50,8150.0,,,,,run,long
-pole_vault,men,mark,Francis Temple,,1849-10-06,,,3.15Â m (10Â ft 4Â in),3.15,,,jump,jump
-pole_vault,men,mark,Robert Mitchell,,1868-06-19,,,3.21Â m (10Â ftÂ 6+1â4Â in),3.21,,,jump,jump
-pole_vault,men,mark,Edwin Woodburn,,1872-08-31,,,3.225Â m (10Â ftÂ 6+3â4Â in),3.225,,,jump,jump
-pole_vault,men,mark,Edwin Woodburn,,1873-06-02,,,3.225Â m (10Â ftÂ 6+3â4Â in),3.225,,,jump,jump
-pole_vault,men,mark,William Kelsey,,1873-07-07,,,3.225Â m (10Â ftÂ 6+3â4Â in),3.225,,,jump,jump
-pole_vault,men,mark,John Wigfull,,1873-07-07,,,3.225Â m (10Â ftÂ 6+3â4Â in),3.225,,,jump,jump
-pole_vault,men,mark,Edwin Woodburn,,1874-03-30,,,3.225Â m (10Â ftÂ 6+3â4Â in),3.225,,,jump,jump
-pole_vault,men,mark,John Wigfull,,1875-07-05,,,3.225Â m (10Â ftÂ 6+3â4Â in),3.225,,,jump,jump
-pole_vault,men,mark,A. Hammond,,1876-03-30,,,3.38Â m (11Â ft 1Â in),3.38,,,jump,jump
-pole_vault,men,mark,Edwin Woodburn,,1876-07-21,,,3.38Â m (11Â ft 1Â in),3.38,,,jump,jump
-pole_vault,men,mark,Thomas Ray,,1879-09-19,,,3.42Â m (11Â ftÂ 2+1â2Â in),3.42,,,jump,jump
-pole_vault,men,mark,Thomas Ray,,1881-07-16,,,3.43Â m (11Â ft 3Â in),3.43,,,jump,jump
-pole_vault,men,mark,Thomas Ray,,1882-08-12,,,3.455Â m (11Â ft 4Â in),3.455,,,jump,jump
-pole_vault,men,mark,Thomas Ray,,1883-06-16,,,3.455Â m (11Â ft 4Â in),3.455,,,jump,jump
-pole_vault,men,mark,Thomas Ray,,1883-08-18,,,3.465Â m (11Â ftÂ 4+1â4Â in),3.465,,,jump,jump
-pole_vault,men,mark,Thomas Ray,,1885-08-20,,,3.48Â m (11Â ft 5Â in),3.48,,,jump,jump
-pole_vault,men,mark,Thomas Ray,,1886-08-13,,,3.485Â m (11Â ft 5Â in),3.485,,,jump,jump
-pole_vault,men,mark,Thomas Ray,,1887-08-18,,,3.505Â m (11Â ftÂ 5+3â4Â in),3.505,,,jump,jump
-pole_vault,men,mark,Thomas Ray,,1887-08-19,,,3.52Â m (11Â ftÂ 6+1â2Â in),3.52,,,jump,jump
-pole_vault,men,mark,Ernest Stones,,1888-06-02,,,3.53Â m (11Â ftÂ 6+3â4Â in),3.53,,,jump,jump
-pole_vault,men,mark,Thomas Ray,,1888-09-22,,,3.555Â m (11Â ftÂ 7+3â4Â in),3.555,,,jump,jump
-pole_vault,men,mark,Ernest Stones,,1889-08-23,,,3.57Â m (11Â ftÂ 8+1â2Â in),3.57,,,jump,jump
-pole_vault,men,mark,Richard Dickenson,,1891-07-04,,,3.58Â m (11Â ftÂ 8+3â4Â in),3.58,,,jump,jump
-pole_vault,men,mark,Raymond Clapp,,1898-06-16,,,3.62Â m (11Â ftÂ 10+1â2Â in),3.62,,,jump,jump
-pole_vault,men,mark,Norman Dole,,1904-04-23,,,3.69Â m (12Â ftÂ 1+1â4Â in),3.69,,,jump,jump
-pole_vault,men,mark,Fernand Gonder,,1904-06-26,,,3.69Â m (12Â ftÂ 1+1â4Â in),3.69,,,jump,jump
-pole_vault,men,mark,Fernand Gonder,,1905-06-04,,,3.74Â m (12Â ft 3Â in),3.74,,,jump,jump
-pole_vault,men,mark,Leroy Samse,,1906-06-02,,,3.78Â m (12Â ftÂ 4+3â4Â in),3.78,,,jump,jump
-pole_vault,men,mark,Walter Dray,,1907-05-18,,,3.79Â m (12Â ft 5Â in),3.79,,,jump,jump
-pole_vault,men,mark,Walter Dray,,1908-04-25,,,3.82Â m (12Â ftÂ 6+1â4Â in),3.82,,,jump,jump
-pole_vault,men,mark,Alfred Gilbert,,1908-06-06,,,3.855Â m (12Â ftÂ 7+3â4Â in),3.855,,,jump,jump
-pole_vault,men,mark,Alfred Gilbert,,1908-06-12,,,3.86Â m (12Â ftÂ 7+3â4Â in),3.86,,,jump,jump
-pole_vault,men,mark,Walter Dray,,1908-06-13,,,3.90Â m (12Â ftÂ 9+1â2Â in),3.9,,,jump,jump
-pole_vault,men,mark,Leland Scott,,1910-04-30,,,3.91Â m (12Â ftÂ 9+3â4Â in),3.91,,,jump,jump
-pole_vault,men,mark,Leland Scott,,1910-05-27,,,3.93Â m (12Â ftÂ 10+1â2Â in),3.93,,,jump,jump
-pole_vault,men,mark,Robert Gardner,,1912-06-01,,,3.985Â m (13Â ftÂ 3â4Â in),3.985,,,jump,jump
-pole_vault,men,mark,Marc Wright,,1912-06-08,,,4.02Â m (13Â ftÂ 2+1â4Â in),4.02,,,jump,jump
-pole_vault,men,mark,Frank Foss,,1920-08-20,,,4.09Â m (13Â ft 5Â in),4.09,,,jump,jump
-pole_vault,men,mark,Charles Hoff,,1922-09-22,,,4.12Â m (13Â ft 6Â in),4.12,,,jump,jump
-pole_vault,men,mark,Charles Hoff,,1923-07-22,,,4.21Â m (13Â ftÂ 9+1â2Â in),4.21,,,jump,jump
-pole_vault,men,mark,Charles Hoff,,1925-08-13,,,4.23Â m (13Â ftÂ 10+1â2Â in),4.23,,,jump,jump
-pole_vault,men,mark,Charles Hoff,,1925-09-27,,,4.25Â m (13Â ftÂ 11+1â4Â in),4.25,,,jump,jump
-pole_vault,men,mark,Sabin Carr,,1927-05-28,,,4.27Â m (14Â ft 0Â in),4.27,,,jump,jump
-pole_vault,men,mark,Lee Barnes,,1928-04-28,,,4.30Â m (14Â ftÂ 1+1â4Â in),4.3,,,jump,jump
-pole_vault,men,mark,William Graber,,1932-07-16,,,4.37Â m (14Â ft 4Â in),4.37,,,jump,jump
-pole_vault,men,mark,Keith Brown,,1935-06-01,,,4.39Â m (14Â ftÂ 4+3â4Â in),4.39,,,jump,jump
-pole_vault,men,mark,George Varoff,,1936-07-04,,,4.43Â m (14Â ftÂ 6+1â4Â in),4.43,,,jump,jump
-pole_vault,men,mark,Bill Sefton,,1937-05-29,,,4.54Â m (14Â ftÂ 10+1â2Â in),4.54,,,jump,jump
-pole_vault,men,mark,Earle Meadows,,1937-05-29,,,4.54Â m (14Â ftÂ 10+1â2Â in),4.54,,,jump,jump
-pole_vault,men,mark,Cornelius Warmerdam,,1940-06-29,,,4.60Â m (15Â ft 1Â in),4.6,,,jump,jump
-pole_vault,men,mark,Cornelius Warmerdam,,1941-06-26,,,4.72Â m (15Â ftÂ 5+3â4Â in),4.72,,,jump,jump
-pole_vault,men,mark,Cornelius Warmerdam,,1942-05-23,,,4.77Â m (15Â ftÂ 7+3â4Â in),4.77,,,jump,jump
-pole_vault,men,mark,Robert Gutowski,,1957-04-27,,,4.78Â m (15Â ft 8Â in),4.78,,,jump,jump
-pole_vault,men,mark,Don Bragg,,1960-07-02,,,4.80Â m (15Â ftÂ 8+3â4Â in),4.8,,,jump,jump
-pole_vault,men,mark,George Davies,,1961-05-20,,,4.83Â m (15Â ft 10Â in),4.83,,,jump,jump
-pole_vault,men,mark,John Uelses,,1962-03-31,,,4.89Â m (16Â ftÂ 1â2Â in),4.89,,,jump,jump
-pole_vault,men,mark,Dave Tork,,1962-04-28,,,4.93Â m (16Â ft 2Â in),4.93,,,jump,jump
-pole_vault,men,mark,Pentti Nikula,,1962-06-22,,,4.94Â m (16Â ftÂ 2+1â4Â in),4.94,,,jump,jump
-pole_vault,men,mark,Brian Sternberg,,1963-04-27,,,5.00Â m (16Â ftÂ 4+3â4Â in),5.0,,,jump,jump
-pole_vault,men,mark,Brian Sternberg,,1963-06-07,,,5.08Â m (16Â ft 8Â in),5.08,,,jump,jump
-pole_vault,men,mark,John Pennel,,1963-08-05,,,5.13Â m (16Â ftÂ 9+3â4Â in),5.13,,,jump,jump
-pole_vault,men,mark,John Pennel,,1963-08-24,,,5.20Â m (17Â ftÂ 1â2Â in),5.2,,,jump,jump
-pole_vault,men,mark,Fred Hansen,,1964-06-13,,,5.23Â m (17Â ftÂ 1+3â4Â in),5.23,,,jump,jump
-pole_vault,men,mark,Fred Hansen,,1964-07-25,,,5.28Â m (17Â ftÂ 3+3â4Â in),5.28,,,jump,jump
-pole_vault,men,mark,Bob Seagren,,1966-05-14,,,5.32Â m (17Â ftÂ 5+1â4Â in),5.32,,,jump,jump
-pole_vault,men,mark,John Pennel,,1966-07-23,,,5.34Â m (17Â ft 6Â in),5.34,,,jump,jump
-pole_vault,men,mark,Bob Seagren,,1967-06-10,,,5.36Â m (17Â ft 7Â in),5.36,,,jump,jump
-pole_vault,men,mark,Paul Wilson,,1967-06-23,,,5.38Â m (17Â ftÂ 7+3â4Â in),5.38,,,jump,jump
-pole_vault,men,mark,Bob Seagren,,1968-09-12,,,5.41Â m (17Â ftÂ 8+3â4Â in)Â A,5.41,,,jump,jump
-pole_vault,men,mark,John Pennel,,1969-06-21,,,5.44Â m (17Â ft 10Â in),5.44,,,jump,jump
-pole_vault,men,mark,Wolfgang Nordwig,,1970-06-17,,,5.45Â m (17Â ftÂ 10+1â2Â in),5.45,,,jump,jump
-pole_vault,men,mark,Wolfgang Nordwig,,1970-09-03,,,5.46Â m (17Â ftÂ 10+3â4Â in),5.46,,,jump,jump
-pole_vault,men,mark,Christos Papanikolaou,,1970-10-24,,,5.49Â m (18Â ft 0Â in),5.49,,,jump,jump
-pole_vault,men,mark,Kjell Isaksson,,1972-04-08,,,5.51Â m (18Â ftÂ 3â4Â in),5.51,,,jump,jump
-pole_vault,men,mark,Kjell Isaksson,,1972-04-15,,,5.54Â m (18Â ft 2Â in),5.54,,,jump,jump
-pole_vault,men,mark,Kjell Isaksson,,1972-06-12,,,5.55Â m (18Â ftÂ 2+1â2Â in),5.55,,,jump,jump
-pole_vault,men,mark,Bob Seagren,,1972-07-02,,,5.63Â m (18Â ftÂ 5+1â2Â in),5.63,,,jump,jump
-pole_vault,men,mark,David Roberts,,1975-03-28,,,5.65Â m (18Â ftÂ 6+1â4Â in),5.65,,,jump,jump
-pole_vault,men,mark,Earl Bell,,1976-05-29,,,5.67Â m (18Â ft 7Â in),5.67,,,jump,jump
-pole_vault,men,mark,David Roberts,,1976-06-22,,,5.70Â m (18Â ftÂ 8+1â4Â in),5.7,,,jump,jump
-pole_vault,men,mark,Władysław Kozakiewicz,,1980-05-11,,,5.72Â m (18Â ft 9Â in),5.72,,,jump,jump
-pole_vault,men,mark,Thierry Vigneron,,1980-06-01,,,5.75Â m (18Â ftÂ 10+1â4Â in),5.75,,,jump,jump
-pole_vault,men,mark,Thierry Vigneron,,1980-06-29,,,5.75Â m (18Â ftÂ 10+1â4Â in),5.75,,,jump,jump
-pole_vault,men,mark,Philippe Houvion,,1980-07-17,,,5.77Â m (18Â ft 11Â in),5.77,,,jump,jump
-pole_vault,men,mark,Władysław Kozakiewicz,,1980-07-30,,,5.78Â m (18Â ftÂ 11+1â2Â in),5.78,,,jump,jump
-pole_vault,men,mark,Thierry Vigneron,,1981-06-20,,,5.80Â m (19Â ftÂ 1â4Â in),5.8,,,jump,jump
-pole_vault,men,mark,Vladimir Polyakov,,1981-06-26,,,5.81Â m (19Â ftÂ 1â2Â in),5.81,,,jump,jump
-pole_vault,men,mark,Pierre Quinon,,1983-08-28,,,5.82Â m (19Â ft 1Â in),5.82,,,jump,jump
-pole_vault,men,mark,Thierry Vigneron,,1983-09-01,,,5.83Â m (19Â ftÂ 1+1â2Â in),5.83,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1984-05-26,,,5.85Â m (19Â ftÂ 2+1â4Â in),5.85,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1984-06-02,,,5.88Â m (19Â ftÂ 3+1â4Â in),5.88,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1984-07-13,,,5.90Â m (19Â ftÂ 4+1â4Â in),5.9,,,jump,jump
-pole_vault,men,mark,Thierry Vigneron,,1984-08-31,,,5.91Â m (19Â ftÂ 4+1â2Â in),5.91,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1984-08-31,,,5.94Â m (19Â ftÂ 5+3â4Â in),5.94,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1985-07-13,,,6.00Â m (19Â ft 8Â in),6.0,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1986-07-08,,,6.01Â m (19Â ftÂ 8+1â2Â in),6.01,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1987-06-23,,,6.03Â m (19Â ftÂ 9+1â4Â in),6.03,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1988-06-09,,,6.05Â m (19Â ft 10Â in),6.05,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1988-07-10,,,6.06Â m (19Â ftÂ 10+1â2Â in),6.06,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1991-05-06,,,6.07Â m (19Â ftÂ 10+3â4Â in),6.07,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1991-06-09,,,6.08Â m (19Â ftÂ 11+1â4Â in),6.08,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1991-07-08,,,6.09Â m (19Â ftÂ 11+3â4Â in),6.09,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1991-08-05,,,6.10Â m (20Â ft 0Â in),6.1,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1992-06-13,,,6.11Â m (20Â ftÂ 1â2Â in),6.11,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1992-08-30,,,6.12Â m (20Â ftÂ 3â4Â in),6.12,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1992-09-19,,,6.13Â m (20Â ftÂ 1+1â4Â in),6.13,,,jump,jump
-pole_vault,men,mark,Sergey Bubka,,1994-07-31,,,6.14Â m (20Â ftÂ 1+1â2Â in)Â A[b],6.14,,,jump,jump
-pole_vault,men,mark,Renaud Lavillenie,,2014-02-15,,,6.16Â m (20Â ftÂ 2+1â2Â in)Â i[7],6.16,,,jump,jump
-pole_vault,men,mark,Armand Duplantis,,2020-02-08,,,6.17Â m (20Â ftÂ 2+3â4Â in)Â i,6.17,,,jump,jump
-pole_vault,men,mark,Armand Duplantis,,2020-02-15,,,6.18Â m (20Â ftÂ 3+1â4Â in)Â i,6.18,,,jump,jump
-pole_vault,men,mark,Armand Duplantis,,2022-03-07,,,6.19Â m (20Â ftÂ 3+1â2Â in)Â i,6.19,,,jump,jump
-pole_vault,men,mark,Armand Duplantis,,2022-03-20,,,6.20Â m (20Â ft 4Â in)Â i,6.2,,,jump,jump
-pole_vault,men,mark,Armand Duplantis,,2022-07-24,,,6.21Â m (20Â ftÂ 4+1â4Â in),6.21,,,jump,jump
-pole_vault,men,mark,Armand Duplantis,,2023-02-25,,,6.22Â m (20Â ftÂ 4+3â4Â in)Â i,6.22,,,jump,jump
-pole_vault,men,mark,Armand Duplantis,,2023-09-17,,,6.23Â m (20Â ftÂ 5+1â4Â in),6.23,,,jump,jump
-pole_vault,men,mark,Armand Duplantis,,2024-04-20,,,6.24Â m (20Â ftÂ 5+1â2Â in),6.24,,,jump,jump
-pole_vault,men,mark,Armand Duplantis,,2024-08-05,,,6.25Â m (20Â ft 6Â in),6.25,,,jump,jump
-pole_vault,men,mark,Armand Duplantis,,2024-08-25,,,6.26Â m (20Â ftÂ 6+1â4Â in),6.26,,,jump,jump
-pole_vault,men,mark,Armand Duplantis,,2025-02-28,,,6.27Â m (20Â ftÂ 6+3â4Â in)Â i,6.27,,,jump,jump
-pole_vault,men,mark,Armand Duplantis,,2025-06-15,,,6.28Â m (20Â ft 7Â in),6.28,,,jump,jump
-pole_vault,men,mark,Armand Duplantis,,2025-08-12,,,6.29Â m (20Â ftÂ 7+1â2Â in),6.29,,,jump,jump
+pole_vault,men,mark,Francis Temple,,1849-10-06,,,3.15 m (10 ft 4 in),3.15,,,jump,jump
+pole_vault,men,mark,Robert Mitchell,,1868-06-19,,,3.21 m (10 ft 6+1/4 in),3.21,,,jump,jump
+pole_vault,men,mark,Edwin Woodburn,,1872-08-31,,,3.225 m (10 ft 6+3/4 in),3.225,,,jump,jump
+pole_vault,men,mark,Edwin Woodburn,,1873-06-02,,,3.225 m (10 ft 6+3/4 in),3.225,,,jump,jump
+pole_vault,men,mark,William Kelsey,,1873-07-07,,,3.225 m (10 ft 6+3/4 in),3.225,,,jump,jump
+pole_vault,men,mark,John Wigfull,,1873-07-07,,,3.225 m (10 ft 6+3/4 in),3.225,,,jump,jump
+pole_vault,men,mark,Edwin Woodburn,,1874-03-30,,,3.225 m (10 ft 6+3/4 in),3.225,,,jump,jump
+pole_vault,men,mark,John Wigfull,,1875-07-05,,,3.225 m (10 ft 6+3/4 in),3.225,,,jump,jump
+pole_vault,men,mark,A. Hammond,,1876-03-30,,,3.38 m (11 ft 1 in),3.38,,,jump,jump
+pole_vault,men,mark,Edwin Woodburn,,1876-07-21,,,3.38 m (11 ft 1 in),3.38,,,jump,jump
+pole_vault,men,mark,Thomas Ray,,1879-09-19,,,3.42 m (11 ft 2+1/2 in),3.42,,,jump,jump
+pole_vault,men,mark,Thomas Ray,,1881-07-16,,,3.43 m (11 ft 3 in),3.43,,,jump,jump
+pole_vault,men,mark,Thomas Ray,,1882-08-12,,,3.455 m (11 ft 4 in),3.455,,,jump,jump
+pole_vault,men,mark,Thomas Ray,,1883-06-16,,,3.455 m (11 ft 4 in),3.455,,,jump,jump
+pole_vault,men,mark,Thomas Ray,,1883-08-18,,,3.465 m (11 ft 4+1/4 in),3.465,,,jump,jump
+pole_vault,men,mark,Thomas Ray,,1885-08-20,,,3.48 m (11 ft 5 in),3.48,,,jump,jump
+pole_vault,men,mark,Thomas Ray,,1886-08-13,,,3.485 m (11 ft 5 in),3.485,,,jump,jump
+pole_vault,men,mark,Thomas Ray,,1887-08-18,,,3.505 m (11 ft 5+3/4 in),3.505,,,jump,jump
+pole_vault,men,mark,Thomas Ray,,1887-08-19,,,3.52 m (11 ft 6+1/2 in),3.52,,,jump,jump
+pole_vault,men,mark,Ernest Stones,,1888-06-02,,,3.53 m (11 ft 6+3/4 in),3.53,,,jump,jump
+pole_vault,men,mark,Thomas Ray,,1888-09-22,,,3.555 m (11 ft 7+3/4 in),3.555,,,jump,jump
+pole_vault,men,mark,Ernest Stones,,1889-08-23,,,3.57 m (11 ft 8+1/2 in),3.57,,,jump,jump
+pole_vault,men,mark,Richard Dickenson,,1891-07-04,,,3.58 m (11 ft 8+3/4 in),3.58,,,jump,jump
+pole_vault,men,mark,Raymond Clapp,,1898-06-16,,,3.62 m (11 ft 10+1/2 in),3.62,,,jump,jump
+pole_vault,men,mark,Norman Dole,,1904-04-23,,,3.69 m (12 ft 1+1/4 in),3.69,,,jump,jump
+pole_vault,men,mark,Fernand Gonder,,1904-06-26,,,3.69 m (12 ft 1+1/4 in),3.69,,,jump,jump
+pole_vault,men,mark,Fernand Gonder,,1905-06-04,,,3.74 m (12 ft 3 in),3.74,,,jump,jump
+pole_vault,men,mark,Leroy Samse,,1906-06-02,,,3.78 m (12 ft 4+3/4 in),3.78,,,jump,jump
+pole_vault,men,mark,Walter Dray,,1907-05-18,,,3.79 m (12 ft 5 in),3.79,,,jump,jump
+pole_vault,men,mark,Walter Dray,,1908-04-25,,,3.82 m (12 ft 6+1/4 in),3.82,,,jump,jump
+pole_vault,men,mark,Alfred Gilbert,,1908-06-06,,,3.855 m (12 ft 7+3/4 in),3.855,,,jump,jump
+pole_vault,men,mark,Alfred Gilbert,,1908-06-12,,,3.86 m (12 ft 7+3/4 in),3.86,,,jump,jump
+pole_vault,men,mark,Walter Dray,,1908-06-13,,,3.90 m (12 ft 9+1/2 in),3.9,,,jump,jump
+pole_vault,men,mark,Leland Scott,,1910-04-30,,,3.91 m (12 ft 9+3/4 in),3.91,,,jump,jump
+pole_vault,men,mark,Leland Scott,,1910-05-27,,,3.93 m (12 ft 10+1/2 in),3.93,,,jump,jump
+pole_vault,men,mark,Robert Gardner,,1912-06-01,,,3.985 m (13 ft 3/4 in),3.985,,,jump,jump
+pole_vault,men,mark,Marc Wright,,1912-06-08,,,4.02 m (13 ft 2+1/4 in),4.02,,,jump,jump
+pole_vault,men,mark,Frank Foss,,1920-08-20,,,4.09 m (13 ft 5 in),4.09,,,jump,jump
+pole_vault,men,mark,Charles Hoff,,1922-09-22,,,4.12 m (13 ft 6 in),4.12,,,jump,jump
+pole_vault,men,mark,Charles Hoff,,1923-07-22,,,4.21 m (13 ft 9+1/2 in),4.21,,,jump,jump
+pole_vault,men,mark,Charles Hoff,,1925-08-13,,,4.23 m (13 ft 10+1/2 in),4.23,,,jump,jump
+pole_vault,men,mark,Charles Hoff,,1925-09-27,,,4.25 m (13 ft 11+1/4 in),4.25,,,jump,jump
+pole_vault,men,mark,Sabin Carr,,1927-05-28,,,4.27 m (14 ft 0 in),4.27,,,jump,jump
+pole_vault,men,mark,Lee Barnes,,1928-04-28,,,4.30 m (14 ft 1+1/4 in),4.3,,,jump,jump
+pole_vault,men,mark,William Graber,,1932-07-16,,,4.37 m (14 ft 4 in),4.37,,,jump,jump
+pole_vault,men,mark,Keith Brown,,1935-06-01,,,4.39 m (14 ft 4+3/4 in),4.39,,,jump,jump
+pole_vault,men,mark,George Varoff,,1936-07-04,,,4.43 m (14 ft 6+1/4 in),4.43,,,jump,jump
+pole_vault,men,mark,Bill Sefton,,1937-05-29,,,4.54 m (14 ft 10+1/2 in),4.54,,,jump,jump
+pole_vault,men,mark,Earle Meadows,,1937-05-29,,,4.54 m (14 ft 10+1/2 in),4.54,,,jump,jump
+pole_vault,men,mark,Cornelius Warmerdam,,1940-06-29,,,4.60 m (15 ft 1 in),4.6,,,jump,jump
+pole_vault,men,mark,Cornelius Warmerdam,,1941-06-26,,,4.72 m (15 ft 5+3/4 in),4.72,,,jump,jump
+pole_vault,men,mark,Cornelius Warmerdam,,1942-05-23,,,4.77 m (15 ft 7+3/4 in),4.77,,,jump,jump
+pole_vault,men,mark,Robert Gutowski,,1957-04-27,,,4.78 m (15 ft 8 in),4.78,,,jump,jump
+pole_vault,men,mark,Don Bragg,,1960-07-02,,,4.80 m (15 ft 8+3/4 in),4.8,,,jump,jump
+pole_vault,men,mark,George Davies,,1961-05-20,,,4.83 m (15 ft 10 in),4.83,,,jump,jump
+pole_vault,men,mark,John Uelses,,1962-03-31,,,4.89 m (16 ft 1/2 in),4.89,,,jump,jump
+pole_vault,men,mark,Dave Tork,,1962-04-28,,,4.93 m (16 ft 2 in),4.93,,,jump,jump
+pole_vault,men,mark,Pentti Nikula,,1962-06-22,,,4.94 m (16 ft 2+1/4 in),4.94,,,jump,jump
+pole_vault,men,mark,Brian Sternberg,,1963-04-27,,,5.00 m (16 ft 4+3/4 in),5.0,,,jump,jump
+pole_vault,men,mark,Brian Sternberg,,1963-06-07,,,5.08 m (16 ft 8 in),5.08,,,jump,jump
+pole_vault,men,mark,John Pennel,,1963-08-05,,,5.13 m (16 ft 9+3/4 in),5.13,,,jump,jump
+pole_vault,men,mark,John Pennel,,1963-08-24,,,5.20 m (17 ft 1/2 in),5.2,,,jump,jump
+pole_vault,men,mark,Fred Hansen,,1964-06-13,,,5.23 m (17 ft 1+3/4 in),5.23,,,jump,jump
+pole_vault,men,mark,Fred Hansen,,1964-07-25,,,5.28 m (17 ft 3+3/4 in),5.28,,,jump,jump
+pole_vault,men,mark,Bob Seagren,,1966-05-14,,,5.32 m (17 ft 5+1/4 in),5.32,,,jump,jump
+pole_vault,men,mark,John Pennel,,1966-07-23,,,5.34 m (17 ft 6 in),5.34,,,jump,jump
+pole_vault,men,mark,Bob Seagren,,1967-06-10,,,5.36 m (17 ft 7 in),5.36,,,jump,jump
+pole_vault,men,mark,Paul Wilson,,1967-06-23,,,5.38 m (17 ft 7+3/4 in),5.38,,,jump,jump
+pole_vault,men,mark,Bob Seagren,,1968-09-12,,,5.41 m (17 ft 8+3/4 in) A,5.41,,,jump,jump
+pole_vault,men,mark,John Pennel,,1969-06-21,,,5.44 m (17 ft 10 in),5.44,,,jump,jump
+pole_vault,men,mark,Wolfgang Nordwig,,1970-06-17,,,5.45 m (17 ft 10+1/2 in),5.45,,,jump,jump
+pole_vault,men,mark,Wolfgang Nordwig,,1970-09-03,,,5.46 m (17 ft 10+3/4 in),5.46,,,jump,jump
+pole_vault,men,mark,Christos Papanikolaou,,1970-10-24,,,5.49 m (18 ft 0 in),5.49,,,jump,jump
+pole_vault,men,mark,Kjell Isaksson,,1972-04-08,,,5.51 m (18 ft 3/4 in),5.51,,,jump,jump
+pole_vault,men,mark,Kjell Isaksson,,1972-04-15,,,5.54 m (18 ft 2 in),5.54,,,jump,jump
+pole_vault,men,mark,Kjell Isaksson,,1972-06-12,,,5.55 m (18 ft 2+1/2 in),5.55,,,jump,jump
+pole_vault,men,mark,Bob Seagren,,1972-07-02,,,5.63 m (18 ft 5+1/2 in),5.63,,,jump,jump
+pole_vault,men,mark,David Roberts,,1975-03-28,,,5.65 m (18 ft 6+1/4 in),5.65,,,jump,jump
+pole_vault,men,mark,Earl Bell,,1976-05-29,,,5.67 m (18 ft 7 in),5.67,,,jump,jump
+pole_vault,men,mark,David Roberts,,1976-06-22,,,5.70 m (18 ft 8+1/4 in),5.7,,,jump,jump
+pole_vault,men,mark,Władysław Kozakiewicz,,1980-05-11,,,5.72 m (18 ft 9 in),5.72,,,jump,jump
+pole_vault,men,mark,Thierry Vigneron,,1980-06-01,,,5.75 m (18 ft 10+1/4 in),5.75,,,jump,jump
+pole_vault,men,mark,Thierry Vigneron,,1980-06-29,,,5.75 m (18 ft 10+1/4 in),5.75,,,jump,jump
+pole_vault,men,mark,Philippe Houvion,,1980-07-17,,,5.77 m (18 ft 11 in),5.77,,,jump,jump
+pole_vault,men,mark,Władysław Kozakiewicz,,1980-07-30,,,5.78 m (18 ft 11+1/2 in),5.78,,,jump,jump
+pole_vault,men,mark,Thierry Vigneron,,1981-06-20,,,5.80 m (19 ft 1/4 in),5.8,,,jump,jump
+pole_vault,men,mark,Vladimir Polyakov,,1981-06-26,,,5.81 m (19 ft 1/2 in),5.81,,,jump,jump
+pole_vault,men,mark,Pierre Quinon,,1983-08-28,,,5.82 m (19 ft 1 in),5.82,,,jump,jump
+pole_vault,men,mark,Thierry Vigneron,,1983-09-01,,,5.83 m (19 ft 1+1/2 in),5.83,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1984-05-26,,,5.85 m (19 ft 2+1/4 in),5.85,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1984-06-02,,,5.88 m (19 ft 3+1/4 in),5.88,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1984-07-13,,,5.90 m (19 ft 4+1/4 in),5.9,,,jump,jump
+pole_vault,men,mark,Thierry Vigneron,,1984-08-31,,,5.91 m (19 ft 4+1/2 in),5.91,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1984-08-31,,,5.94 m (19 ft 5+3/4 in),5.94,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1985-07-13,,,6.00 m (19 ft 8 in),6.0,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1986-07-08,,,6.01 m (19 ft 8+1/2 in),6.01,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1987-06-23,,,6.03 m (19 ft 9+1/4 in),6.03,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1988-06-09,,,6.05 m (19 ft 10 in),6.05,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1988-07-10,,,6.06 m (19 ft 10+1/2 in),6.06,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1991-05-06,,,6.07 m (19 ft 10+3/4 in),6.07,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1991-06-09,,,6.08 m (19 ft 11+1/4 in),6.08,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1991-07-08,,,6.09 m (19 ft 11+3/4 in),6.09,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1991-08-05,,,6.10 m (20 ft 0 in),6.1,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1992-06-13,,,6.11 m (20 ft 1/2 in),6.11,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1992-08-30,,,6.12 m (20 ft 3/4 in),6.12,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1992-09-19,,,6.13 m (20 ft 1+1/4 in),6.13,,,jump,jump
+pole_vault,men,mark,Sergey Bubka,,1994-07-31,,,6.14 m (20 ft 1+1/2 in) A,6.14,,,jump,jump
+pole_vault,men,mark,Renaud Lavillenie,,2014-02-15,,,6.16 m (20 ft 2+1/2 in) i,6.16,,,jump,jump
+pole_vault,men,mark,Armand Duplantis,,2020-02-08,,,6.17 m (20 ft 2+3/4 in) i,6.17,,,jump,jump
+pole_vault,men,mark,Armand Duplantis,,2020-02-15,,,6.18 m (20 ft 3+1/4 in) i,6.18,,,jump,jump
+pole_vault,men,mark,Armand Duplantis,,2022-03-07,,,6.19 m (20 ft 3+1/2 in) i,6.19,,,jump,jump
+pole_vault,men,mark,Armand Duplantis,,2022-03-20,,,6.20 m (20 ft 4 in) i,6.2,,,jump,jump
+pole_vault,men,mark,Armand Duplantis,,2022-07-24,,,6.21 m (20 ft 4+1/4 in),6.21,,,jump,jump
+pole_vault,men,mark,Armand Duplantis,,2023-02-25,,,6.22 m (20 ft 4+3/4 in) i,6.22,,,jump,jump
+pole_vault,men,mark,Armand Duplantis,,2023-09-17,,,6.23 m (20 ft 5+1/4 in),6.23,,,jump,jump
+pole_vault,men,mark,Armand Duplantis,,2024-04-20,,,6.24 m (20 ft 5+1/2 in),6.24,,,jump,jump
+pole_vault,men,mark,Armand Duplantis,,2024-08-05,,,6.25 m (20 ft 6 in),6.25,,,jump,jump
+pole_vault,men,mark,Armand Duplantis,,2024-08-25,,,6.26 m (20 ft 6+1/4 in),6.26,,,jump,jump
+pole_vault,men,mark,Armand Duplantis,,2025-02-28,,,6.27 m (20 ft 6+3/4 in) i,6.27,,,jump,jump
+pole_vault,men,mark,Armand Duplantis,,2025-06-15,,,6.28 m (20 ft 7 in),6.28,,,jump,jump
+pole_vault,men,mark,Armand Duplantis,,2025-08-12,,,6.29 m (20 ft 7+1/2 in),6.29,,,jump,jump
 pole_vault,men,mark,Armand Duplantis,,2025-09-15,,,6.30 m (20 ft 8 in),6.3,,,jump,jump
-pole_vault,women,mark,Ruth Spencer,,1910-05-14,,,4Â ftÂ 9Â inÂ (1.44Â m)[1],4.0,,,jump,jump
-pole_vault,women,mark,Ruth Spencer,,1911-05-15,,,4Â ftÂ 10Â inÂ (1.47Â m)[1],4.0,,,jump,jump
-pole_vault,women,mark,Ruth Spencer,,1911-05-15,,,4Â ftÂ 11Â inÂ (1.49Â m)[1],4.0,,,jump,jump
-pole_vault,women,mark,Ruth Spencer,,1911-05-15,,,5Â ftÂ 0Â inÂ (1.52Â m)[1],5.0,,,jump,jump
-pole_vault,women,mark,Ruth Spencer,,1911-05-15,,,5Â ftÂ 1Â inÂ (1.54Â m)[1],5.0,,,jump,jump
-pole_vault,women,mark,Ruth Spencer,,1911-05-15,,,5Â ftÂ 2Â inÂ (1.57Â m)[1],5.0,,,jump,jump
-pole_vault,women,mark,Ruth Spencer,,1911-05-15,,,5Â ftÂ 3Â inÂ (1.6Â m)[1],5.0,,,jump,jump
-pole_vault,women,mark,Ruth Spencer,,1911-05-15,,,5Â ftÂ 4Â inÂ (1.62Â m)[1],5.0,,,jump,jump
-pole_vault,women,mark,Ruth Spencer,,1911-05-15,,,5Â ftÂ 5Â inÂ (1.65Â m)[1],5.0,,,jump,jump
-pole_vault,women,mark,Ruth Spencer,,1911-05-15,,,5Â ftÂ 6Â inÂ (1.67Â m)[1],5.0,,,jump,jump
-pole_vault,women,mark,Ruth Spencer,,1911-05-15,,,5Â ftÂ 7Â inÂ (1.7Â m)[1],5.0,,,jump,jump
-pole_vault,women,mark,Ruth Spencer,,1911-05-15,,,5Â ftÂ 73â4Â inÂ (1.72Â m)[4],5.0,,,jump,jump
-pole_vault,women,mark,Hazel Hutaff,,1915-04-03,,,5Â ftÂ 93â4Â inÂ (1.77Â m)[4],5.0,,,jump,jump
-pole_vault,women,mark,Hazel Hutaff,,1915-04-03,,,5Â ftÂ 9Â inÂ (1.75Â m)[1],5.0,,,jump,jump
-pole_vault,women,mark,Hazel Hutaff,,1915-04-03,,,5Â ftÂ 8Â inÂ (1.72Â m)[1],5.0,,,jump,jump
-pole_vault,women,mark,Lois Tatum,,1915-04-13,,,5Â ftÂ 10Â inÂ (1.77Â m)[1],5.0,,,jump,jump
-pole_vault,women,mark,Emma Lee King,,1915-04-13,,,=5Â ftÂ 10Â inÂ (1.77Â m)[1],5.0,,,jump,jump
-pole_vault,women,mark,Lois Tatum,,1915-04-13,,,6Â ftÂ 01â2Â inÂ (1.84Â m)[4],6.0,,,jump,jump
-pole_vault,women,mark,Eva Fisk,,1915-05-13,,,=6Â ftÂ 01â2Â inÂ (1.84Â m)[1],6.0,,,jump,jump
-pole_vault,women,mark,Eva Fisk,,1915-05-13,,,6Â ftÂ 1Â inÂ (1.85Â m)[1],6.0,,,jump,jump
-pole_vault,women,mark,Eva Fisk,,1915-05-13,,,6Â ftÂ 3Â inÂ (1.9Â m)[1],6.0,,,jump,jump
-pole_vault,women,mark,Mildred Carl,,1915-06-06,,,7Â ftÂ 3Â inÂ (2.2Â m)[4],7.0,,,jump,jump
-pole_vault,women,mark,Mildred Carl,,1915-06-06,,,7Â ftÂ 2Â inÂ (2.18Â m)[4],7.0,,,jump,jump
-pole_vault,women,mark,Mildred Carl,,1915-06-06,,,7Â ftÂ 1Â inÂ (2.15Â m)[1],7.0,,,jump,jump
-pole_vault,women,mark,Mildred Carl,,1915-06-06,,,7Â ftÂ 0Â inÂ (2.13Â m)[4],7.0,,,jump,jump
-pole_vault,women,mark,Mildred Carl,,1915-06-06,,,6Â ftÂ 11Â inÂ (2.1Â m)[1],6.0,,,jump,jump
-pole_vault,women,mark,Mildred Carl,,1915-06-06,,,6Â ftÂ 9Â inÂ (2.05Â m)[1],6.0,,,jump,jump
-pole_vault,women,mark,Mildred Carl,,1915-06-06,,,6Â ftÂ 10Â inÂ (2.08Â m)[1],6.0,,,jump,jump
-pole_vault,women,mark,Mildred Carl,,1915-06-06,,,6Â ftÂ 7Â inÂ (2Â m)[1],6.0,,,jump,jump
-pole_vault,women,mark,Mildred Carl,,1915-06-06,,,6Â ftÂ 6Â inÂ (1.98Â m)[1],6.0,,,jump,jump
-pole_vault,women,mark,Mildred Carl,,1915-06-06,,,6Â ftÂ 5Â inÂ (1.95Â m)[1],6.0,,,jump,jump
-pole_vault,women,mark,Mildred Carl,,1915-06-06,,,6Â ftÂ 4Â inÂ (1.93Â m)[1],6.0,,,jump,jump
-pole_vault,women,mark,Mildred Carl,,1915-06-06,,,=6Â ftÂ 3Â inÂ (1.9Â m)[1],6.0,,,jump,jump
-pole_vault,women,mark,Mildred Carl,,1915-06-06,,,6Â ftÂ 8Â inÂ (2.03Â m)[1],6.0,,,jump,jump
-pole_vault,women,mark,Elva Hintze,,1921-07-17,,,2.25Â m (7Â ftÂ 4+1â2Â in)[1],2.25,,,jump,jump
-pole_vault,women,mark,Helene Henneke,,1921-07-17,,,2.30Â m (7Â ftÂ 6+1â2Â in)[1],2.3,,,jump,jump
-pole_vault,women,mark,Helene Henneke,,1921-07-17,,,2.35Â m (7Â ftÂ 8+1â2Â in)[4],2.35,,,jump,jump
-pole_vault,women,mark,Yelena Goldobina,,1924-09-07,,,=2.35Â m (7Â ftÂ 8+1â2Â in)[4],2.35,,,jump,jump
-pole_vault,women,mark,Zoya Romanova,,1935-08-26,,,2.53Â m (8Â ftÂ 3+1â2Â in)[4],2.53,,,jump,jump
-pole_vault,women,mark,Diane Bragg,,1952-07-06,,,8Â ftÂ 6Â inÂ (2.59Â m)[4],8.0,,,jump,jump
-pole_vault,women,mark,Brenda Walker,,1969-01-08,,,=8Â ftÂ 6Â inÂ (2.59Â m)[4],8.0,,,jump,jump
-pole_vault,women,mark,Irene Spieker,,1978-02-10,,,8Â ftÂ 61â2Â inÂ (2.6Â m) i[1],8.0,,,jump,jump
-pole_vault,women,mark,Irene Spieker,,1979-02-09,,,10Â ftÂ 01â4Â inÂ (3.05Â m) i[1],10.0,,,jump,jump
-pole_vault,women,mark,Irene Spieker,,1979-02-09,,,9Â ftÂ 7Â inÂ (2.92Â m) i[1],9.0,,,jump,jump
-pole_vault,women,mark,Irene Spieker,,1979-02-09,,,8Â ftÂ 7Â inÂ (2.61Â m) i[1],8.0,,,jump,jump
-pole_vault,women,mark,Irene Spieker,,1979-02-09,,,9Â ftÂ 0Â inÂ (2.74Â m) i[1],9.0,,,jump,jump
-pole_vault,women,mark,Jana Edwards,,1983-06-11,,,10Â ftÂ 6Â inÂ (3.2Â m)[4],10.0,,,jump,jump
-pole_vault,women,mark,Jana Edwards,,1983-06-18,,,10Â ftÂ 7Â inÂ (3.22Â m)[4],10.0,,,jump,jump
-pole_vault,women,mark,Jana Edwards,,1983-06-18,,,11Â ftÂ 1Â inÂ (3.37Â m)[4],11.0,,,jump,jump
-pole_vault,women,mark,Jana Edwards,,1983-07-23,,,11Â ftÂ 6Â inÂ (3.5Â m)[4],11.0,,,jump,jump
-pole_vault,women,mark,Jana Edwards,,1983-07-23,,,11Â ftÂ 91â2Â inÂ (3.59Â m)[4],11.0,,,jump,jump
-pole_vault,women,mark,Zhang Chunzhen,,1988-04-20,,,3.72Â m (12Â ftÂ 2+1â4Â in)[4],3.72,,,jump,jump
-pole_vault,women,mark,Shao Jingmen,,1988-05-04,,,3.73Â m (12Â ftÂ 2+3â4Â in)[4],3.73,,,jump,jump
-pole_vault,women,mark,Zhang Chunzhen,,1988-06-10,,,3.75Â m (12Â ftÂ 3+1â2Â in)[4],3.75,,,jump,jump
-pole_vault,women,mark,Zhou Minxin,,1989-04-22,,,3.76Â m (12Â ft 4Â in)[4],3.76,,,jump,jump
-pole_vault,women,mark,Zhang Chunzhen,,1989-09-09,,,3.8Â m (12Â ftÂ 5+1â2Â in)[4],3.8,,,jump,jump
-pole_vault,women,mark,Zhang Chunzhen,,1990-03-24,,,3.81Â m (12Â ft 6Â in)[4],3.81,,,jump,jump
-pole_vault,women,mark,Zhang Chunzhen,,1991-03-24,,,4.00Â m (13Â ftÂ 1+1â4Â in)[4],4.0,,,jump,jump
-pole_vault,women,mark,Zhang Chunzhen,,1991-03-24,,,=3.83Â m (12Â ftÂ 6+3â4Â in)[4],3.83,,,jump,jump
-pole_vault,women,mark,Sun Caiyun,,1991-03-24,,,3.83Â m (12Â ftÂ 6+3â4Â in)[4],3.83,,,jump,jump
-pole_vault,women,mark,Zhang Chunzhen,,1991-06-05,,,4.02Â m (13Â ftÂ 2+1â4Â in)[4],4.02,,,jump,jump
-pole_vault,women,mark,Zhang Chunzhen,,1991-08-10,,,4.05Â m (13Â ftÂ 3+1â4Â in)[4],4.05,,,jump,jump
-pole_vault,women,mark,Sun Caiyun,,1992-05-21,,,4.05Â m (13Â ftÂ 3+1â4Â in)[2],4.05,,,jump,jump
-pole_vault,women,mark,Sun Caiyun,,1995-05-18,,,4.08Â m (13Â ftÂ 4+1â2Â in)[2],4.08,,,jump,jump
-pole_vault,women,mark,Zhong Guiqing,,1995-05-18,,,4.08Â m (13Â ftÂ 4+1â2Â in)[2],4.08,,,jump,jump
-pole_vault,women,mark,Daniela Bártová,,1995-05-21,,,4.10Â m (13Â ftÂ 5+1â4Â in)[2],4.1,,,jump,jump
-pole_vault,women,mark,Daniela Bártová,,1995-06-18,,,4.12Â m (13Â ft 6Â in)[2],4.12,,,jump,jump
-pole_vault,women,mark,Daniela Bártová,,1995-06-24,,,4.13Â m (13Â ftÂ 6+1â2Â in)[2],4.13,,,jump,jump
-pole_vault,women,mark,Daniela Bártová,,1995-07-02,,,4.14Â m (13Â ftÂ 6+3â4Â in)[2],4.14,,,jump,jump
-pole_vault,women,mark,Daniela Bártová,,1995-07-06,,,4.15Â m (13Â ftÂ 7+1â4Â in)[2],4.15,,,jump,jump
-pole_vault,women,mark,Daniela Bártová,,1995-07-14,,,4.16Â m (13Â ftÂ 7+3â4Â in)[2],4.16,,,jump,jump
-pole_vault,women,mark,Daniela Bártová,,1995-07-15,,,4.17Â m (13Â ft 8Â in)[2],4.17,,,jump,jump
-pole_vault,women,mark,Andrea Müller,,1995-08-05,,,4.18Â m (13Â ftÂ 8+1â2Â in)[2],4.18,,,jump,jump
-pole_vault,women,mark,Daniela Bártová,,1995-08-18,,,4.20Â m (13Â ftÂ 9+1â4Â in)[2],4.2,,,jump,jump
-pole_vault,women,mark,Daniela Bártová,,1995-08-22,,,4.21Â m (13Â ftÂ 9+1â2Â in)[2],4.21,,,jump,jump
-pole_vault,women,mark,Daniela Bártová,,1995-09-11,,,4.22Â m (13Â ft 10Â in)[2],4.22,,,jump,jump
-pole_vault,women,mark,Emma George,,1995-11-30,,,4.25Â m (13Â ftÂ 11+1â4Â in)[2],4.25,,,jump,jump
-pole_vault,women,mark,Emma George,,1995-12-17,,,4.28Â m (14Â ftÂ 1â2Â in)[2],4.28,,,jump,jump
-pole_vault,women,mark,Emma George,,1996-01-28,,,4.30Â m (14Â ftÂ 1+1â4Â in)[2],4.3,,,jump,jump
-pole_vault,women,mark,Emma George,,1996-01-28,,,4.41Â m (14Â ftÂ 5+1â2Â in)[2],4.41,,,jump,jump
-pole_vault,women,mark,Emma George,,1996-06-29,,,4.42Â m (14Â ft 6Â in)[2],4.42,,,jump,jump
-pole_vault,women,mark,Emma George,,1996-07-14,,,4.45Â m (14Â ft 7Â in)[2],4.45,,,jump,jump
-pole_vault,women,mark,Emma George,,1997-02-08,,,4.50Â m (14Â ft 9Â in)[2],4.5,,,jump,jump
-pole_vault,women,mark,Emma George,,1997-02-20,,,4.55Â m (14Â ft 11Â in)[2],4.55,,,jump,jump
-pole_vault,women,mark,Emma George,,1998-02-21,,,4.57Â m (14Â ftÂ 11+3â4Â in)[2],4.57,,,jump,jump
-pole_vault,women,mark,Emma George,,1998-03-14,,,4.58Â m (15Â ftÂ 1â4Â in)[2],4.58,,,jump,jump
-pole_vault,women,mark,Emma George,,1998-03-21,,,4.59Â m (15Â ftÂ 1â2Â in)[2],4.59,,,jump,jump
-pole_vault,women,mark,Emma George,,1999-02-20,,,4.60Â m (15Â ft 1Â in)[2],4.6,,,jump,jump
-pole_vault,women,mark,Stacy Dragila,,1999-08-21,,,4.60Â m (15Â ft 1Â in)[2],4.6,,,jump,jump
-pole_vault,women,mark,Stacy Dragila,,2000-02-19,,,iÂ 4.60Â m (15Â ft 1Â in)[2][5],4.6,,,jump,jump
-pole_vault,women,mark,Stacy Dragila,,2000-03-03,,,iÂ 4.62Â m (15Â ftÂ 1+3â4Â in)[2][5],4.62,,,jump,jump
-pole_vault,women,mark,Stacy Dragila,,2000-07-23,,,4.63Â m (15Â ftÂ 2+1â4Â in)[2],4.63,,,jump,jump
-pole_vault,women,mark,Stacy Dragila,,2001-02-02,,,iÂ 4.63Â m (15Â ftÂ 2+1â4Â in)[2][5],4.63,,,jump,jump
-pole_vault,women,mark,Svetlana Feofanova,,2001-02-11,,,iÂ 4.64Â m (15Â ftÂ 2+1â2Â in)[2][5],4.64,,,jump,jump
-pole_vault,women,mark,Stacy Dragila,,2001-02-17,,,iÂ 4.66Â m (15Â ftÂ 3+1â4Â in)[2][5],4.66,,,jump,jump
-pole_vault,women,mark,Stacy Dragila,,2001-02-17,,,iÂ 4.70Â m (15Â ft 5Â in)[2][5],4.7,,,jump,jump
-pole_vault,women,mark,Stacy Dragila,,2001-04-27,,,4.70Â m (15Â ft 5Â in)[2],4.7,,,jump,jump
-pole_vault,women,mark,Stacy Dragila,,2001-06-09,,,4.71Â m (15Â ftÂ 5+1â4Â in)[2],4.71,,,jump,jump
-pole_vault,women,mark,Stacy Dragila,,2001-06-09,,,4.81Â m (15Â ftÂ 9+1â4Â in)[2],4.81,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2003-07-13,,,4.82Â m (15Â ftÂ 9+3â4Â in)[2],4.82,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2004-02-15,,,iÂ 4.83Â m (15Â ft 10Â in)[2][5],4.83,,,jump,jump
-pole_vault,women,mark,Svetlana Feofanova,,2004-02-22,,,iÂ 4.85Â m (15Â ftÂ 10+3â4Â in)[2][5],4.85,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2004-03-06,,,iÂ 4.86Â m (15Â ftÂ 11+1â4Â in)[2][5],4.86,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2004-06-27,,,4.87Â m (15Â ftÂ 11+1â2Â in)[2],4.87,,,jump,jump
-pole_vault,women,mark,Svetlana Feofanova,,2004-07-04,,,4.88Â m (16Â ft 0Â in)[2],4.88,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2004-07-25,,,4.89Â m (16Â ftÂ 1â2Â in)[2],4.89,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2004-07-30,,,4.90Â m (16Â ftÂ 3â4Â in)[2],4.9,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2004-08-24,,,4.91Â m (16Â ftÂ 1+1â4Â in)[2],4.91,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2004-09-03,,,4.92Â m (16Â ftÂ 1+1â2Â in)[2],4.92,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2005-07-05,,,4.93Â m (16Â ft 2Â in)[2],4.93,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2005-07-16,,,4.95Â m (16Â ftÂ 2+3â4Â in)[2],4.95,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2005-07-22,,,4.96Â m (16Â ftÂ 3+1â4Â in)[2],4.96,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2005-07-22,,,5.00Â m (16Â ftÂ 4+3â4Â in)[2],5.0,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2005-08-09,,,5.01Â m (16Â ft 5Â in)[2],5.01,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2008-07-11,,,5.03Â m (16Â ft 6Â in)[2],5.03,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2008-07-29,,,5.04Â m (16Â ftÂ 6+1â4Â in)[2],5.04,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2008-08-18,,,5.05Â m (16Â ftÂ 6+3â4Â in)[2],5.05,,,jump,jump
-pole_vault,women,mark,Yelena Isinbayeva,,2009-08-28,,,5.06Â m (16Â ft 7Â in)[7],5.06,,,jump,jump
+pole_vault,women,mark,Ruth Spencer,,1910-05-14,,,4 ft 9 in (1.44 m),1.44,,,jump,jump
+pole_vault,women,mark,Ruth Spencer,,1911-05-15,,,5 ft 7+3/4 in (1.72 m),1.72,,,jump,jump
+pole_vault,women,mark,Hazel Hutaff,,1915-04-03,,,5 ft 9+3/4 in (1.77 m),1.77,,,jump,jump
+pole_vault,women,mark,Lois Tatum,,1915-04-13,,,5 ft 10 in (1.77 m),1.77,,,jump,jump
+pole_vault,women,mark,Eva Fisk,,1915-05-13,,,6 ft 3 in (1.9 m),1.9,,,jump,jump
+pole_vault,women,mark,Mildred Carl,,1915-06-06,,,7 ft 3 in (2.2 m),2.2,,,jump,jump
+pole_vault,women,mark,Helene Henneke,,1921-07-17,,,2.35 m (7 ft 8+1/2 in),2.35,,,jump,jump
+pole_vault,women,mark,Yelena Goldobina,,1924-09-07,,,2.35 m (7 ft 8+1/2 in),2.35,,,jump,jump
+pole_vault,women,mark,Zoya Romanova,,1935-08-26,,,2.53 m (8 ft 3+1/2 in),2.53,,,jump,jump
+pole_vault,women,mark,Diane Bragg,,1952-07-06,,,8 ft 6 in (2.59 m),2.59,,,jump,jump
+pole_vault,women,mark,Brenda Walker,,1969-01-08,,,8 ft 6 in (2.59 m),2.59,,,jump,jump
+pole_vault,women,mark,Irene Spieker,,1978-02-10,,,8 ft 6+1/2 in (2.6 m) i,2.6,,,jump,jump
+pole_vault,women,mark,Irene Spieker,,1979-02-09,,,10 ft 0+1/4 in (3.05 m) i,3.05,,,jump,jump
+pole_vault,women,mark,Jana Edwards,,1983-06-11,,,10 ft 6 in (3.2 m),3.2,,,jump,jump
+pole_vault,women,mark,Jana Edwards,,1983-06-18,,,11 ft 1 in (3.37 m),3.37,,,jump,jump
+pole_vault,women,mark,Jana Edwards,,1983-07-23,,,11 ft 9+1/2 in (3.59 m),3.59,,,jump,jump
+pole_vault,women,mark,Zhang Chunzhen,,1988-04-20,,,3.72 m (12 ft 2+1/4 in),3.72,,,jump,jump
+pole_vault,women,mark,Shao Jingmen,,1988-05-04,,,3.73 m (12 ft 2+3/4 in),3.73,,,jump,jump
+pole_vault,women,mark,Zhang Chunzhen,,1988-06-10,,,3.75 m (12 ft 3+1/2 in),3.75,,,jump,jump
+pole_vault,women,mark,Zhou Minxin,,1989-04-22,,,3.76 m (12 ft 4 in),3.76,,,jump,jump
+pole_vault,women,mark,Zhang Chunzhen,,1989-09-09,,,3.8 m (12 ft 5+1/2 in),3.8,,,jump,jump
+pole_vault,women,mark,Zhang Chunzhen,,1990-03-24,,,3.81 m (12 ft 6 in),3.81,,,jump,jump
+pole_vault,women,mark,Zhang Chunzhen,,1991-03-24,,,4.00 m (13 ft 1+1/4 in),4.0,,,jump,jump
+pole_vault,women,mark,Zhang Chunzhen,,1991-06-05,,,4.02 m (13 ft 2+1/4 in),4.02,,,jump,jump
+pole_vault,women,mark,Zhang Chunzhen,,1991-08-10,,,4.05 m (13 ft 3+1/4 in),4.05,,,jump,jump
+pole_vault,women,mark,Sun Caiyun,,1992-05-21,,,4.05 m (13 ft 3+1/4 in),4.05,,,jump,jump
+pole_vault,women,mark,Zhong Guiqing,,1995-05-18,,,4.08 m (13 ft 4+1/2 in),4.08,,,jump,jump
+pole_vault,women,mark,Daniela Bártová,,1995-05-21,,,4.10 m (13 ft 5+1/4 in),4.1,,,jump,jump
+pole_vault,women,mark,Daniela Bártová,,1995-06-18,,,4.12 m (13 ft 6 in),4.12,,,jump,jump
+pole_vault,women,mark,Daniela Bártová,,1995-06-24,,,4.13 m (13 ft 6+1/2 in),4.13,,,jump,jump
+pole_vault,women,mark,Daniela Bártová,,1995-07-02,,,4.14 m (13 ft 6+3/4 in),4.14,,,jump,jump
+pole_vault,women,mark,Daniela Bártová,,1995-07-06,,,4.15 m (13 ft 7+1/4 in),4.15,,,jump,jump
+pole_vault,women,mark,Daniela Bártová,,1995-07-14,,,4.16 m (13 ft 7+3/4 in),4.16,,,jump,jump
+pole_vault,women,mark,Daniela Bártová,,1995-07-15,,,4.17 m (13 ft 8 in),4.17,,,jump,jump
+pole_vault,women,mark,Andrea Müller,,1995-08-05,,,4.18 m (13 ft 8+1/2 in),4.18,,,jump,jump
+pole_vault,women,mark,Daniela Bártová,,1995-08-18,,,4.20 m (13 ft 9+1/4 in),4.2,,,jump,jump
+pole_vault,women,mark,Daniela Bártová,,1995-08-22,,,4.21 m (13 ft 9+1/2 in),4.21,,,jump,jump
+pole_vault,women,mark,Daniela Bártová,,1995-09-11,,,4.22 m (13 ft 10 in),4.22,,,jump,jump
+pole_vault,women,mark,Emma George,,1995-11-30,,,4.25 m (13 ft 11+1/4 in),4.25,,,jump,jump
+pole_vault,women,mark,Emma George,,1995-12-17,,,4.28 m (14 ft 1/2 in),4.28,,,jump,jump
+pole_vault,women,mark,Emma George,,1996-01-28,,,4.41 m (14 ft 5+1/2 in),4.41,,,jump,jump
+pole_vault,women,mark,Emma George,,1996-06-29,,,4.42 m (14 ft 6 in),4.42,,,jump,jump
+pole_vault,women,mark,Emma George,,1996-07-14,,,4.45 m (14 ft 7 in),4.45,,,jump,jump
+pole_vault,women,mark,Emma George,,1997-02-08,,,4.50 m (14 ft 9 in),4.5,,,jump,jump
+pole_vault,women,mark,Emma George,,1997-02-20,,,4.55 m (14 ft 11 in),4.55,,,jump,jump
+pole_vault,women,mark,Emma George,,1998-02-21,,,4.57 m (14 ft 11+3/4 in),4.57,,,jump,jump
+pole_vault,women,mark,Emma George,,1998-03-14,,,4.58 m (15 ft 1/4 in),4.58,,,jump,jump
+pole_vault,women,mark,Emma George,,1998-03-21,,,4.59 m (15 ft 1/2 in),4.59,,,jump,jump
+pole_vault,women,mark,Emma George,,1999-02-20,,,4.60 m (15 ft 1 in),4.6,,,jump,jump
+pole_vault,women,mark,Stacy Dragila,,1999-08-21,,,4.60 m (15 ft 1 in),4.6,,,jump,jump
+pole_vault,women,mark,Stacy Dragila,,2000-02-19,,,4.60 m (15 ft 1 in),4.6,,,jump,jump
+pole_vault,women,mark,Stacy Dragila,,2000-03-03,,,4.62 m (15 ft 1+3/4 in),4.62,,,jump,jump
+pole_vault,women,mark,Stacy Dragila,,2000-07-23,,,4.63 m (15 ft 2+1/4 in),4.63,,,jump,jump
+pole_vault,women,mark,Stacy Dragila,,2001-02-02,,,4.63 m (15 ft 2+1/4 in),4.63,,,jump,jump
+pole_vault,women,mark,Svetlana Feofanova,,2001-02-11,,,4.64 m (15 ft 2+1/2 in),4.64,,,jump,jump
+pole_vault,women,mark,Stacy Dragila,,2001-02-17,,,4.66 m (15 ft 3+1/4 in),4.66,,,jump,jump
+pole_vault,women,mark,Stacy Dragila,,2001-02-17,,,4.70 m (15 ft 5 in),4.7,,,jump,jump
+pole_vault,women,mark,Stacy Dragila,,2001-04-27,,,4.70 m (15 ft 5 in),4.7,,,jump,jump
+pole_vault,women,mark,Stacy Dragila,,2001-06-09,,,4.81 m (15 ft 9+1/4 in),4.81,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2003-07-13,,,4.82 m (15 ft 9+3/4 in),4.82,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2004-02-15,,,4.83 m (15 ft 10 in),4.83,,,jump,jump
+pole_vault,women,mark,Svetlana Feofanova,,2004-02-22,,,4.85 m (15 ft 10+3/4 in),4.85,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2004-03-06,,,4.86 m (15 ft 11+1/4 in),4.86,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2004-06-27,,,4.87 m (15 ft 11+1/2 in),4.87,,,jump,jump
+pole_vault,women,mark,Svetlana Feofanova,,2004-07-04,,,4.88 m (16 ft 0 in),4.88,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2004-07-25,,,4.89 m (16 ft 1/2 in),4.89,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2004-07-30,,,4.90 m (16 ft 3/4 in),4.9,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2004-08-24,,,4.91 m (16 ft 1+1/4 in),4.91,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2004-09-03,,,4.92 m (16 ft 1+1/2 in),4.92,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2005-07-05,,,4.93 m (16 ft 2 in),4.93,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2005-07-16,,,4.95 m (16 ft 2+3/4 in),4.95,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2005-07-22,,,5.00 m (16 ft 4+3/4 in),5.0,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2005-08-09,,,5.01 m (16 ft 5 in),5.01,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2008-07-11,,,5.03 m (16 ft 6 in),5.03,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2008-07-29,,,5.04 m (16 ft 6+1/4 in),5.04,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2008-08-18,,,5.05 m (16 ft 6+3/4 in),5.05,,,jump,jump
+pole_vault,women,mark,Yelena Isinbayeva,,2009-08-28,,,5.06 m (16 ft 7 in),5.06,,,jump,jump
 swimming_backstroke_100m,men,time,David Theile,Australia,1956-12-06,1:02.2,62.2,,,,,swim,backstroke
 swimming_backstroke_100m,men,time,John Monckton,Australia,1958-02-15,1:01.5,61.5,,,,,swim,backstroke
 swimming_backstroke_100m,men,time,Bob Bennett,United States,1961-08-19,1:01.3,61.3,,,,,swim,backstroke
@@ -2735,7 +2688,7 @@ swimming_freestyle_relay_4x200m,men,time,Geoff Gaberino (1:49.80) David Larson (
 swimming_freestyle_relay_4x200m,men,time,Mike Heath (1:48.67) David Larson (1:49.01) Jeff Float (1:49.60) Bruce Hayes,United States,1984-07-30,7:15.69,435.69,,,,,swim,relay
 swimming_freestyle_relay_4x200m,men,time,Peter Sitt Rainer Henkel Thomas Fahrner Michael Gross,West Germany,1987-08-19,7:13.10,433.1,,,,,swim,relay
 swimming_freestyle_relay_4x200m,men,time,Troy Dalbey (1:49.37) Matt Cetlinski (1:48.44) Doug Gjertsen (1:48.26) Matt Biondi,United States,1988-09-21,7:12.51,432.51,,,,,swim,relay
-swimming_freestyle_relay_4x200m,men,time,(1:49.55)Dmitry Lepikov (1:46.58)Vladimir Pyshnenko (1:48.99)Veniamin Tayanovich (1:46.83)Yevgeny Sadovyi,Unified Team,1992-07-27,Â 7:11.95Â ,431.95,,,,,swim,relay
+swimming_freestyle_relay_4x200m,men,time,(1:49.55)Dmitry Lepikov (1:46.58)Vladimir Pyshnenko (1:48.99)Veniamin Tayanovich (1:46.83)Yevgeny Sadovyi,Unified Team,1992-07-27,7:11.95,431.95,,,,,swim,relay
 swimming_freestyle_relay_4x200m,men,time,Ian Thorpe (1:47.48) Daniel Kowalski (1:47.81) Matthew Dunn (1:49.15) Michael Klim,Australia,1998-09-13,7:11.86,431.86,,,,,swim,relay
 swimming_freestyle_relay_4x200m,men,time,Ian Thorpe (1:46.28) Bill Kirby (1:48.96) Grant Hackett (1:46.30) Michael Klim,Australia,1999-08-25,7:08.79,428.79,,,,,swim,relay
 swimming_freestyle_relay_4x200m,men,time,Ian Thorpe (1:46.03) Michael Klim (1:46.40) Todd Pearson (1:47.36) Bill Kirby,Australia,2000-09-19,7:07.05,427.05,,,,,swim,relay
@@ -3020,57 +2973,57 @@ swimming_medley_relay_4x100m,women,time,Kathleen Baker (58.54) Lilly King (1:04.
 swimming_medley_relay_4x100m,women,time,Regan Smith (57.57 WR) Lilly King (1:04.81) Kelsi Dahlia (56.16) Simone Manuel,United States,2019-07-28,3:50.40,230.4,,,,,swim,relay
 swimming_medley_relay_4x100m,women,time,Regan Smith (57.28) Lilly King (1:04.90) Gretchen Walsh (55.03) Torri Huske,United States,2024-08-04,3:49.63,229.63,,,,,swim,relay
 swimming_medley_relay_4x100m,women,time,Regan Smith (57.57) Kate Douglass (1:04.27) Gretchen Walsh (54.98) Torri Huske,United States,2025-08-03,3:49.34,229.34,,,,,swim,relay
-triple_jump,men,mark,Dan Ahearn,USA,1911-05-30,,,15.52Â m (50Â ft 11Â in),15.52,,,jump,jump
-triple_jump,men,mark,Nick Winter,AUS,1924-07-12,,,15.52Â m (50Â ft 11Â in),15.52,,,jump,jump
-triple_jump,men,mark,Mikio Oda,JPN,1931-10-27,,,15.58Â m (51Â ftÂ 1+1â4Â in),15.58,,,jump,jump
-triple_jump,men,mark,Chuhei Nambu,JPN,1932-08-04,,,15.72Â m (51Â ftÂ 6+3â4Â in),15.72,,,jump,jump
-triple_jump,men,mark,Jack Metcalfe,AUS,1935-12-14,,,15.78Â m (51Â ftÂ 9+1â4Â in),15.78,,,jump,jump
-triple_jump,men,mark,Naoto Tajima,JPN,1936-08-06,,,16.00Â m (52Â ftÂ 5+3â4Â in),16.0,0.6,,jump,jump
-triple_jump,men,mark,Adhemar da Silva,BRA,1950-12-03,,,16.00Â m (52Â ftÂ 5+3â4Â in),16.0,1.6,,jump,jump
-triple_jump,men,mark,Adhemar da Silva,BRA,1951-09-30,,,16.01Â m (52Â ftÂ 6+1â4Â in),16.01,1.2,,jump,jump
-triple_jump,men,mark,Adhemar da Silva,BRA,1952-07-23,,,16.12Â m (52Â ftÂ 10+1â2Â in),16.12,,,jump,jump
-triple_jump,men,mark,Adhemar da Silva,BRA,1952-07-23,,,16.22Â m (53Â ftÂ 2+1â2Â in),16.22,,,jump,jump
-triple_jump,men,mark,Leonid Shcherbakov,URS,1953-07-19,,,16.23Â m (53Â ftÂ 2+3â4Â in),16.23,1.5,,jump,jump
-triple_jump,men,mark,Adhemar da Silva,BRA,1955-03-16,,,16.56Â m (54Â ftÂ 3+3â4Â in) A,16.56,0.2,,jump,jump
-triple_jump,men,mark,Oleg Ryakhovskiy,URS,1958-07-28,,,16.59Â m (54Â ft 5Â in),16.59,1.0,,jump,jump
-triple_jump,men,mark,Oleg Fyodoseyev,URS,1959-05-03,,,16.70Â m (54Â ftÂ 9+1â4Â in),16.7,0.0,,jump,jump
-triple_jump,men,mark,Józef Szmidt,POL,1960-08-05,,,17.03Â m (55Â ftÂ 10+1â4Â in),17.03,1.0,,jump,jump
-triple_jump,men,mark,Giuseppe Gentile,ITA,1968-10-16,,,17.10Â m (56Â ft 1Â in) A,17.1,0.0,,jump,jump
-triple_jump,men,mark,Giuseppe Gentile,ITA,1968-10-17,,,17.22Â m (56Â ftÂ 5+3â4Â in) A,17.22,0.0,,jump,jump
-triple_jump,men,mark,Viktor Sanyeyev,URS,1968-10-17,,,17.23Â m (56Â ftÂ 6+1â4Â in) A,17.23,2.0,,jump,jump
-triple_jump,men,mark,Nelson Prudêncio,BRA,1968-10-17,,,17.27Â m (56Â ftÂ 7+3â4Â in) A,17.27,2.0,,jump,jump
-triple_jump,men,mark,Viktor Sanyeyev,URS,1968-10-17,,,17.39Â m (57Â ftÂ 1â2Â in) A,17.39,2.0,,jump,jump
-triple_jump,men,mark,Pedro Pérez,CUB,1971-08-05,,,17.40Â m (57Â ft 1Â in) A,17.4,0.4,,jump,jump
-triple_jump,men,mark,Viktor Sanyeyev,URS,1972-10-17,,,17.44Â m (57Â ftÂ 2+1â2Â in),17.44,-0.5,,jump,jump
-triple_jump,men,mark,João Carlos de Oliveira,BRA,1975-10-15,,,17.89Â m (58Â ftÂ 8+1â4Â in) A,17.89,0.0,,jump,jump
-triple_jump,men,mark,Willie Banks,USA,1985-06-16,,,17.97Â m (58Â ftÂ 11+1â4Â in),17.97,1.5,,jump,jump
-triple_jump,men,mark,Jonathan Edwards,GBR,1995-07-18,,,17.98Â m (58Â ftÂ 11+3â4Â in),17.98,1.8,,jump,jump
-triple_jump,men,mark,Jonathan Edwards,GBR,1995-08-07,,,18.16Â m (59Â ftÂ 6+3â4Â in),18.16,1.3,,jump,jump
-triple_jump,men,mark,Jonathan Edwards,GBR,1995-08-07,,,18.29Â m (60Â ft 0Â in),18.29,1.3,,jump,jump
-triple_jump,women,mark,Elizabeth Stine,USA,1922-05-13,,,10.32Â m (33Â ftÂ 10+1â4Â in),10.32,,,jump,jump
-triple_jump,women,mark,Adrienne Kaenel,SUI,1923-07-23,,,10.50Â m (34Â ftÂ 5+1â4Â in),10.5,,,jump,jump
-triple_jump,women,mark,Kinue Hitomi,JPN,1926-10-17,,,11.62Â m (38Â ftÂ 1+1â4Â in),11.62,,,jump,jump
-triple_jump,women,mark,Rie Yamaguchi,JPN,1939-10-21,,,11.66Â m (38Â ft 3Â in),11.66,,,jump,jump
-triple_jump,women,mark,Mary Bignal,GBR,1959-06-18,,,12.22Â m (40Â ft 1Â in),12.22,,,jump,jump
-triple_jump,women,mark,Terri Turner,USA,1981-05-09,,,12.43Â m (40Â ftÂ 9+1â4Â in),12.43,,,jump,jump
-triple_jump,women,mark,Terri Turner,USA,1982-05-07,,,12.47Â m (40Â ftÂ 10+3â4Â in),12.47,,,jump,jump
-triple_jump,women,mark,Melody Smith,USA,1983-05-06,,,12.51Â m (41Â ftÂ 1â2Â in),12.51,,,jump,jump
-triple_jump,women,mark,Easter Gabriel,USA,1983-05-07,,,12.98Â m (42Â ft 7Â in),12.98,,,jump,jump
-triple_jump,women,mark,Terri Turner,USA,1984-03-24,,,13.15Â m (43Â ftÂ 1+1â2Â in),13.15,,,jump,jump
-triple_jump,women,mark,Terri Turner,USA,1984-04-13,,,13.21Â m (43Â ft 4Â in),13.21,,,jump,jump
-triple_jump,women,mark,Wendy Brown,USA,1985-05-30,,,13.58Â m (44Â ftÂ 6+1â2Â in),13.58,,,jump,jump
-triple_jump,women,mark,Esmeralda Garcia,BRA,1986-06-05,,,13.68Â m (44Â ftÂ 10+1â2Â in),13.68,,,jump,jump
-triple_jump,women,mark,Wendy Brown,USA,1987-05-02,,,13.71Â m (44Â ftÂ 11+3â4Â in),13.71,,,jump,jump
-triple_jump,women,mark,Flora Hyacinth,ISV,1987-05-17,,,13.73Â m (45Â ftÂ 1â2Â in),13.73,,,jump,jump
-triple_jump,women,mark,Sheila Hudson,USA,1987-06-06,,,13.78Â m (45Â ftÂ 2+1â2Â in),13.78,,,jump,jump
-triple_jump,women,mark,Sheila Hudson,USA,1987-06-26,,,13.85Â m (45Â ftÂ 5+1â4Â in),13.85,,,jump,jump
-triple_jump,women,mark,Li Huirong,CHN,1987-10-11,,,14.04Â m (46Â ftÂ 3â4Â in),14.04,,,jump,jump
-triple_jump,women,mark,Li Huirong,CHN,1988-04-23,,,14.16Â m (46Â ftÂ 5+1â4Â in),14.16,,,jump,jump
-triple_jump,women,mark,Galina Chistyakova,URS,1989-07-02,,,14.52Â m (47Â ftÂ 7+1â2Â in),14.52,,,jump,jump
-triple_jump,women,mark,Li Huirong,CHN,1990-08-25,,,14.54Â m (47Â ftÂ 8+1â4Â in),14.54,1.1,,jump,jump
-triple_jump,women,mark,Inessa Kravets,URS,1991-06-10,,,14.95Â m (49Â ftÂ 1â2Â in),14.95,-0.2,,jump,jump
-triple_jump,women,mark,Iolanda Chen,RUS,1993-06-18,,,14.97Â m (49Â ftÂ 1+1â4Â in),14.97,0.9,,jump,jump
-triple_jump,women,mark,Anna Biryukova,RUS,1993-08-21,,,15.09Â m (49Â ft 6Â in),15.09,0.5,,jump,jump
-triple_jump,women,mark,Inessa Kravets,UKR,1995-08-10,,,15.50Â m (50Â ft 10Â in),15.5,0.9,,jump,jump
-triple_jump,women,mark,Yulimar Rojas,VEN,2021-08-01,,,15.67Â m (51Â ftÂ 4+3â4Â in),15.67,0.7,,jump,jump
-triple_jump,women,mark,Yulimar Rojas,VEN,2022-03-20,,,15.74Â m (51Â ftÂ 7+1â2Â in),15.74,,,jump,jump
+triple_jump,men,mark,Dan Ahearn,USA,1911-05-30,,,15.52 m (50 ft 11 in),15.52,,,jump,jump
+triple_jump,men,mark,Nick Winter,AUS,1924-07-12,,,15.52 m (50 ft 11 in),15.52,,,jump,jump
+triple_jump,men,mark,Mikio Oda,JPN,1931-10-27,,,15.58 m (51 ft 1+1/4 in),15.58,,,jump,jump
+triple_jump,men,mark,Chuhei Nambu,JPN,1932-08-04,,,15.72 m (51 ft 6+3/4 in),15.72,,,jump,jump
+triple_jump,men,mark,Jack Metcalfe,AUS,1935-12-14,,,15.78 m (51 ft 9+1/4 in),15.78,,,jump,jump
+triple_jump,men,mark,Naoto Tajima,JPN,1936-08-06,,,16.00 m (52 ft 5+3/4 in),16.0,0.6,,jump,jump
+triple_jump,men,mark,Adhemar da Silva,BRA,1950-12-03,,,16.00 m (52 ft 5+3/4 in),16.0,1.6,,jump,jump
+triple_jump,men,mark,Adhemar da Silva,BRA,1951-09-30,,,16.01 m (52 ft 6+1/4 in),16.01,1.2,,jump,jump
+triple_jump,men,mark,Adhemar da Silva,BRA,1952-07-23,,,16.12 m (52 ft 10+1/2 in),16.12,,,jump,jump
+triple_jump,men,mark,Adhemar da Silva,BRA,1952-07-23,,,16.22 m (53 ft 2+1/2 in),16.22,,,jump,jump
+triple_jump,men,mark,Leonid Shcherbakov,URS,1953-07-19,,,16.23 m (53 ft 2+3/4 in),16.23,1.5,,jump,jump
+triple_jump,men,mark,Adhemar da Silva,BRA,1955-03-16,,,16.56 m (54 ft 3+3/4 in) A,16.56,0.2,,jump,jump
+triple_jump,men,mark,Oleg Ryakhovskiy,URS,1958-07-28,,,16.59 m (54 ft 5 in),16.59,1.0,,jump,jump
+triple_jump,men,mark,Oleg Fyodoseyev,URS,1959-05-03,,,16.70 m (54 ft 9+1/4 in),16.7,0.0,,jump,jump
+triple_jump,men,mark,Józef Szmidt,POL,1960-08-05,,,17.03 m (55 ft 10+1/4 in),17.03,1.0,,jump,jump
+triple_jump,men,mark,Giuseppe Gentile,ITA,1968-10-16,,,17.10 m (56 ft 1 in) A,17.1,0.0,,jump,jump
+triple_jump,men,mark,Giuseppe Gentile,ITA,1968-10-17,,,17.22 m (56 ft 5+3/4 in) A,17.22,0.0,,jump,jump
+triple_jump,men,mark,Viktor Sanyeyev,URS,1968-10-17,,,17.23 m (56 ft 6+1/4 in) A,17.23,2.0,,jump,jump
+triple_jump,men,mark,Nelson Prudêncio,BRA,1968-10-17,,,17.27 m (56 ft 7+3/4 in) A,17.27,2.0,,jump,jump
+triple_jump,men,mark,Viktor Sanyeyev,URS,1968-10-17,,,17.39 m (57 ft 1/2 in) A,17.39,2.0,,jump,jump
+triple_jump,men,mark,Pedro Pérez,CUB,1971-08-05,,,17.40 m (57 ft 1 in) A,17.4,0.4,,jump,jump
+triple_jump,men,mark,Viktor Sanyeyev,URS,1972-10-17,,,17.44 m (57 ft 2+1/2 in),17.44,-0.5,,jump,jump
+triple_jump,men,mark,João Carlos de Oliveira,BRA,1975-10-15,,,17.89 m (58 ft 8+1/4 in) A,17.89,0.0,,jump,jump
+triple_jump,men,mark,Willie Banks,USA,1985-06-16,,,17.97 m (58 ft 11+1/4 in),17.97,1.5,,jump,jump
+triple_jump,men,mark,Jonathan Edwards,GBR,1995-07-18,,,17.98 m (58 ft 11+3/4 in),17.98,1.8,,jump,jump
+triple_jump,men,mark,Jonathan Edwards,GBR,1995-08-07,,,18.16 m (59 ft 6+3/4 in),18.16,1.3,,jump,jump
+triple_jump,men,mark,Jonathan Edwards,GBR,1995-08-07,,,18.29 m (60 ft 0 in),18.29,1.3,,jump,jump
+triple_jump,women,mark,Elizabeth Stine,USA,1922-05-13,,,10.32 m (33 ft 10+1/4 in),10.32,,,jump,jump
+triple_jump,women,mark,Adrienne Kaenel,SUI,1923-07-23,,,10.50 m (34 ft 5+1/4 in),10.5,,,jump,jump
+triple_jump,women,mark,Kinue Hitomi,JPN,1926-10-17,,,11.62 m (38 ft 1+1/4 in),11.62,,,jump,jump
+triple_jump,women,mark,Rie Yamaguchi,JPN,1939-10-21,,,11.66 m (38 ft 3 in),11.66,,,jump,jump
+triple_jump,women,mark,Mary Bignal,GBR,1959-06-18,,,12.22 m (40 ft 1 in),12.22,,,jump,jump
+triple_jump,women,mark,Terri Turner,USA,1981-05-09,,,12.43 m (40 ft 9+1/4 in),12.43,,,jump,jump
+triple_jump,women,mark,Terri Turner,USA,1982-05-07,,,12.47 m (40 ft 10+3/4 in),12.47,,,jump,jump
+triple_jump,women,mark,Melody Smith,USA,1983-05-06,,,12.51 m (41 ft 1/2 in),12.51,,,jump,jump
+triple_jump,women,mark,Easter Gabriel,USA,1983-05-07,,,12.98 m (42 ft 7 in),12.98,,,jump,jump
+triple_jump,women,mark,Terri Turner,USA,1984-03-24,,,13.15 m (43 ft 1+1/2 in),13.15,,,jump,jump
+triple_jump,women,mark,Terri Turner,USA,1984-04-13,,,13.21 m (43 ft 4 in),13.21,,,jump,jump
+triple_jump,women,mark,Wendy Brown,USA,1985-05-30,,,13.58 m (44 ft 6+1/2 in),13.58,,,jump,jump
+triple_jump,women,mark,Esmeralda Garcia,BRA,1986-06-05,,,13.68 m (44 ft 10+1/2 in),13.68,,,jump,jump
+triple_jump,women,mark,Wendy Brown,USA,1987-05-02,,,13.71 m (44 ft 11+3/4 in),13.71,,,jump,jump
+triple_jump,women,mark,Flora Hyacinth,ISV,1987-05-17,,,13.73 m (45 ft 1/2 in),13.73,,,jump,jump
+triple_jump,women,mark,Sheila Hudson,USA,1987-06-06,,,13.78 m (45 ft 2+1/2 in),13.78,,,jump,jump
+triple_jump,women,mark,Sheila Hudson,USA,1987-06-26,,,13.85 m (45 ft 5+1/4 in),13.85,,,jump,jump
+triple_jump,women,mark,Li Huirong,CHN,1987-10-11,,,14.04 m (46 ft 3/4 in),14.04,,,jump,jump
+triple_jump,women,mark,Li Huirong,CHN,1988-04-23,,,14.16 m (46 ft 5+1/4 in),14.16,,,jump,jump
+triple_jump,women,mark,Galina Chistyakova,URS,1989-07-02,,,14.52 m (47 ft 7+1/2 in),14.52,,,jump,jump
+triple_jump,women,mark,Li Huirong,CHN,1990-08-25,,,14.54 m (47 ft 8+1/4 in),14.54,1.1,,jump,jump
+triple_jump,women,mark,Inessa Kravets,URS,1991-06-10,,,14.95 m (49 ft 1/2 in),14.95,-0.2,,jump,jump
+triple_jump,women,mark,Iolanda Chen,RUS,1993-06-18,,,14.97 m (49 ft 1+1/4 in),14.97,0.9,,jump,jump
+triple_jump,women,mark,Anna Biryukova,RUS,1993-08-21,,,15.09 m (49 ft 6 in),15.09,0.5,,jump,jump
+triple_jump,women,mark,Inessa Kravets,UKR,1995-08-10,,,15.50 m (50 ft 10 in),15.5,0.9,,jump,jump
+triple_jump,women,mark,Yulimar Rojas,VEN,2021-08-01,,,15.67 m (51 ft 4+3/4 in),15.67,0.7,,jump,jump
+triple_jump,women,mark,Yulimar Rojas,VEN,2022-03-20,,,15.74 m (51 ft 7+1/2 in),15.74,,,jump,jump
