@@ -711,3 +711,574 @@ st.caption(
     "Hover to see the raw record value (from the progression tables), the date it was obtained, and the athlete(s). "
     "The optional dashed 'model fit' (≤2025) is non-interactive."
 )
+
+
+
+# ============================================================
+# GRID VIEW — all disciplines at once
+# ============================================================
+
+st.divider()
+st.header("All disciplines — grid view")
+
+# -----------------------------
+# Helpers for grid computations
+# -----------------------------
+def safe_event_meta(df_combined: pd.DataFrame, df_predictions: pd.DataFrame) -> pd.DataFrame:
+    """
+    Returns event-level metadata: category, subcategory, measure.
+    Prefers df_combined if it contains category/subcategory; otherwise falls back to 'Unknown'.
+    """
+    meta_cols = ["event"]
+    has_cat = "category" in df_combined.columns
+    has_sub = "subcategory" in df_combined.columns
+    has_measure_combined = "measure" in df_combined.columns
+
+    # Start from df_predictions to guarantee we include all predicted events
+    base = df_predictions[["event"]].dropna().drop_duplicates().copy()
+
+    # Merge category/subcategory/measure from df_combined if available
+    if has_cat or has_sub or has_measure_combined:
+        keep = ["event"]
+        if has_cat:
+            keep.append("category")
+        if has_sub:
+            keep.append("subcategory")
+        if has_measure_combined:
+            keep.append("measure")
+        comb_meta = df_combined[keep].dropna(subset=["event"]).drop_duplicates()
+
+        base = base.merge(comb_meta, on="event", how="left")
+
+    # Fill missing
+    if "category" not in base.columns:
+        base["category"] = "Unknown"
+    else:
+        base["category"] = base["category"].fillna("Unknown").astype(str)
+
+    if "subcategory" not in base.columns:
+        base["subcategory"] = "Unknown"
+    else:
+        base["subcategory"] = base["subcategory"].fillna("Unknown").astype(str)
+
+    # Ensure measure exists: prefer df_predictions measure (assumed consistent per event)
+    if "measure" not in base.columns or base["measure"].isna().all():
+        pred_meas = (
+            df_predictions[["event", "measure"]]
+            .dropna(subset=["event"])
+            .drop_duplicates()
+        )
+        base = base.drop(columns=["measure"], errors="ignore").merge(pred_meas, on="event", how="left")
+
+    base["measure"] = base["measure"].fillna("time").astype(str).str.lower()
+    return base
+
+
+def compute_improvement_slope(hist_df: pd.DataFrame, measure: str) -> float | None:
+    """
+    Returns an *improvement* slope score:
+      - time: improvement = -slope (since lower is better)
+      - mark: improvement = +slope (since higher is better)
+    Uses linear fit on y_hist_ffill up to CURRENT_YEAR.
+    """
+    d = hist_df.dropna(subset=["year", "y_hist_ffill"]).sort_values("year")
+    d = d[d["year"] <= CURRENT_YEAR]
+    if len(d) < 2:
+        return None
+
+    x = d["year"].astype(float).to_numpy()
+    y = d["y_hist_ffill"].astype(float).to_numpy()
+    slope, _ = np.polyfit(x, y, 1)
+
+    if measure == "time":
+        return float(-slope)  # more positive = faster improvement
+    return float(slope)      # more positive = faster improvement
+
+
+def compute_cross_year_for_event(dfp_event: pd.DataFrame, event: str) -> tuple[int | None, float | None, str]:
+    """
+    Computes cross_year for this event using the same logic as the main plot:
+    based on women's CURRENT_YEAR value vs men's historical progression.
+    Returns: (cross_year, women_2025_val, measure)
+    """
+    if dfp_event.empty:
+        return None, None, "time"
+
+    measure = str(dfp_event["measure"].dropna().iloc[0]).lower() if dfp_event["measure"].notna().any() else "time"
+
+    dfp_m = dfp_event[dfp_event["sex"] == "men"]
+    dfp_w = dfp_event[dfp_event["sex"] == "women"]
+
+    men_series = build_yearly_record_series(dfp_m)
+    women_series = build_yearly_record_series(dfp_w)
+
+    men_hist = men_series[men_series["year"] <= CURRENT_YEAR].copy()
+    women_hist = women_series[women_series["year"] <= CURRENT_YEAR].copy()
+
+    men_lookup = build_record_lookup_from_combined(df_combined, event=event, sex="men", measure=measure)
+    women_lookup = build_record_lookup_from_combined(df_combined, event=event, sex="women", measure=measure)
+
+    men_hist_h = attach_hover_metadata(men_hist, men_lookup)
+    women_hist_h = attach_hover_metadata(women_hist, women_lookup)
+
+    women_2025_val = year_value(women_hist_h, CURRENT_YEAR)
+    men_first_year, _ = first_valid_year_and_value(men_hist_h)
+
+    if women_2025_val is None or men_first_year is None:
+        return None, women_2025_val, measure
+
+    cross_year = find_crossing_year(men_hist_h, women_2025_val, measure=measure)
+    return cross_year, women_2025_val, measure
+
+
+def ticks_every_25_years(min_year: int, max_year: int, must_include: int = CURRENT_YEAR):
+    start = (min_year // 25) * 25
+    end = ((max_year + 24) // 25) * 25
+    ticks = list(range(start, end + 1, 25))
+    if must_include not in ticks:
+        ticks.append(must_include)
+    return sorted(set(ticks))
+
+
+def make_event_figure(
+    event: str,
+    model_name: str,
+    show_gap_line: bool,
+    show_future_pred: bool,
+    show_full_pred: bool,
+    show_regression: bool,
+    show_history: bool,  # NEW
+) -> go.Figure | None:
+    """
+    Mini-plot builder for the grid. Very similar to the main plot, but:
+    - smaller height
+    - simpler legend defaults
+    """
+    dfp_e = df_predictions[df_predictions["event"] == event].copy()
+    if "model" in dfp_e.columns:
+        dfp_e = dfp_e[dfp_e["model"] == model_name].copy()
+
+    needed_cols = {"event", "sex", "year", "y_hist", "y_pred", "measure"}
+    if (needed_cols - set(dfp_e.columns)):
+        return None
+
+    measure = str(dfp_e["measure"].dropna().iloc[0]).lower() if dfp_e["measure"].notna().any() else "time"
+
+    dfp_m = dfp_e[dfp_e["sex"] == "men"]
+    dfp_w = dfp_e[dfp_e["sex"] == "women"]
+
+    men_series = build_yearly_record_series(dfp_m)
+    women_series = build_yearly_record_series(dfp_w)
+
+    men_hist = men_series[men_series["year"] <= CURRENT_YEAR].copy()
+    women_hist = women_series[women_series["year"] <= CURRENT_YEAR].copy()
+
+    men_pred_future = men_series[men_series["year"] >= PRED_START_YEAR].copy()
+    women_pred_future = women_series[women_series["year"] >= PRED_START_YEAR].copy()
+
+    men_lookup = build_record_lookup_from_combined(df_combined, event=event, sex="men", measure=measure)
+    women_lookup = build_record_lookup_from_combined(df_combined, event=event, sex="women", measure=measure)
+
+    men_hist_h = attach_hover_metadata(men_hist, men_lookup)
+    women_hist_h = attach_hover_metadata(women_hist, women_lookup)
+
+    women_2025_val = year_value(women_hist_h, CURRENT_YEAR)
+    men_first_y, _ = first_valid_year_and_value(men_hist_h)
+    cross_year = None
+    if women_2025_val is not None and men_first_y is not None:
+        cross_year = find_crossing_year(men_hist_h, women_2025_val, measure=measure)
+
+    # Ticks
+    min_year = int(dfp_e["year"].dropna().min())
+    max_year = int(dfp_e["year"].dropna().max())
+    tickvals = ticks_every_25_years(min_year, max_year, must_include=CURRENT_YEAR)
+
+    fig = go.Figure()
+
+    if show_history:
+        # Women historical
+        fig.add_trace(
+            go.Scatter(
+                x=women_hist_h["year"].astype(int),
+                y=women_hist_h["y_hist_ffill"],
+                mode="lines",
+                name="Women",
+                line=dict(color=COLOR_WOMEN, width=2),
+                fill="tozeroy",
+                fillcolor="rgba(255,127,14,0.12)",
+                customdata=np.stack(
+                    [
+                        women_hist_h["record_date"],
+                        women_hist_h["record_year_obtained"].fillna(-1).astype(int),
+                        women_hist_h["athletes"],
+                        women_hist_h["raw"],
+                    ],
+                    axis=1,
+                ),
+                hovertemplate=(
+                    "<b>Women</b><br>"
+                    "Record: %{customdata[3]}<br>"
+                    "Obtained: %{customdata[0]} (year %{customdata[1]})<br>"
+                    "Athlete(s): %{customdata[2]}<br>"
+                    "<extra></extra>"
+                ),
+            )
+        )
+
+        # Men historical
+        fig.add_trace(
+            go.Scatter(
+                x=men_hist_h["year"].astype(int),
+                y=men_hist_h["y_hist_ffill"],
+                mode="lines",
+                name="Men",
+                line=dict(color=COLOR_MEN, width=2),
+                fill="tozeroy",
+                fillcolor="rgba(44,160,44,0.12)",
+                customdata=np.stack(
+                    [
+                        men_hist_h["record_date"],
+                        men_hist_h["record_year_obtained"].fillna(-1).astype(int),
+                        men_hist_h["athletes"],
+                        men_hist_h["raw"],
+                    ],
+                    axis=1,
+                ),
+                hovertemplate=(
+                    "<b>Men</b><br>"
+                    "Record: %{customdata[3]}<br>"
+                    "Obtained: %{customdata[0]} (year %{customdata[1]})<br>"
+                    "Athlete(s): %{customdata[2]}<br>"
+                    "<extra></extra>"
+                ),
+            )
+        )
+
+    # Optional full prediction (≤2025) non-interactive
+    if show_full_pred:
+        w_pre = women_series[women_series["year"] <= CURRENT_YEAR].copy()
+        if not w_pre.empty:
+            fig.add_trace(
+                go.Scatter(
+                    x=w_pre["year"].astype(int),
+                    y=w_pre["y_pred"],
+                    mode="lines",
+                    name="Women fit",
+                    line=dict(color=COLOR_WOMEN, width=1.5, dash="dash"),
+                    hoverinfo="skip",
+                    opacity=0.7,
+                    showlegend=False,
+                )
+            )
+        m_pre = men_series[men_series["year"] <= CURRENT_YEAR].copy()
+        if not m_pre.empty:
+            fig.add_trace(
+                go.Scatter(
+                    x=m_pre["year"].astype(int),
+                    y=m_pre["y_pred"],
+                    mode="lines",
+                    name="Men fit",
+                    line=dict(color=COLOR_MEN, width=1.5, dash="dash"),
+                    hoverinfo="skip",
+                    opacity=0.7,
+                    showlegend=False,
+                )
+            )
+
+    # Future forecasts
+    if show_future_pred and not women_pred_future.empty:
+        fig.add_trace(
+            go.Scatter(
+                x=women_pred_future["year"].astype(int),
+                y=women_pred_future["y_pred"],
+                mode="lines",
+                name="Women forecast",
+                line=dict(color=COLOR_WOMEN, width=1.5, dash="dash"),
+                hovertemplate="<b>Women forecast</b><br>Predicted: %{y:.3f}<extra></extra>",
+                showlegend=False,
+            )
+        )
+    if show_future_pred and not men_pred_future.empty:
+        fig.add_trace(
+            go.Scatter(
+                x=men_pred_future["year"].astype(int),
+                y=men_pred_future["y_pred"],
+                mode="lines",
+                name="Men forecast",
+                line=dict(color=COLOR_MEN, width=1.5, dash="dash"),
+                hovertemplate="<b>Men forecast</b><br>Predicted: %{y:.3f}<extra></extra>",
+                showlegend=False,
+            )
+        )
+
+    # Optional regression (visual)
+    if show_regression:
+
+        def add_reg_line(hist_df: pd.DataFrame, color: str):
+            d = hist_df.dropna(subset=["year", "y_hist_ffill"]).sort_values("year")
+            d = d[d["year"] <= CURRENT_YEAR]
+            if len(d) < 2:
+                return
+            x = d["year"].astype(float).to_numpy()
+            y = d["y_hist_ffill"].astype(float).to_numpy()
+            m, b = np.polyfit(x, y, 1)
+            x0 = int(d["year"].min())
+            x1 = CURRENT_YEAR
+            fig.add_trace(
+                go.Scatter(
+                    x=[x0, x1],
+                    y=[m * x0 + b, m * x1 + b],
+                    mode="lines",
+                    line=dict(color=color, width=1.5, dash="dot"),
+                    hoverinfo="skip",
+                    showlegend=False,
+                    opacity=0.85,
+                )
+            )
+
+        add_reg_line(women_hist_h, COLOR_WOMEN)
+        add_reg_line(men_hist_h, COLOR_MEN)
+
+    # Optional gap line & crossing marker
+    if show_gap_line and women_2025_val is not None and men_first_y is not None:
+        if cross_year is None:
+            fig.add_shape(
+                type="line",
+                x0=men_first_y, x1=CURRENT_YEAR,
+                y0=women_2025_val, y1=women_2025_val,
+                line=dict(color=COLOR_COMPARE, width=2, dash="dash"),
+                opacity=0.9,
+            )
+        else:
+            fig.add_shape(
+                type="line",
+                x0=cross_year, x1=CURRENT_YEAR,
+                y0=women_2025_val, y1=women_2025_val,
+                line=dict(color=COLOR_COMPARE, width=2),
+                opacity=0.9,
+            )
+            fig.add_trace(
+                go.Scatter(
+                    x=[cross_year],
+                    y=[women_2025_val],
+                    mode="markers",
+                    marker=dict(size=7, color=COLOR_COMPARE),
+                    hoverinfo="skip",
+                    showlegend=False,
+                )
+            )
+
+    # Zoom y
+    all_y = pd.concat(
+        [
+            men_hist_h["y_hist_ffill"],
+            women_hist_h["y_hist_ffill"],
+            men_pred_future["y_pred"] if not men_pred_future.empty else pd.Series(dtype=float),
+            women_pred_future["y_pred"] if not women_pred_future.empty else pd.Series(dtype=float),
+        ]
+    ).dropna()
+
+    if not all_y.empty:
+        y_min, y_max = all_y.min(), all_y.max()
+        pad = 0.15 * (y_max - y_min) if (y_max - y_min) != 0 else 0.15 * abs(y_max if y_max != 0 else 1.0)
+        fig.update_yaxes(range=[y_min - pad, y_max + pad])
+
+    y_title = "Time (s)" if measure == "time" else "Mark (m)"
+    fig.update_layout(
+        height=340,
+        margin=dict(l=20, r=10, t=60, b=25),
+        title=dict(text=event, x=0.02, xanchor="left", y=0.98, yanchor="top", font=dict(size=16)),
+        xaxis_title="",
+        yaxis_title=y_title,
+        hovermode="x unified",
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
+    )
+    fig.update_xaxes(
+        tickmode="array",
+        tickvals=tickvals,
+        showgrid=True,
+        gridwidth=1,
+        griddash="dot",
+    )
+    return fig
+
+
+# -----------------------------
+# Build metadata and controls
+# -----------------------------
+event_meta = safe_event_meta(df_combined, df_predictions)
+
+# -----------------------------
+# Row 1: category + subcategory + crossing
+# -----------------------------
+r1c1, r1c2, r1c3 = st.columns([3, 3, 4])
+
+with r1c1:
+    categories = ["All"] + sorted(event_meta["category"].dropna().unique().tolist())
+    grid_category = st.selectbox("Category (grid)", categories, index=0)
+
+with r1c2:
+    if grid_category == "All":
+        subcats = ["All"] + sorted(event_meta["subcategory"].dropna().unique().tolist())
+    else:
+        subcats = ["All"] + sorted(
+            event_meta[event_meta["category"] == grid_category]["subcategory"].dropna().unique().tolist()
+        )
+    grid_subcategory = st.selectbox("Subcategory (grid)", subcats, index=0)
+
+with r1c3:
+    cross_filter = st.selectbox(
+        "Crossing filter",
+        ["All", "Only women reached men (cross_year exists)", "Only women NOT reached men (cross_year is None)"],
+        index=0,
+    )
+
+# -----------------------------
+# Row 2: grid toggles (show/hide)
+# -----------------------------
+r2c1, r2c2, r2c3, r2c4, r2c5 = st.columns([2, 2, 2, 2, 2])
+
+with r2c1:
+    grid_show_history = st.checkbox("Grid: show historical data", value=True)
+with r2c2:
+    grid_show_regression = st.checkbox("Grid: show regression slopes", value=show_regression)
+with r2c3:
+    grid_show_gap_line = st.checkbox("Grid: show gap line", value=show_gap_line)
+with r2c4:
+    grid_show_future_pred = st.checkbox("Grid: show predictions (2026+)", value=show_future_pred)
+with r2c5:
+    grid_show_full_pred = st.checkbox("Grid: show model fit (≤2025)", value=show_full_pred)
+
+# -----------------------------
+# Row 3: sorting + layout
+# -----------------------------
+r3c1, r3c2 = st.columns([3, 2])
+
+with r3c1:
+    sort_women_better = st.checkbox(
+        "Sort: women improve faster than men",
+        value=False,
+        help="Uses linear regression slope on historical best-so-far up to 2025 (converted to an improvement score).",
+    )
+
+with r3c2:
+    grid_cols = st.slider("Grid columns", min_value=2, max_value=4, value=3, step=1)
+
+
+# -----------------------------
+# Filter events list
+# -----------------------------
+meta_f = event_meta.copy()
+
+if grid_category != "All":
+    meta_f = meta_f[meta_f["category"] == grid_category]
+if grid_subcategory != "All":
+    meta_f = meta_f[meta_f["subcategory"] == grid_subcategory]
+
+grid_events = meta_f["event"].dropna().unique().tolist()
+
+# -----------------------------
+# Compute per-event stats for sorting / filtering
+# -----------------------------
+rows = []
+for ev in grid_events:
+    dfp_ev = df_predictions[df_predictions["event"] == ev].copy()
+    if "model" in dfp_ev.columns:
+        dfp_ev = dfp_ev[dfp_ev["model"] == model_name].copy()
+
+    if dfp_ev.empty:
+        continue
+
+    measure_ev = str(dfp_ev["measure"].dropna().iloc[0]).lower() if dfp_ev["measure"].notna().any() else "time"
+
+    # Build hist for slopes
+    dfp_m = dfp_ev[dfp_ev["sex"] == "men"]
+    dfp_w = dfp_ev[dfp_ev["sex"] == "women"]
+    men_series = build_yearly_record_series(dfp_m)
+    women_series = build_yearly_record_series(dfp_w)
+    men_hist = men_series[men_series["year"] <= CURRENT_YEAR].copy()
+    women_hist = women_series[women_series["year"] <= CURRENT_YEAR].copy()
+
+    # Slopes
+    men_slope_imp = compute_improvement_slope(men_hist, measure_ev)
+    women_slope_imp = compute_improvement_slope(women_hist, measure_ev)
+
+    # Crossing
+    cross_year, w2025, _ = compute_cross_year_for_event(dfp_ev, ev)
+
+    women_better = None
+    if (men_slope_imp is not None) and (women_slope_imp is not None):
+        women_better = women_slope_imp > men_slope_imp
+
+    rows.append(
+        {
+            "event": ev,
+            "measure": measure_ev,
+            "men_improvement_slope": men_slope_imp,
+            "women_improvement_slope": women_slope_imp,
+            "women_better": women_better,
+            "cross_year": cross_year,
+        }
+    )
+
+stats = pd.DataFrame(rows)
+
+# Crossing filter
+if not stats.empty:
+    if cross_filter == "Only women reached men (cross_year exists)":
+        stats = stats[stats["cross_year"].notna()]
+    elif cross_filter == "Only women NOT reached men (cross_year is None)":
+        stats = stats[stats["cross_year"].isna()]
+
+# Sorting
+if sort_women_better and not stats.empty:
+    # Put women_better=True first, then by (women-men) improvement gap descending
+    stats["gap"] = (stats["women_improvement_slope"] - stats["men_improvement_slope"])
+    stats = stats.sort_values(
+        by=["women_better", "gap"],
+        ascending=[False, False],
+        na_position="last",
+    )
+else:
+    # Default: keep your custom ordering if possible
+    # (stats order is arbitrary, so re-apply your sorter)
+    stats_events = stats["event"].tolist() if not stats.empty else []
+    stats = stats.set_index("event").loc[sort_events_custom(stats_events)].reset_index()
+
+# Final event list for rendering
+render_events = stats["event"].tolist() if not stats.empty else []
+
+# -----------------------------
+# Render grid
+# -----------------------------
+if not render_events:
+    st.info("No disciplines match the selected filters.")
+else:
+    st.caption(
+        "Mini-plots use the same logic as the main chart (historical filled progression, optional forecasts, optional slopes, optional gap line). "
+        "Sorting uses an improvement-score slope (time: -slope, mark: +slope)."
+    )
+
+    cols = st.columns(grid_cols)
+    for i, ev in enumerate(render_events):
+        col = cols[i % grid_cols]
+        with col:
+            fig_ev = make_event_figure(
+                event=ev,
+                model_name=model_name,
+                show_gap_line=grid_show_gap_line,
+                show_future_pred=grid_show_future_pred,
+                show_full_pred=grid_show_full_pred,
+                show_regression=grid_show_regression,
+                show_history=grid_show_history,
+            )
+            if fig_ev is None:
+                st.warning(f"Could not render {ev} (missing data).")
+            else:
+                st.plotly_chart(fig_ev, width='stretch')
+
+    # Show a small summary table (optional but handy)
+    with st.expander("Show grid metrics table"):
+        show_cols = ["event", "measure", "women_improvement_slope", "men_improvement_slope", "women_better", "cross_year"]
+        st.dataframe(stats[show_cols], width='stretch', hide_index=True)
+
