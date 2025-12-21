@@ -457,7 +457,7 @@ if show_full_pred:
         )
 
 # Future forecasts (interactive)
-if not women_pred_future.empty:
+if show_future_pred and not women_pred_future.empty:
     fig.add_trace(
         go.Scatter(
             x=women_pred_future["year"].astype(int),
@@ -473,7 +473,7 @@ if not women_pred_future.empty:
             hoverinfo="text",
         )
     )
-if not men_pred_future.empty:
+if show_future_pred and not men_pred_future.empty:
     fig.add_trace(
         go.Scatter(
             x=men_pred_future["year"].astype(int),
