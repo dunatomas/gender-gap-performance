@@ -8,36 +8,14 @@ st.set_page_config(page_title="Gender Gap in Sports Performance", layout="wide")
 st.markdown(
     """
     <style>
-    /* =========================================================
-       PLOTLY — SAFE INSET OUTLINE (NO SCROLL ISSUES)
-       ========================================================= */
-
-    /* Do NOT style the outer Streamlit Plotly container */
-    div[data-testid="stPlotlyChart"] {
+    /* Plotly: remove border/background/shadow to avoid scroll issues in deploy */
+    div[data-testid="stPlotlyChart"]{
         background: transparent !important;
         border: none !important;
         box-shadow: none !important;
         padding: 0 !important;
         margin: 12px 0 18px 0;
         overflow: visible !important;
-    }
-
-    div[data-testid="stPlotlyChart"] > div {
-        overflow: visible !important;
-        max-height: none !important;
-    }
-
-    div[data-testid="stPlotlyChart"] iframe,
-    div[data-testid="stPlotlyChart"] svg {
-        overflow: visible !important;
-    }
-
-    /* Inset outline INSIDE the Plotly canvas */
-    div[data-testid="stPlotlyChart"] .plotly {
-        border-radius: 12px;
-        outline: 2px solid rgba(255, 255, 255, 0.10);
-        outline-offset: -1px;   /* inset, not outside */
-        overflow: hidden;
     }
 
     /* =========================================================
