@@ -1,8 +1,90 @@
+import streamlit as st
+
+# -----------------------------
+# App UI
+# -----------------------------
+st.set_page_config(page_title="Gender Gap in Sports Performance", layout="wide")
+
+st.markdown(
+    """
+    <style>
+    /* =========================================================
+       PLOTLY — SAFE INSET OUTLINE (NO SCROLL ISSUES)
+       ========================================================= */
+
+    /* Do NOT style the outer Streamlit Plotly container */
+    div[data-testid="stPlotlyChart"] {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 12px 0 18px 0;
+        overflow: visible !important;
+    }
+
+    div[data-testid="stPlotlyChart"] > div {
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    div[data-testid="stPlotlyChart"] iframe,
+    div[data-testid="stPlotlyChart"] svg {
+        overflow: visible !important;
+    }
+
+    /* Inset outline INSIDE the Plotly canvas */
+    div[data-testid="stPlotlyChart"] .plotly {
+        border-radius: 12px;
+        outline: 2px solid rgba(255, 255, 255, 0.10);
+        outline-offset: -1px;   /* inset, not outside */
+        overflow: hidden;
+    }
+
+    /* =========================================================
+       FILTERS BLOCK (UNCHANGED, STABLE)
+       ========================================================= */
+
+    #filters-anchor + div[data-testid="stVerticalBlock"] {
+        background: rgba(255, 255, 255, 0.02);
+        border: 0.3px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        padding: 0px;
+        margin: 10px 0 16px 0;
+        box-shadow: none;
+    }
+
+    #filters-anchor + div[data-testid="stVerticalBlock"] > div {
+        padding: 6px 10px;
+    }
+
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
+
+st.title("Gender Gap in Sports Performance")
+
+st.markdown(
+    """
+Women’s performance has accelerated dramatically across many sports, especially as access, participation, coaching,
+and professionalization have expanded. In several disciplines, women’s historical improvement rate has been steeper
+than men’s, narrowing the performance gap over time.
+
+This dashboard explores that gap by combining record progressions with model-based forecasts.
+
+**How to use the dashboard**  
+The main chart focuses on a single discipline and allows you to toggle historical data, forecasts, regression trends,
+and gender-gap indicators. Below, the grid view provides a comparative overview across all disciplines. Filters can be
+used to restrict the grid by category and subcategory, while sorting options highlight events where women’s performance
+has improved faster than men’s.
+"""
+)
+
 import numpy as np
 import pandas as pd
-import streamlit as st
 import plotly.graph_objects as go
-
 
 # -----------------------------
 # Config
@@ -197,76 +279,7 @@ def decade_ticks(min_year: int, max_year: int):
     return list(range(start, end + 1, 10))
 
 
-# -----------------------------
-# App UI
-# -----------------------------
-st.set_page_config(page_title="Gender Gap in Sports Performance", layout="wide")
 
-st.markdown(
-    """
-    <style>
-    /* Existing plot styling */
-    div[data-testid="stPlotlyChart"] {
-        background: rgba(255, 255, 255, 0.04);
-        border: 0.3px solid rgba(255, 255, 255, 0.08);
-        border-radius: 12px;
-        padding: 0.6px;
-        margin: 12px 0 18px 0;
-    }
-
-    div[data-testid="stPlotlyChart"] .plotly {
-        border-radius: 12px;
-        overflow: hidden;
-    }
-
-    /* Style the container immediately after the filters anchor */
-    #filters-anchor + div[data-testid="stVerticalBlock"] {
-        background: rgba(255, 255, 255, 0.02);
-        border: 0.3px solid rgba(255, 255, 255, 0.08);
-        border-radius: 14px;
-        padding: 0px;              /* no padding */
-        margin: 10px 0 16px 0;
-        box-shadow: none;
-    }
-
-    /* Optional: tiny inner spacing so widgets don't touch border */
-    #filters-anchor + div[data-testid="stVerticalBlock"] > div {
-        padding: 6px 10px;
-    }
-
-    /* ---- Fix Plotly 6 + Streamlit 1.51 scrollbar bug ---- */
-    div[data-testid="stPlotlyChart"] {
-        overflow: visible !important;
-        padding-bottom: 2px;
-    }
-
-    div[data-testid="stPlotlyChart"] > div {
-        overflow: visible !important;
-        max-height: none !important;
-    }
-
-    div[data-testid="stPlotlyChart"] iframe,
-    div[data-testid="stPlotlyChart"] svg {
-        overflow: visible !important;
-    }
-
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-
-st.title("Gender Gap in Sports Performance")
-
-st.markdown(
-    """
-Women’s performance has accelerated dramatically across many sports, especially as access, participation, coaching,
-and professionalization have expanded. In several disciplines, women’s historical improvement rate has been steeper
-than men’s, narrowing the performance gap over time.
-
-This dashboard explores that gap by combining record progressions with model-based forecasts.
-"""
-)
 
 # Load data
 df_combined = load_combined("data/processed/all_events_results_clean.csv")
@@ -341,6 +354,8 @@ available_events = sort_events_custom(df_predictions["event"].dropna().unique().
 
 available_models = sorted(df_predictions["model"].dropna().unique().tolist()) if "model" in df_predictions.columns else ["model"]
 
+st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
+
 # Top filter "box"
 # First row: event and model
 with st.container():
@@ -366,7 +381,13 @@ with st.container():
     with c6:
         show_regression = st.checkbox("Show regression slopes", value=False)
 
-st.subheader(f"{event} record progression and forecasts")
+# # Increase space ABOVE
+# st.markdown("<div style='height: 18px;'></div>", unsafe_allow_html=True)
+
+# st.subheader(f"{event} record progression and forecasts")
+
+# # Decrease space BELOW
+# st.markdown("<div style='height: 1px;'></div>", unsafe_allow_html=True)
 
 # Filter predictions to event/model
 dfp = df_predictions[df_predictions["event"] == event].copy()
@@ -730,7 +751,7 @@ if show_gap_line and women_2025_val is not None and men_first_y is not None:
 # Layout: vertical gridlines + decade ticks
 y_title = "Time (seconds)" if measure == "time" else "Mark (meters)"
 fig.update_layout(
-    height=650,
+    height=600,
     margin=dict(l=40, r=40, t=40, b=40),
     xaxis_title="Year",
     yaxis_title=y_title,
@@ -764,7 +785,19 @@ fig.update_yaxes(range=[y_min - padding, y_max + padding])
 # (Optional) keep y grid subtle too
 # fig.update_yaxes(showgrid=True, gridwidth=1, griddash="dot")
 
-st.plotly_chart(fig, use_container_width=True, config=PLOTLY_CONFIG, key="main_plot")
+fig.update_layout(
+    title=dict(
+        text=f"{event} record progression and forecasts",
+        x=0.5,
+        xanchor="center",
+        y=0.97,
+        yanchor="top",
+        font=dict(size=24),
+    ),
+    margin=dict(t=120)  # ensure room for the title
+)
+
+st.plotly_chart(fig, width='stretch', config=PLOTLY_CONFIG, key="main_plot")
 
 st.caption(
     "Hover to see the raw record value (from the progression tables), the date it was obtained, and the athlete(s). "
@@ -779,6 +812,14 @@ st.caption(
 
 st.divider()
 st.header("All disciplines — grid view")
+
+st.markdown(
+    """
+Each panel summarizes the historical record progression for a single discipline, shown for women and men using regression slopes. 
+Optional elements (forecasts and gap indicators) can be toggled globally to support rapid comparison across events. 
+Sorting by relative improvement highlights disciplines where women’s performance has accelerated faster than men’s, while crossing filters identify events where women have reached or surpassed historical men’s records.
+"""
+)
 
 # -----------------------------
 # Helpers for grid computations
@@ -1152,7 +1193,7 @@ def make_event_figure(
 
     y_title = "Time (s)" if measure == "time" else "Mark (m)"
     fig.update_layout(
-        height=340,
+        height=300,
         margin=dict(l=20, r=10, t=60, b=25),
         title=dict(text=event, x=0.02, xanchor="left", y=0.98, yanchor="top", font=dict(size=16)),
         xaxis_title="",
@@ -1342,10 +1383,10 @@ else:
             if fig_ev is None:
                 st.warning(f"Could not render {ev} (missing data).")
             else:
-                st.plotly_chart(fig_ev, use_container_width=True, config=PLOTLY_CONFIG, key=f"grid_plot_{ev}_{i}",)
+                st.plotly_chart(fig_ev, width='stretch', config=PLOTLY_CONFIG, key=f"grid_plot_{ev}_{i}",)
 
     # Show a small summary table (optional but handy)
     with st.expander("Show grid metrics table"):
         show_cols = ["event", "measure", "women_improvement_slope", "men_improvement_slope", "women_better", "cross_year"]
-        st.dataframe(stats[show_cols], use_container_width=True, hide_index=True)
+        st.dataframe(stats[show_cols], width='stretch', hide_index=True)
 
