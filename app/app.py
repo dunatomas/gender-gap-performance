@@ -237,6 +237,7 @@ st.markdown(
     /* ---- Fix Plotly 6 + Streamlit 1.51 scrollbar bug ---- */
     div[data-testid="stPlotlyChart"] {
         overflow: visible !important;
+        padding-bottom: 2px;
     }
 
     div[data-testid="stPlotlyChart"] > div {
@@ -730,7 +731,7 @@ if show_gap_line and women_2025_val is not None and men_first_y is not None:
 y_title = "Time (seconds)" if measure == "time" else "Mark (meters)"
 fig.update_layout(
     height=650,
-    margin=dict(l=40, r=40, t=40, b=50),
+    margin=dict(l=40, r=40, t=40, b=40),
     xaxis_title="Year",
     yaxis_title=y_title,
     hovermode="x unified",
@@ -763,7 +764,7 @@ fig.update_yaxes(range=[y_min - padding, y_max + padding])
 # (Optional) keep y grid subtle too
 # fig.update_yaxes(showgrid=True, gridwidth=1, griddash="dot")
 
-st.plotly_chart(fig, width='stretch', config=PLOTLY_CONFIG, key="main_plot")
+st.plotly_chart(fig, use_container_width=True, config=PLOTLY_CONFIG, key="main_plot")
 
 st.caption(
     "Hover to see the raw record value (from the progression tables), the date it was obtained, and the athlete(s). "
@@ -1151,8 +1152,8 @@ def make_event_figure(
 
     y_title = "Time (s)" if measure == "time" else "Mark (m)"
     fig.update_layout(
-        height=380,
-        margin=dict(t=70, b=45, l=20, r=10),
+        height=340,
+        margin=dict(l=20, r=10, t=60, b=25),
         title=dict(text=event, x=0.02, xanchor="left", y=0.98, yanchor="top", font=dict(size=16)),
         xaxis_title="",
         yaxis_title=y_title,
@@ -1341,10 +1342,10 @@ else:
             if fig_ev is None:
                 st.warning(f"Could not render {ev} (missing data).")
             else:
-                st.plotly_chart(fig_ev, width='stretch', config=PLOTLY_CONFIG, key=f"grid_plot_{ev}_{i}",)
+                st.plotly_chart(fig_ev, use_container_width=True, config=PLOTLY_CONFIG, key=f"grid_plot_{ev}_{i}",)
 
     # Show a small summary table (optional but handy)
     with st.expander("Show grid metrics table"):
         show_cols = ["event", "measure", "women_improvement_slope", "men_improvement_slope", "women_better", "cross_year"]
-        st.dataframe(stats[show_cols], width='stretch', hide_index=True)
+        st.dataframe(stats[show_cols], use_container_width=True, hide_index=True)
 
