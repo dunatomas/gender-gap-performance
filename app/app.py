@@ -5,43 +5,6 @@ import streamlit as st
 # -----------------------------
 st.set_page_config(page_title="Gender Gap in Sports Performance", layout="wide")
 
-st.markdown(
-    """
-    <style>
-    /* Plotly: remove border/background/shadow to avoid scroll issues in deploy */
-    div[data-testid="stPlotlyChart"]{
-        background: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
-        padding: 0 !important;
-        margin: 12px 0 18px 0;
-        overflow: visible !important;
-    }
-
-    /* =========================================================
-       FILTERS BLOCK (UNCHANGED, STABLE)
-       ========================================================= */
-
-    #filters-anchor + div[data-testid="stVerticalBlock"] {
-        background: rgba(255, 255, 255, 0.02);
-        border: 0.3px solid rgba(255, 255, 255, 0.08);
-        border-radius: 14px;
-        padding: 0px;
-        margin: 10px 0 16px 0;
-        box-shadow: none;
-    }
-
-    #filters-anchor + div[data-testid="stVerticalBlock"] > div {
-        padding: 6px 10px;
-    }
-
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-
-
 st.title("Gender Gap in Sports Performance")
 
 st.markdown(
@@ -359,13 +322,10 @@ with st.container():
     with c6:
         show_regression = st.checkbox("Show regression slopes", value=False)
 
-# # Increase space ABOVE
-# st.markdown("<div style='height: 18px;'></div>", unsafe_allow_html=True)
 
-# st.subheader(f"{event} record progression and forecasts")
+# Increase space
+st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
 
-# # Decrease space BELOW
-# st.markdown("<div style='height: 1px;'></div>", unsafe_allow_html=True)
 
 # Filter predictions to event/model
 dfp = df_predictions[df_predictions["event"] == event].copy()
@@ -1194,6 +1154,8 @@ def make_event_figure(
 # -----------------------------
 event_meta = safe_event_meta(df_combined, df_predictions)
 
+st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
+
 # -----------------------------
 # Row 1: category + subcategory + crossing
 # -----------------------------
@@ -1250,6 +1212,7 @@ with r3c1:
 with r3c2:
     grid_cols = st.slider("Grid columns", min_value=2, max_value=5, value=4, step=1)
 
+st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
 
 # -----------------------------
 # Filter events list
