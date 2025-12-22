@@ -209,10 +209,9 @@ st.markdown(
     div[data-testid="stPlotlyChart"] {
         background: rgba(255, 255, 255, 0.04);
         border: 0.3px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        padding: 0.1px;
+        border-radius: 12px;
+        padding: 0.6px;
         margin: 12px 0 18px 0;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.22);
     }
 
     div[data-testid="stPlotlyChart"] .plotly {
