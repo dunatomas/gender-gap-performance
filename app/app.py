@@ -234,6 +234,21 @@ st.markdown(
         padding: 6px 10px;
     }
 
+    /* ---- Fix Plotly 6 + Streamlit 1.51 scrollbar bug ---- */
+    div[data-testid="stPlotlyChart"] {
+        overflow: visible !important;
+    }
+
+    div[data-testid="stPlotlyChart"] > div {
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    div[data-testid="stPlotlyChart"] iframe,
+    div[data-testid="stPlotlyChart"] svg {
+        overflow: visible !important;
+    }
+
     </style>
     """,
     unsafe_allow_html=True,
@@ -715,7 +730,7 @@ if show_gap_line and women_2025_val is not None and men_first_y is not None:
 y_title = "Time (seconds)" if measure == "time" else "Mark (meters)"
 fig.update_layout(
     height=650,
-    margin=dict(l=40, r=40, t=40, b=40),
+    margin=dict(l=40, r=40, t=40, b=50),
     xaxis_title="Year",
     yaxis_title=y_title,
     hovermode="x unified",
@@ -1136,8 +1151,8 @@ def make_event_figure(
 
     y_title = "Time (s)" if measure == "time" else "Mark (m)"
     fig.update_layout(
-        height=340,
-        margin=dict(l=20, r=10, t=60, b=25),
+        height=380,
+        margin=dict(t=70, b=45, l=20, r=10),
         title=dict(text=event, x=0.02, xanchor="left", y=0.98, yanchor="top", font=dict(size=16)),
         xaxis_title="",
         yaxis_title=y_title,
