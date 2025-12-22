@@ -15,10 +15,15 @@ COLOR_MEN = "#2ca02c"      # green
 COLOR_WOMEN = "#ff7f0e"    # orange
 COLOR_COMPARE = "#9467bd"  # purple
 COLOR_MEN_ANNOT = "#3ddc84"  # lighter green for annotations
+COLOR_GAP_ANNOT = "#b07edf"  # lighter purple for annotations
 
 # Rounding for matching prediction record values to df_combined record values
 MATCH_ROUND_DECIMALS = 3
 
+PLOTLY_CONFIG = {
+    "displayModeBar": False,   # hides zoom/pan/download/etc
+    "displaylogo": True,
+}
 
 # -----------------------------
 # Data loading
@@ -197,6 +202,45 @@ def decade_ticks(min_year: int, max_year: int):
 # -----------------------------
 st.set_page_config(page_title="Gender Gap in Sports Performance", layout="wide")
 
+st.markdown(
+    """
+    <style>
+    /* Existing plot styling */
+    div[data-testid="stPlotlyChart"] {
+        background: rgba(255, 255, 255, 0.04);
+        border: 0.3px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 0.1px;
+        margin: 12px 0 18px 0;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+    }
+
+    div[data-testid="stPlotlyChart"] .plotly {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    /* Style the container immediately after the filters anchor */
+    #filters-anchor + div[data-testid="stVerticalBlock"] {
+        background: rgba(255, 255, 255, 0.02);
+        border: 0.3px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        padding: 0px;              /* no padding */
+        margin: 10px 0 16px 0;
+        box-shadow: none;
+    }
+
+    /* Optional: tiny inner spacing so widgets don't touch border */
+    #filters-anchor + div[data-testid="stVerticalBlock"] > div {
+        padding: 6px 10px;
+    }
+
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
 st.title("Gender Gap in Sports Performance")
 
 st.markdown(
@@ -293,7 +337,7 @@ with st.container():
             index=available_events.index("100m") if "100m" in available_events else 0,
         )
     with c2:
-        model_name = st.selectbox("Model", available_models, index=0)
+        model_name = st.selectbox("Prediction Model", available_models, index=0)
 
 # Second row: checkboxes
 with st.container():
@@ -558,9 +602,9 @@ if show_regression:
                 y=y_line,
                 mode="lines",
                 name=f"{sex_label} — slope (visual)",
-                line=dict(color=color, width=2, dash="dot"),
+                line=dict(color=color, width=3, dash="dot"),
                 hoverinfo="skip",  # visual aid only
-                opacity=0.85,
+                opacity=0.95,
                 showlegend=True,
             )
         )
@@ -622,7 +666,7 @@ if show_gap_line and women_2025_val is not None and men_first_y is not None:
             y=women_2025_val + y_offset,
             text=f"Women have not<br>surpassed men yet",
             showarrow=False,
-            font=dict(color=COLOR_COMPARE, size=14),
+            font=dict(color=COLOR_GAP_ANNOT, size=14),
         )
     else:
         # Crossing exists: solid line from crossing year to 2025
@@ -664,7 +708,7 @@ if show_gap_line and women_2025_val is not None and men_first_y is not None:
                 y=women_2025_val + y_offset,
                 text=f"Women surpass men<br>from {cross_year}",
                 showarrow=False,
-                font=dict(color=COLOR_COMPARE, size=14),
+                font=dict(color=COLOR_GAP_ANNOT, size=14),
             )
 
 
@@ -705,7 +749,7 @@ fig.update_yaxes(range=[y_min - padding, y_max + padding])
 # (Optional) keep y grid subtle too
 # fig.update_yaxes(showgrid=True, gridwidth=1, griddash="dot")
 
-st.plotly_chart(fig, width='stretch')
+st.plotly_chart(fig, width='stretch', config=PLOTLY_CONFIG, key="main_plot")
 
 st.caption(
     "Hover to see the raw record value (from the progression tables), the date it was obtained, and the athlete(s). "
@@ -918,8 +962,7 @@ def make_event_figure(
                 hovertemplate=(
                     "<b>Women</b><br>"
                     "Record: %{customdata[3]}<br>"
-                    "Obtained: %{customdata[0]} (year %{customdata[1]})<br>"
-                    "Athlete(s): %{customdata[2]}<br>"
+                    "Obtained: %{customdata[1]}<br>"
                     "<extra></extra>"
                 ),
             )
@@ -947,8 +990,7 @@ def make_event_figure(
                 hovertemplate=(
                     "<b>Men</b><br>"
                     "Record: %{customdata[3]}<br>"
-                    "Obtained: %{customdata[0]} (year %{customdata[1]})<br>"
-                    "Athlete(s): %{customdata[2]}<br>"
+                    "Obtained: %{customdata[1]}<br>"
                     "<extra></extra>"
                 ),
             )
@@ -1029,10 +1071,10 @@ def make_event_figure(
                     x=[x0, x1],
                     y=[m * x0 + b, m * x1 + b],
                     mode="lines",
-                    line=dict(color=color, width=1.5, dash="dot"),
+                    line=dict(color=color, width=2, dash="dot"),
                     hoverinfo="skip",
                     showlegend=False,
-                    opacity=0.85,
+                    opacity=0.95,
                 )
             )
 
@@ -1041,6 +1083,16 @@ def make_event_figure(
 
     # Optional gap line & crossing marker
     if show_gap_line and women_2025_val is not None and men_first_y is not None:
+        fig.add_trace(
+            go.Scatter(
+                x=[CURRENT_YEAR],
+                y=[women_2025_val],
+                    mode="markers",
+                    marker=dict(size=7, color=COLOR_COMPARE),
+                    hoverinfo="skip",
+                    showlegend=False
+                )
+        )
         if cross_year is None:
             fig.add_shape(
                 type="line",
@@ -1141,11 +1193,11 @@ r2c1, r2c2, r2c3, r2c4, r2c5 = st.columns([2, 2, 2, 2, 2])
 with r2c1:
     grid_show_history = st.checkbox("Grid: show historical data", value=True)
 with r2c2:
-    grid_show_regression = st.checkbox("Grid: show regression slopes", value=show_regression)
+    grid_show_regression = st.checkbox("Grid: show regression slopes", value=True)
 with r2c3:
-    grid_show_gap_line = st.checkbox("Grid: show gap line", value=show_gap_line)
+    grid_show_gap_line = st.checkbox("Grid: show gap line", value=False)
 with r2c4:
-    grid_show_future_pred = st.checkbox("Grid: show predictions (2026+)", value=show_future_pred)
+    grid_show_future_pred = st.checkbox("Grid: show predictions (2026+)", value=False)
 with r2c5:
     grid_show_full_pred = st.checkbox("Grid: show model fit (≤2025)", value=show_full_pred)
 
@@ -1162,7 +1214,7 @@ with r3c1:
     )
 
 with r3c2:
-    grid_cols = st.slider("Grid columns", min_value=2, max_value=4, value=3, step=1)
+    grid_cols = st.slider("Grid columns", min_value=2, max_value=5, value=4, step=1)
 
 
 # -----------------------------
@@ -1255,7 +1307,7 @@ if not render_events:
     st.info("No disciplines match the selected filters.")
 else:
     st.caption(
-        "Mini-plots use the same logic as the main chart (historical filled progression, optional forecasts, optional slopes, optional gap line). "
+        "Mini-plots use the same logic as the main chart (historical filled progression, optional forecasts, optional slopes, optional gap line). with additional options to show/hide historical data. "
         "Sorting uses an improvement-score slope (time: -slope, mark: +slope)."
     )
 
@@ -1275,7 +1327,7 @@ else:
             if fig_ev is None:
                 st.warning(f"Could not render {ev} (missing data).")
             else:
-                st.plotly_chart(fig_ev, width='stretch')
+                st.plotly_chart(fig_ev, width='stretch', config=PLOTLY_CONFIG, key=f"grid_plot_{ev}_{i}",)
 
     # Show a small summary table (optional but handy)
     with st.expander("Show grid metrics table"):
