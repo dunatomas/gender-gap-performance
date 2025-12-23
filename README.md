@@ -1,79 +1,84 @@
-# Gender Gap in Sports Performance
+# Women Do Better in Sports
 
-**Do women do better?**  
-This project explores how the performance gap between men and women has evolved across time in different sports disciplines, with a special focus on **world records** and moments where **women's records cross past men's records** ("glass ceiling" effect).
+**Exploring the narrowing performance gap between men and women**
 
-The project is part of my Master's Thesis and aims to produce:
+This repository contains the code and data pipeline developed for my Master’s Thesis, which analyzes how the performance gap between women and men has evolved over time across comparable athletics and swimming disciplines.
 
-- An **interactive Streamlit app** to explore records, predictions, and gender gaps.
-- A **storytelling landing page** with scrollytelling visuals (for portfolio / competitions such as *Information is Beautiful*).
+Rather than focusing on absolute performance differences, the project emphasizes **rates of improvement** and **historical progression**, showing that women have often improved faster than men once comparable competitive conditions were established. The results are communicated through an **interactive Streamlit dashboard** designed for both in-depth inspection and cross-discipline comparison.
+
+🔗 **Live dashboard**:
+[Women Do Better in Sports – Interactive visualization](https://women-do-better-in-sports.streamlit.app/)
 
 ---
 
 ## 🔍 Core idea
 
-For each discipline (e.g. 100m sprint):
+For each discipline (e.g., 100 m sprint, marathon, swimming freestyle):
 
-- Plot the **historical progression of men's and women's world records** (time or distance).
-- Highlight the **crossover moment**:  
-  when the **current women's record** is **faster/better than all men's records before a certain year**.
-- Extend the curves into the **future** using prediction models (ML/DL)  
-  – shown as dashed lines or uncertainty bands to distinguish them from observed data.
-
-This allows statements like:
-
-> "Before **1930**, no man had ever run as fast as the **current women’s 100m world record**."
+* Build **historical best-so-far progressions** of women’s and men’s world records.
+* Compare improvement dynamics over time, highlighting differences in **progression speed** rather than static gaps.
+* Introduce a historically grounded **men–women gap framing**, showing how far back in the men’s record timeline the current women’s record would rank.
+* Extend record trajectories using a **normalized saturation-based prediction model**, producing plausible near-limit trends rather than linear extrapolations.
 
 ---
 
-## 🧱 Project structure
+## 📊 Interactive visualizations
 
-```text
-gender-gap-performance/
-│
-├── README.md                       # Project description (this file)
-├── requirements.txt                # Python dependencies
-│
-├── app/                            # STREAMLIT APPLICATION
-│   ├── app.py                      # Main Streamlit entry point
-│   ├── pages/                      # (Optional) extra pages
-│   ├── components/                 # (Optional) reusable plotting / UI components
-│   ├── assets/                     # Logos, custom CSS, images
-│   └── __init__.py
-│
-├── landing/                        # STATIC LANDING PAGE (scrollytelling)
-│   ├── index.html
-│   ├── main.css
-│   ├── main.js
-│   └── img/                        # Images / snapshots for the story
-│
-├── data/
-│   ├── raw/                        # Raw data (scraped / downloaded, unmodified)
-│   │   ├── records_100m_men_raw.csv
-│   │   └── records_100m_women_raw.csv
-│   │
-│   ├── processed/                  # Cleaned + structured datasets
-│   │   ├── records_100m_men.csv
-│   │   └── records_100m_women.csv
-│   │
-│   └── predictions/                # Future projections from models
-│       ├── 100m_model_pred_2100.csv
-│       └── ...
-│
-├── notebooks/                      # Jupyter notebooks for EDA, modeling, checks
-│   ├── 01_cleaning_100m.ipynb
-│   ├── 02_feature_engineering.ipynb
-│   ├── 03_model_training.ipynb
-│   └── 04_visual_checks.ipynb
-│
-├── src/                            # Reusable Python modules
-│   ├── __init__.py
-│   ├── cleaning.py                 # Data cleaning functions
-│   ├── utils.py                    # Helpers (parsers, date handling, etc.)
-│   ├── modeling.py                 # Training / loading prediction models
-│   └── plotting.py                 # Plotly chart builders
-│
-└── docs/                           # Documentation (for the thesis / architecture)
-    ├── architecture.md
-    ├── data-dictionary.md
-    └── roadmap.md
+The Streamlit app provides two complementary views:
+
+### 1️⃣ Single-discipline view
+
+* Detailed inspection of one event at a time
+* Historical record progression for women and men
+* Optional overlays:
+
+  * Gap / crossing reference line
+  * Regression slope indicators
+  * Near-limit predictive trajectories
+
+### 2️⃣ Multi-discipline grid view
+
+* Mini-plots for all disciplines shown simultaneously
+* Filters by **category** (running, swimming, jumps) and **subcategory**
+* Sorting by **women’s improvement advantage relative to men** (percentage-based)
+* Filters to identify disciplines where women have or have not reached comparable historical men’s levels
+
+This grid view makes it possible to detect **systematic patterns**, such as the strong concentration of women’s faster improvement in endurance running disciplines.
+
+---
+
+## 🧠 Modeling philosophy
+
+Predictive components are included for **exploratory and visual support**, not for precise forecasting. Instead of event-specific extrapolations, the project uses a **normalized universal saturation model** that:
+
+* Enforces bounded long-term improvement
+* Stabilizes predictions across disciplines with sparse or truncated histories
+* Aligns with established evidence of physiological and technological limits in elite sport
+
+Predictions illustrate how the gender gap may continue to **narrow gradually**, though at much lower rates than those observed during the rapid expansion of women’s sport in the 20th century.
+
+---
+
+## 🛠️ Repository structure
+
+* `data/`
+  * `raw/` – original record progression sources
+  * `processed/` – cleaned and structured datasets
+  * `predictions` - sports predictions
+* `notebooks/` – data cleaning, exploration, modeling and prediction
+* `app.py` – Streamlit application
+---
+
+## 🎓 Context
+
+This project builds upon the *gender-o-meter* concept by Jaume Nualart and Mar Canet, extending it into a fully reproducible analysis pipeline with predictive modeling and large-scale comparative visualization.
+
+It was developed as part of a Master’s Thesis in data science and visualization, with an explicit focus on **gender equity**, **historical context**, and **responsible interpretation of performance data**.
+
+---
+
+## 📄 License and data
+
+All data sources used are publicly available.
+The code is provided for academic and educational purposes.
+
