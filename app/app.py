@@ -1360,6 +1360,7 @@ render_events = stats["event"].tolist() if not stats.empty else []
 # -----------------------------
 # Render grid
 # -----------------------------
+
 if not render_events:
     st.info("No disciplines match the selected filters.")
 else:
@@ -1526,8 +1527,6 @@ else:
                     """,
                     unsafe_allow_html=True,
                 )
-
-
 
     # Show a small summary table (optional but handy)
     with st.expander("Show grid metrics table"):
