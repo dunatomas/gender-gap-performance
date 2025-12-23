@@ -9,7 +9,6 @@ Rather than focusing on absolute performance differences, the project emphasizes
 🔗 **Live dashboard**:
 [Women Do Better in Sports – Interactive visualization](https://women-do-better-in-sports.streamlit.app/)
 
----
 
 ## 🔍 Core idea
 
@@ -20,7 +19,6 @@ For each discipline (e.g., 100 m sprint, marathon, swimming freestyle):
 * Introduce a historically grounded **men–women gap framing**, showing how far back in the men’s record timeline the current women’s record would rank.
 * Extend record trajectories using a **normalized saturation-based prediction model**, producing plausible near-limit trends rather than linear extrapolations.
 
----
 
 ## 📊 Interactive visualizations
 
@@ -45,7 +43,6 @@ The Streamlit app provides two complementary views:
 
 This grid view makes it possible to detect **systematic patterns**, such as the strong concentration of women’s faster improvement in endurance running disciplines.
 
----
 
 ## 🧠 Modeling philosophy
 
@@ -57,7 +54,6 @@ Predictive components are included for **exploratory and visual support**, not f
 
 Predictions illustrate how the gender gap may continue to **narrow gradually**, though at much lower rates than those observed during the rapid expansion of women’s sport in the 20th century.
 
----
 
 ## 🛠️ Repository structure
 
@@ -67,7 +63,7 @@ Predictions illustrate how the gender gap may continue to **narrow gradually**, 
   * `predictions` - sports predictions
 * `notebooks/` – data cleaning, exploration, modeling and prediction
 * `app.py` – Streamlit application
----
+
 
 ## 🎓 Context
 
@@ -75,7 +71,6 @@ This project builds upon the *gender-o-meter* concept by Jaume Nualart and Mar C
 
 It was developed as part of a Master’s Thesis in data science and visualization, with an explicit focus on **gender equity**, **historical context**, and **responsible interpretation of performance data**.
 
----
 
 ## 📄 License and data
 
