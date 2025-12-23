@@ -5,7 +5,8 @@ import streamlit as st
 # -----------------------------
 st.set_page_config(page_title="Gender Gap in Sports Performance", layout="wide")
 
-st.title("Gender Gap in Sports Performance")
+st.title("Women Do Better in Sports")
+st.header("Exploring the narrowing performance gap between men and women")
 
 st.markdown(
     """
@@ -13,7 +14,8 @@ Women’s performance has accelerated dramatically across many sports, especiall
 and professionalization have expanded. In several disciplines, women’s historical improvement rate has been steeper
 than men’s, narrowing the performance gap over time.
 
-This dashboard explores that gap by combining record progressions with model-based forecasts.
+This dashboard explores and **quantifies** that gap by combining record progressions with model-based forecasts, 
+measuring how much faster women’s performance has improved relative to men’s across different sports.
 
 **How to use the dashboard**  
 The main chart focuses on a single discipline and allows you to toggle historical data, forecasts, regression trends,
@@ -34,10 +36,12 @@ CURRENT_YEAR = 2025
 PRED_START_YEAR = 2026
 
 # Pick non-stereotypical, distinguishable colors
-COLOR_MEN = "#2ca02c"      # green
-COLOR_WOMEN = "#ff7f0e"    # orange
+COLOR_WOMEN = "#2ca02c"      # green
+COLOR_WOMEN_FILL = "rgba(44,160,44,0.15)"
+COLOR_MEN = "#ff7f0e"    # orange
+COLOR_MEN_FILL = "rgba(255,127,14,0.15)"
 COLOR_COMPARE = "#9467bd"  # purple
-COLOR_MEN_ANNOT = "#3ddc84"  # lighter green for annotations
+COLOR_WOMEN_ANNOT = "#3ddc84"  # lighter green for annotations
 COLOR_GAP_ANNOT = "#b07edf"  # lighter purple for annotations
 
 # Rounding for matching prediction record values to df_combined record values
@@ -219,9 +223,6 @@ def decade_ticks(min_year: int, max_year: int):
     end = ((max_year + 9) // 10) * 10
     return list(range(start, end + 1, 10))
 
-
-
-
 # Load data
 df_combined = load_combined("data/processed/all_events_results_clean.csv")
 df_predictions = load_predictions("data/predictions/predictions_normalized_near_ceiling.csv")
@@ -390,7 +391,7 @@ fig.add_trace(
         name=f"Women — record progression (to {CURRENT_YEAR})",
         line=dict(color=COLOR_WOMEN, width=3),
         fill="tozeroy",
-        fillcolor="rgba(255,127,14,0.15)",
+        fillcolor=COLOR_WOMEN_FILL,
         customdata=np.stack(
             [
                 women_hist_h["record_date"],
@@ -420,7 +421,7 @@ fig.add_trace(
         name=f"Men — record progression (to {CURRENT_YEAR})",
         line=dict(color=COLOR_MEN, width=3),
         fill="tozeroy",
-        fillcolor="rgba(44,160,44,0.15)",
+        fillcolor=COLOR_MEN_FILL,
         customdata=np.stack(
             [
                 men_hist_h["record_date"],
@@ -593,7 +594,7 @@ if show_regression:
 
         # Place label slightly left of CURRENT_YEAR
         x_label = CURRENT_YEAR + 15
-        annot_color = COLOR_MEN_ANNOT if sex_label == "Men" else color
+        annot_color = COLOR_WOMEN_ANNOT if sex_label == "Women" else color
 
         fig.add_annotation(
             x=x_label,
@@ -748,11 +749,70 @@ st.caption(
 # GRID VIEW — all disciplines at once
 # ============================================================
 
+@st.cache_data(show_spinner=False)
+def compute_event_metrics(df_predictions: pd.DataFrame, model_name: str) -> pd.DataFrame:
+    rows = []
+    dfp = df_predictions.copy()
+    if "model" in dfp.columns:
+        dfp = dfp[dfp["model"] == model_name].copy()
+
+    for ev in dfp["event"].dropna().unique():
+        dfp_ev = dfp[dfp["event"] == ev]
+        if dfp_ev.empty:
+            continue
+
+        measure_ev = str(dfp_ev["measure"].dropna().iloc[0]).lower() if dfp_ev["measure"].notna().any() else "time"
+
+        dfp_m = dfp_ev[dfp_ev["sex"] == "men"]
+        dfp_w = dfp_ev[dfp_ev["sex"] == "women"]
+
+        men_series = build_yearly_record_series(dfp_m)
+        women_series = build_yearly_record_series(dfp_w)
+
+        men_hist = men_series[men_series["year"] <= CURRENT_YEAR].copy()
+        women_hist = women_series[women_series["year"] <= CURRENT_YEAR].copy()
+
+        men_slope_imp = compute_improvement_slope(men_hist, measure_ev)
+        women_slope_imp = compute_improvement_slope(women_hist, measure_ev)
+
+        cross_year, _, _ = compute_cross_year_for_event(dfp_ev, ev)
+
+        women_better = None
+        if men_slope_imp is not None and women_slope_imp is not None:
+            women_better = women_slope_imp > men_slope_imp
+
+        rel_adv = None
+        if (
+            men_slope_imp is not None
+            and women_slope_imp is not None
+            and not pd.isna(men_slope_imp)
+            and abs(men_slope_imp) > 0
+        ):
+            rel_adv = (women_slope_imp - men_slope_imp) / abs(men_slope_imp) * 100
+
+
+        rows.append(
+            dict(
+                event=ev,
+                model=model_name,
+                measure=measure_ev,
+                men_improvement_slope=men_slope_imp,
+                women_improvement_slope=women_slope_imp,
+                improvement_diff=women_slope_imp - men_slope_imp,
+                improvement_relative_pct=rel_adv,   # ← NEW
+                women_better=women_better,
+                cross_year=cross_year,
+            )
+        )
+
+    return pd.DataFrame(rows)
+
 st.divider()
-st.header("All disciplines — grid view")
+st.header("How much faster do women improve compared to men?")
 
 st.markdown(
     """
+This grid view compares how much faster women improve compared to men, in proportion to men’s rate.
 Each panel summarizes the historical record progression for a single discipline, shown for women and men using regression slopes. 
 Optional elements (forecasts and gap indicators) can be toggled globally to support rapid comparison across events. 
 Sorting by relative improvement highlights disciplines where women’s performance has accelerated faster than men’s, while crossing filters identify events where women have reached or surpassed historical men’s records.
@@ -943,7 +1003,7 @@ def make_event_figure(
                 name="Women",
                 line=dict(color=COLOR_WOMEN, width=2),
                 fill="tozeroy",
-                fillcolor="rgba(255,127,14,0.12)",
+                fillcolor=COLOR_WOMEN_FILL,
                 customdata=np.stack(
                     [
                         women_hist_h["record_date"],
@@ -971,7 +1031,7 @@ def make_event_figure(
                 name="Men",
                 line=dict(color=COLOR_MEN, width=2),
                 fill="tozeroy",
-                fillcolor="rgba(44,160,44,0.12)",
+                fillcolor=COLOR_MEN_FILL,
                 customdata=np.stack(
                     [
                         men_hist_h["record_date"],
@@ -1132,7 +1192,7 @@ def make_event_figure(
     y_title = "Time (s)" if measure == "time" else "Mark (m)"
     fig.update_layout(
         height=300,
-        margin=dict(l=20, r=10, t=60, b=25),
+        margin=dict(l=20, r=10, t=60, b=5),
         title=dict(text=event, x=0.02, xanchor="left", y=0.98, yanchor="top", font=dict(size=16)),
         xaxis_title="",
         yaxis_title=y_title,
@@ -1204,9 +1264,9 @@ r3c1, r3c2 = st.columns([3, 2])
 
 with r3c1:
     sort_women_better = st.checkbox(
-        "Sort: women improve faster than men",
+        "Sort disciplines by women improving faster than men",
         value=False,
-        help="Uses linear regression slope on historical best-so-far up to 2025 (converted to an improvement score).",
+        help="Uses linear regression slope on historical best-so-far up to 2025 (converted to an improvement score) and calculates the difference of improvement rates between women and men.",
     )
 
 with r3c2:
@@ -1229,48 +1289,13 @@ grid_events = meta_f["event"].dropna().unique().tolist()
 # -----------------------------
 # Compute per-event stats for sorting / filtering
 # -----------------------------
-rows = []
-for ev in grid_events:
-    dfp_ev = df_predictions[df_predictions["event"] == ev].copy()
-    if "model" in dfp_ev.columns:
-        dfp_ev = dfp_ev[dfp_ev["model"] == model_name].copy()
+stats = compute_event_metrics(df_predictions, model_name)
 
-    if dfp_ev.empty:
-        continue
-
-    measure_ev = str(dfp_ev["measure"].dropna().iloc[0]).lower() if dfp_ev["measure"].notna().any() else "time"
-
-    # Build hist for slopes
-    dfp_m = dfp_ev[dfp_ev["sex"] == "men"]
-    dfp_w = dfp_ev[dfp_ev["sex"] == "women"]
-    men_series = build_yearly_record_series(dfp_m)
-    women_series = build_yearly_record_series(dfp_w)
-    men_hist = men_series[men_series["year"] <= CURRENT_YEAR].copy()
-    women_hist = women_series[women_series["year"] <= CURRENT_YEAR].copy()
-
-    # Slopes
-    men_slope_imp = compute_improvement_slope(men_hist, measure_ev)
-    women_slope_imp = compute_improvement_slope(women_hist, measure_ev)
-
-    # Crossing
-    cross_year, w2025, _ = compute_cross_year_for_event(dfp_ev, ev)
-
-    women_better = None
-    if (men_slope_imp is not None) and (women_slope_imp is not None):
-        women_better = women_slope_imp > men_slope_imp
-
-    rows.append(
-        {
-            "event": ev,
-            "measure": measure_ev,
-            "men_improvement_slope": men_slope_imp,
-            "women_improvement_slope": women_slope_imp,
-            "women_better": women_better,
-            "cross_year": cross_year,
-        }
-    )
-
-stats = pd.DataFrame(rows)
+# Apply category/subcategory filters to stats
+if grid_events:
+    stats = stats[stats["event"].isin(grid_events)]
+else:
+    stats = stats.iloc[0:0]  # empty
 
 # Crossing filter
 if not stats.empty:
@@ -1280,12 +1305,10 @@ if not stats.empty:
         stats = stats[stats["cross_year"].isna()]
 
 # Sorting
-if sort_women_better and not stats.empty:
-    # Put women_better=True first, then by (women-men) improvement gap descending
-    stats["gap"] = (stats["women_improvement_slope"] - stats["men_improvement_slope"])
+if sort_women_better:
     stats = stats.sort_values(
-        by=["women_better", "gap"],
-        ascending=[False, False],
+        by="improvement_relative_pct",
+        ascending=False,
         na_position="last",
     )
 else:
@@ -1304,9 +1327,14 @@ if not render_events:
     st.info("No disciplines match the selected filters.")
 else:
     st.caption(
-        "Mini-plots use the same logic as the main chart (historical filled progression, optional forecasts, optional slopes, optional gap line). with additional options to show/hide historical data. "
-        "Sorting uses an improvement-score slope (time: -slope, mark: +slope)."
+        "Mini-plots use the same visual logic as the main chart (historical filled progression, optional forecasts, regression slopes, and gap indicators), "
+        "with global toggles to show or hide each component. "
+        "Sorting ranks disciplines by women’s relative improvement advantage compared to men, expressed as a percentage of men’s improvement rate "
+        "(based on improvement-score slopes: time = −slope, mark = +slope)."
     )
+
+    # Quick lookup: event -> stats row
+    stats_by_event = stats.set_index("event").to_dict(orient="index")
 
     cols = st.columns(grid_cols)
     for i, ev in enumerate(render_events):
@@ -1326,8 +1354,185 @@ else:
             else:
                 st.plotly_chart(fig_ev, width='stretch', config=PLOTLY_CONFIG, key=f"grid_plot_{ev}_{i}",)
 
+                # ---- slope label under each mini-plot ----
+                row = stats_by_event.get(ev, {})
+
+                w_slope = row.get("women_improvement_slope")
+                m_slope = row.get("men_improvement_slope")
+                women_better = row.get("women_better")
+                measure_ev = row.get("measure")  # "time" or "mark" (you have it in stats)
+
+                def format_slope_with_units(x, measure):
+                    if x is None or pd.isna(x) or measure is None:
+                        return "N/A"
+
+                    x = float(x)
+                    ax = abs(x)
+                    sign = "+" if x >= 0 else "-"
+
+                    if str(measure).lower() == "time":
+                        # seconds per year, switch to ms if very small
+                        if ax < 0.1:
+                            return f"{sign}{ax*1000:.1f} ms/year"
+                        return f"{sign}{ax:.3f} s/year"
+                    else:
+                        # meters per year, switch to cm if very small
+                        if ax < 0.1:
+                            return f"{sign}{ax*100:.1f} cm/year"
+                        return f"{sign}{ax:.3f} m/year"
+
+                measure_ev = row.get("measure")  # "time" or "mark"
+
+                w_txt = format_slope_with_units(w_slope, measure_ev)
+                m_txt = format_slope_with_units(m_slope, measure_ev)
+
+                # Difference (women - men)
+                diff = None
+                if (w_slope is not None and not pd.isna(w_slope)) and (m_slope is not None and not pd.isna(m_slope)):
+                    diff = float(w_slope) - float(m_slope)
+
+                # ---- units helper for Δ ----
+                def format_delta_with_units(d: float | None, measure: str | None) -> str:
+                    if d is None or measure is None:
+                        return "N/A"
+
+                    ad = abs(d)
+                    sign = "+" if d >= 0 else "-"
+
+                    if str(measure).lower() == "time":
+                        # use ms if < 0.1 s/year
+                        if ad < 0.1:
+                            return f"{sign}{ad*1000:.1f} ms/year"
+                        return f"{sign}{ad:.3f} s/year"
+                    else:
+                        # mark: use cm if < 0.1 m/year
+                        if ad < 0.1:
+                            return f"{sign}{ad*100:.1f} cm/year"
+                        return f"{sign}{ad:.3f} m/year"
+
+                diff_txt_units = format_delta_with_units(diff, measure_ev)
+
+                rel_pct = row.get("improvement_relative_pct")
+
+                rel_txt = (
+                    "N/A"
+                    if rel_pct is None or pd.isna(rel_pct)
+                    else f"{rel_pct:+.1f}%"
+                )
+                
+                # Color + text for relative improvement (no +/- sign)
+                if rel_pct is None or pd.isna(rel_pct):
+                    rel_phrase = "N/A"
+                else:
+                    pct_abs = abs(rel_pct)
+                    pct_txt = f"{pct_abs:.1f}%"
+
+                    if rel_pct > 0:
+                        color = COLOR_WOMEN  # green
+                        rel_phrase = (
+                            f"<span style='color:{color}; font-weight:650;'>"
+                            f"{pct_txt} faster</span>"
+                        )
+                    else:
+                        color = "#db3939"  # red
+                        rel_phrase = (
+                            f"<span style='color:{color}; font-weight:650;'>"
+                            f"{pct_txt} slower</span>"
+                        )
+
+                if women_better is True:
+                    badge = (
+                        f"<span style='padding:2px 8px;border-radius:999px;"
+                        f"border:1px solid rgba(255,255,255,0.16);"
+                        f"background:{COLOR_WOMEN_FILL};font-weight:650;'>"
+                        f"Women improving faster</span>"
+                    )
+                elif women_better is False:
+                    badge = (
+                        f"<span style='padding:2px 8px;border-radius:999px;"
+                        f"border:1px solid rgba(255,255,255,0.16);"
+                        f"background:{COLOR_MEN_FILL};font-weight:650;'>"
+                        f"Men improving faster</span>"
+                    )
+                else:
+                    badge = (
+                        "<span style='padding:2px 8px;border-radius:999px;"
+                        "border:1px solid rgba(255,255,255,0.12);"
+                        "background:rgba(255,255,255,0.03);'>"
+                        "Insufficient data</span>"
+                    )
+
+                st.markdown(
+                    f"""
+                    <div style="
+                        font-size:0.86rem;
+                        line-height:1.25;
+                        opacity:0.92;
+                        margin-top:-35px;        /* ↓ tighter to plot */
+                        margin-bottom:30px;    /* ↑ more space before next plot */
+                        padding-left: 15px;
+                    ">
+                    {badge}
+                    <div style="height:6px;"></div>
+
+                    <div>
+                        <b>Improvement-score slope:</b><br>
+                        · Women {w_txt}<br>
+                        · Men {m_txt}<br>
+                        · Women vs. Men: <b>{diff_txt_units}</b>
+                    </div>
+
+                    <div style="height:6px;"></div>
+
+                    <div>Women improve {rel_phrase}</div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )
+
+
+
     # Show a small summary table (optional but handy)
     with st.expander("Show grid metrics table"):
-        show_cols = ["event", "measure", "women_improvement_slope", "men_improvement_slope", "women_better", "cross_year"]
-        st.dataframe(stats[show_cols], width='stretch', hide_index=True)
 
+        table = stats.copy()
+
+        # Numeric improvement-score slopes (signed, sortable)
+        table["Women improvement"] = table["women_improvement_slope"]
+        table["Men improvement"] = table["men_improvement_slope"]
+
+        # Numeric relative improvement percentage (signed)
+        table["Women vs. Men (%)"] = table["improvement_relative_pct"]
+
+        # Build unit-aware column names (same unit for entire table row-wise)
+        def improvement_unit(measure):
+            return "s/year" if str(measure).lower() == "time" else "m/year"
+
+        table["Improvement unit"] = table["measure"].apply(improvement_unit)
+
+        # Reorder / rename columns for display
+        show_cols = [
+            "event",
+            "measure",
+            "Women improvement",
+            "Men improvement",
+            "Women vs. Men (%)",
+            "cross_year",
+        ]
+
+        display_table = table[show_cols].copy()
+
+        # Rename columns to include units
+        display_table = display_table.rename(
+            columns={
+                "Women improvement": "Women improvement (per year)",
+                "Men improvement": "Men improvement (per year)",
+            }
+        )
+
+        # Display
+        st.dataframe(
+            display_table,
+            width="stretch",
+            hide_index=True,
+        )
