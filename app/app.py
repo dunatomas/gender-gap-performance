@@ -19,9 +19,10 @@ measuring how much faster women’s performance has improved relative to men’s
 
 **How to use the dashboard**  
 The main chart focuses on a single discipline and allows you to toggle historical data, forecasts, regression trends,
-and gender-gap indicators. Below, the grid view provides a comparative overview across all disciplines. Filters can be
-used to restrict the grid by category and subcategory, while sorting options highlight events where women’s performance
-has improved faster than men’s.
+and gender-gap indicators. Filters can be used to restrict the grid by category and subcategory, while sorting options
+ highlight events where women’s performance has improved faster than men’s.
+
+Below the main chart, the grid view provides a comparative overview across all disciplines.
 """
 )
 
@@ -377,6 +378,23 @@ min_year = int(dfp["year"].dropna().min())
 max_year = int(dfp["year"].dropna().max())
 tickvals = decade_ticks(min_year, max_year)
 
+# --- Y-axis zoom to center the lines ---
+all_y = pd.concat(
+    [
+        men_hist_h["y_hist_ffill"],
+        women_hist_h["y_hist_ffill"],
+        men_pred_future["y_pred"] if not men_pred_future.empty else pd.Series(dtype=float),
+        women_pred_future["y_pred"] if not women_pred_future.empty else pd.Series(dtype=float),
+    ]
+).dropna()
+
+y_min, y_max = all_y.min(), all_y.max()
+padding = 0.15 * (y_max - y_min)  # adjust zoom strength here (e.g. 0.1–0.2)
+y_low = y_min - padding
+y_high = y_max + padding
+y_range_zoomed = max(y_high - y_low, 1e-9)
+y_offset = 0.06 * y_range_zoomed
+
 # -----------------------------
 # Plotly figure
 # -----------------------------
@@ -537,6 +555,13 @@ add_vertical_connector(women_first_y, women_first_v, COLOR_WOMEN)
 men_2025_val = year_value(men_hist_h, CURRENT_YEAR)
 women_2025_val = year_value(women_hist_h, CURRENT_YEAR)
 
+# Year when the current women record was set
+women_record_year = None
+if women_2025_val is not None:
+    rec_row = women_hist_h[women_hist_h["y_hist_ffill"] == women_2025_val]
+    if not rec_row.empty:
+        women_record_year = int(rec_row.iloc[0]["record_year_obtained"])
+
 add_vertical_connector(CURRENT_YEAR, men_2025_val, COLOR_MEN)
 add_vertical_connector(CURRENT_YEAR, women_2025_val, COLOR_WOMEN)
 
@@ -584,60 +609,63 @@ if show_regression:
             )
         )
 
-        # Small label near 2025 endpoint with slope
-        # For time: negative slope means improving (going down); for marks: positive slope means improving (going up)
-        slope_text = f"Improvement slope:<br>{slope:+.4f} per year"
+        # # Small label near 2025 endpoint with slope
+        # # For time: negative slope means improving (going down); for marks: positive slope means improving (going up)
+        # slope_text = f"Improvement slope:<br>{slope:+.4f} per year"
 
-        # Offset label a bit so it doesn't sit on the line
-        y_offset = 0.03 * abs(y_2025) if y_2025 != 0 else 0.03
-        y_lab = (y_2025 - y_offset) if measure == "time" else (y_2025 + y_offset)
+        # # Offset = a fraction of the visible range (works for sprints + marathon)
+        # y_offset = 0.06 * y_range_zoomed   # tweak 0.05–0.08
+        # y_lab_regression = (y_2025 - y_offset) if measure == "time" else (y_2025 + y_offset)
+        
+        # # Place label slightly left of CURRENT_YEAR
+        # x_label = CURRENT_YEAR + 15
+        # annot_color = COLOR_WOMEN_ANNOT if sex_label == "Women" else color
 
-        # Place label slightly left of CURRENT_YEAR
-        x_label = CURRENT_YEAR + 15
-        annot_color = COLOR_WOMEN_ANNOT if sex_label == "Women" else color
-
-        fig.add_annotation(
-            x=x_label,
-            y=y_lab,
-            text=slope_text,
-            showarrow=False,
-            font=dict(color=annot_color, size=14),
-            opacity=0.9,
-        )
+        # fig.add_annotation(
+        #     x=x_label,
+        #     y=y_lab_regression,
+        #     text=slope_text,
+        #     showarrow=False,
+        #     font=dict(color=annot_color, size=14),
+        #     opacity=0.9,
+        # )
 
     add_regression_line(women_hist_h, "Women", COLOR_WOMEN)
     add_regression_line(men_hist_h, "Men", COLOR_MEN)
+
+
 
 # Horizontal comparison line + crossing point marker + better label placement
 if show_gap_line and women_2025_val is not None and men_first_y is not None:
 
     # Point where it reaches women's record level (at crossing year)
-    fig.add_trace(
-        go.Scatter(
-            x=[CURRENT_YEAR],
-            y=[women_2025_val],
-            mode="markers",
-            marker=dict(size=10, color=COLOR_COMPARE),
-            showlegend=False,
-            hoverinfo="skip",
+    if women_record_year is not None:
+        fig.add_trace(
+            go.Scatter(
+                x=[women_record_year],
+                y=[women_2025_val],
+                mode="markers",
+                marker=dict(size=10, color=COLOR_COMPARE),
+                showlegend=False,
+                hoverinfo="skip",
+            )
         )
-    )
 
     # Put label above the women's 2025 point
-    y_offset = (0.025 * abs(women_2025_val)) if measure == "time" else (-0.06 * abs(women_2025_val) if women_2025_val != 0 else 0.06)
+    # y_offset = (0.025 * abs(women_2025_val)) if measure == "time" else (-0.06 * abs(women_2025_val) if women_2025_val != 0 else 0.06)
 
     if cross_year is None:
         # No crossing: dashed line from first men's record year to 2025
         fig.add_shape(
             type="line",
-            x0=men_first_y, x1=CURRENT_YEAR,
+            x0=men_first_y, x1=women_record_year,
             y0=women_2025_val, y1=women_2025_val,
             line=dict(color=COLOR_COMPARE, width=3, dash="dash"),
             opacity=0.9,
         )
 
         fig.add_annotation(
-            x=CURRENT_YEAR,
+            x=women_record_year + 10,
             y=women_2025_val + y_offset,
             text=f"Women have not<br>surpassed men yet",
             showarrow=False,
@@ -647,7 +675,7 @@ if show_gap_line and women_2025_val is not None and men_first_y is not None:
         # Crossing exists: solid line from crossing year to 2025
         fig.add_shape(
             type="line",
-            x0=cross_year, x1=CURRENT_YEAR,
+            x0=cross_year, x1=women_record_year,
             y0=women_2025_val, y1=women_2025_val,
             line=dict(color=COLOR_COMPARE, width=3),
             opacity=0.9,
@@ -675,13 +703,23 @@ if show_gap_line and women_2025_val is not None and men_first_y is not None:
                 opacity=0.8,
             )
 
+        # Vertical purple line at crossing year down to y=0
+        if cross_year is not None:
+            fig.add_shape(
+                type="line",
+                x0=women_record_year, x1=women_record_year,
+                y0=0, y1=women_2025_val,
+                line=dict(color=COLOR_COMPARE, width=1),  # thin purple line
+                opacity=0.8,
+            )
+
         # Label: to the right and slightly higher to avoid intersection
         # For time, "higher" => slightly smaller; for marks, "higher" => slightly bigger
         if cross_year is not None:
             fig.add_annotation(
-                x=CURRENT_YEAR,
+                x=women_record_year + 10,
                 y=women_2025_val + y_offset,
-                text=f"Women surpass men<br>from {cross_year}",
+                text=f"In {women_record_year} women surpass<br>men from {cross_year}",
                 showarrow=False,
                 font=dict(color=COLOR_GAP_ANNOT, size=14),
             )
@@ -707,18 +745,6 @@ fig.update_xaxes(
 )
 
 # --- Y-axis zoom to center the lines ---
-all_y = pd.concat(
-    [
-        men_hist_h["y_hist_ffill"],
-        women_hist_h["y_hist_ffill"],
-        men_pred_future["y_pred"] if not men_pred_future.empty else pd.Series(dtype=float),
-        women_pred_future["y_pred"] if not women_pred_future.empty else pd.Series(dtype=float),
-    ]
-).dropna()
-
-y_min, y_max = all_y.min(), all_y.max()
-padding = 0.15 * (y_max - y_min)  # adjust zoom strength here (e.g. 0.1–0.2)
-
 fig.update_yaxes(range=[y_min - padding, y_max + padding])
 
 # (Optional) keep y grid subtle too
@@ -981,6 +1007,14 @@ def make_event_figure(
     women_hist_h = attach_hover_metadata(women_hist, women_lookup)
 
     women_2025_val = year_value(women_hist_h, CURRENT_YEAR)
+    
+    # Year when the current women record was set
+    women_record_year = None
+    if women_2025_val is not None:
+        rec_row = women_hist_h[women_hist_h["y_hist_ffill"] == women_2025_val]
+        if not rec_row.empty:
+            women_record_year = int(rec_row.iloc[0]["record_year_obtained"])
+
     men_first_y, _ = first_valid_year_and_value(men_hist_h)
     cross_year = None
     if women_2025_val is not None and men_first_y is not None:
@@ -1137,32 +1171,35 @@ def make_event_figure(
 
     # Optional gap line & crossing marker
     if show_gap_line and women_2025_val is not None and men_first_y is not None:
-        fig.add_trace(
-            go.Scatter(
-                x=[CURRENT_YEAR],
-                y=[women_2025_val],
-                    mode="markers",
-                    marker=dict(size=7, color=COLOR_COMPARE),
-                    hoverinfo="skip",
-                    showlegend=False
-                )
-        )
+        if women_record_year is not None:
+            fig.add_trace(
+                go.Scatter(
+                    x=[women_record_year],
+                    y=[women_2025_val],
+                        mode="markers",
+                        marker=dict(size=7, color=COLOR_COMPARE),
+                        hoverinfo="skip",
+                        showlegend=False
+                    )
+            )
         if cross_year is None:
-            fig.add_shape(
-                type="line",
-                x0=men_first_y, x1=CURRENT_YEAR,
-                y0=women_2025_val, y1=women_2025_val,
-                line=dict(color=COLOR_COMPARE, width=2, dash="dash"),
-                opacity=0.9,
-            )
+            if women_record_year is not None:
+                fig.add_shape(
+                    type="line",
+                    x0=men_first_y, x1=women_record_year,
+                    y0=women_2025_val, y1=women_2025_val,
+                    line=dict(color=COLOR_COMPARE, width=2, dash="dash"),
+                    opacity=0.9,
+                )
         else:
-            fig.add_shape(
-                type="line",
-                x0=cross_year, x1=CURRENT_YEAR,
-                y0=women_2025_val, y1=women_2025_val,
-                line=dict(color=COLOR_COMPARE, width=2),
-                opacity=0.9,
-            )
+            if women_record_year is not None:
+                fig.add_shape(
+                    type="line",
+                    x0=cross_year, x1=women_record_year,
+                    y0=women_2025_val, y1=women_2025_val,
+                    line=dict(color=COLOR_COMPARE, width=2),
+                    opacity=0.9,
+                )
             fig.add_trace(
                 go.Scatter(
                     x=[cross_year],
@@ -1266,7 +1303,7 @@ with r3c1:
     sort_women_better = st.checkbox(
         "Sort disciplines by women improving faster than men",
         value=False,
-        help="Uses linear regression slope on historical best-so-far up to 2025 (converted to an improvement score) and calculates the difference of improvement rates between women and men.",
+        help="Uses linear regression slope on historical best-so-far up to 2025 (converted to an improvement score) and calculates the difference of improvement rates between women and men in percentage.",
     )
 
 with r3c2:
