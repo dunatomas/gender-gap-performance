@@ -3,7 +3,7 @@ import streamlit as st
 # -----------------------------
 # App UI
 # -----------------------------
-st.set_page_config(page_title="Gender Gap in Sports Performance", layout="wide")
+st.set_page_config(page_title="Women Do Better in Sports", layout="wide")
 
 st.title("Women Do Better in Sports")
 st.header("Exploring the narrowing performance gap between men and women")

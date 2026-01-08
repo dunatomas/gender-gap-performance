@@ -280,7 +280,6 @@ event,sex,measure,athlete,nationality,date,time_raw,time_seconds,mark_raw,mark_m
 200m,men,time,Michael Johnson,United States,1996-08-01,19.32,19.32,,,0.4,19313.0,run,sprint
 200m,men,time,Usain Bolt,Jamaica,2008-08-20,19.30,19.3,,,-0.9,19296.0,run,sprint
 200m,men,time,Usain Bolt,Jamaica,2009-08-20,19.19,19.19,,,-0.3,19190.0,run,sprint
-200m,men,time,Athlete,Location of race,,Time,,,,,,run,sprint
 200m,women,time,Alice Cast,United Kingdom,1922-08-20,27.8,27.8,,,,,run,sprint
 200m,women,time,Mary Lines,United Kingdom,1922-09-23,26.8,26.8,,,,,run,sprint
 200m,women,time,Eileen Edwards,United Kingdom,1924-08-20,26.2,26.2,,,,,run,sprint
