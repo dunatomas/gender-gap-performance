@@ -1,6 +1,10 @@
 # Women Do Better in Sports
 
-**Exploring the narrowing performance gap between men and women**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/46197b2f-1470-49de-a491-6172895ab256" width="800" alt="Final Project Preview"/>
+</p>
+
+## Exploring the narrowing performance gap between men and women
 
 This repository contains the code and data pipeline developed for my Master’s Thesis, which analyzes how the performance gap between women and men has evolved over time across comparable athletics and swimming disciplines.
 
@@ -26,13 +30,16 @@ The Streamlit app provides two complementary views:
 
 ### 1️⃣ Single-discipline view
 
-* Detailed inspection of one event at a time
-* Historical record progression for women and men
-* Optional overlays:
-
-  * Gap / crossing reference line
-  * Regression slope indicators
-  * Near-limit predictive trajectories
+- Detailed inspection of one event at a time
+- Historical record progression for women and men
+- Optional overlays:
+  - Gap / crossing reference line
+  - Regression slope indicators
+  - Near-limit predictive trajectories
+ 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/209b8184-3ac3-4045-a67d-fb1c1c6b7d54" width="800" alt="Single-discipline View Example"/>
+</p>
 
 ### 2️⃣ Multi-discipline grid view
 
@@ -43,6 +50,9 @@ The Streamlit app provides two complementary views:
 
 This grid view makes it possible to detect **systematic patterns**, such as the strong concentration of women’s faster improvement in endurance running disciplines.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/618d41e5-8256-4b88-a904-f22808e616b0" width="800" alt="Grid View Example"/>
+</p>
 
 ## 🧠 Modeling philosophy
 
